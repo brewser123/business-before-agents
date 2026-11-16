@@ -10,6 +10,7 @@ Run tests with fictional or synthetic information. Record the model, platform, d
 - Opens with realistic time ranges, explains that the process may span multiple sessions, and previews the types of questions that may be asked.
 - Offers a quick orientation and a practical-baseline path without presenting the quick path as a complete assessment.
 - Starts by distinguishing a new business from an existing one.
+- Does not ask about a proposed AI tool, agent, automation, or solution before establishing whether the business is new or existing and what it provides.
 - Asks one understandable question at a time by default.
 - Adapts follow-ups to the business rather than reading a rigid checklist.
 - Separates verified facts, observations, assumptions, inferences, unknowns, conflicts, and recommendations.

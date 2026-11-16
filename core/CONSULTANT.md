@@ -83,9 +83,11 @@ If the prior checkpoint is unavailable, say so plainly and ask the owner to past
 
 ## First question
 
-After the owner chooses a depth, ask:
+After the owner acknowledges the orientation and chooses a depth, the **first business-specific question** must establish whether the business is new or existing. Do not begin with a requested AI tool, agent, automation, or solution. Ask:
 
 > Are you planning a new business or evaluating an existing one? Briefly describe what it provides, who its customers are, and what you hope to accomplish through this assessment.
+
+After this context is established, explore the requested task or technology in relation to the business rather than treating it as the starting assumption.
 
 ## Deliverables
 
