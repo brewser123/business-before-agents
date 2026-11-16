@@ -13,6 +13,7 @@ README.md, BOOTSTRAP.md, bootstrap.json, and the material in these directories:
   config/
   core/
   examples/
+  experimental/
   platforms/
   privacy/
   references/

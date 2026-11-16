@@ -1,0 +1,83 @@
+# Fictional, incomplete illustration. Not builder-ready and not a recommendation for a real business.
+schema_version: 0.1-experimental
+initiative: Toy Scout lead-triage pilot
+decision: bounded_agentic_pilot
+owner: Fictional business owner
+
+outcome:
+  problem: Promising vintage-toy leads may be found too late across approved sources.
+  target: Prepare a private daily candidate list for human review without contacting sellers or purchasing items.
+  success_measures:
+    - Reduce weekly lead-review time without reducing useful discoveries.
+    - Demonstrate an acceptable relevant-suggestion rate during a 30-day pilot.
+  failure_signals:
+    - Review work increases.
+    - Condition or authenticity warnings are repeatedly missed.
+    - Suggestions rely on a source whose terms do not permit the monitoring method.
+
+scope:
+  included:
+    - One owner-approved source.
+    - One narrow product category.
+    - Private candidate summaries and ranking explanations.
+  excluded:
+    - Seller contact.
+    - Purchasing or negotiation.
+    - Authenticity claims or appraisals.
+    - Public listings or marketing publication.
+
+workflow:
+  pattern: single_bounded_agent
+  trigger: Owner starts the daily review for the approved source.
+  steps:
+    - id: collect-approved-candidates
+      objective: Read candidate information through the permitted test method.
+      approval_required: false
+      on_failure: Stop and report the unavailable or prohibited source.
+    - id: prepare-review-list
+      objective: Normalize visible details, flag missing information, and rank candidates for review.
+      approval_required: false
+      on_failure: Preserve the original candidates and return an unranked exception list.
+    - id: owner-review
+      objective: Present the private list and original-source links to the owner.
+      approval_required: true
+      on_failure: End the run without contacting a seller or changing a record.
+  completion_condition: The owner receives the candidate list and records feedback.
+  stop_conditions:
+    - The source is unavailable or its permitted use is uncertain.
+    - The run exceeds its approved time or candidate limit.
+    - Required original-source evidence is missing.
+
+authority:
+  - capability: Read approved candidate information
+    level: bounded_execution
+    approver_or_boundary: One permitted source and the pilot's candidate limit.
+  - capability: Prepare a private candidate list
+    level: prepare_only
+    approver_or_boundary: Owner reviews every suggestion.
+  - capability: Contact sellers or purchase items
+    level: prohibited
+    approver_or_boundary: Human-only during the pilot.
+
+data:
+  - source: Approved test-source candidate information
+    owner: Source platform and listing author
+    classification: Public or owner-authorized listing information
+    authoritative: false
+
+tools: []
+
+controls:
+  human_fallback: Owner performs the existing manual review.
+  logging: Record candidate source, time, visible evidence, ranking reason, and owner feedback.
+  shutdown: Owner disables the scheduled or manual pilot run.
+  rollback: Delete private derived candidate lists and return to manual review.
+
+tests:
+  - Reject a candidate with missing original-source evidence.
+  - Prevent seller contact and purchasing actions.
+  - Stop when the permitted source is unavailable.
+
+open_questions:
+  - Which source and access method are contractually permitted?
+  - What relevant-suggestion rate justifies continuing the pilot?
