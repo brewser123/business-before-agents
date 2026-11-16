@@ -9,6 +9,8 @@
     "initiative",
     "decision",
     "owner",
+    "operating_model",
+    "roles",
     "outcome",
     "scope",
     "workflow",
@@ -30,6 +32,34 @@
       ]
     },
     "owner": { "type": "string", "minLength": 1 },
+    "operating_model": {
+      "enum": [
+        "human_team_with_ai_assistance",
+        "hybrid_human_agent_team",
+        "agent_supported_operating_workflow"
+      ]
+    },
+    "roles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "purpose", "accountable_human", "responsibilities", "handoffs", "fallback"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "kind": { "enum": ["human", "agent"] },
+          "purpose": { "type": "string", "minLength": 1 },
+          "accountable_human": { "type": "string", "minLength": 1 },
+          "responsibilities": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "recommendations": { "type": "array", "items": { "type": "string" } },
+          "permitted_actions": { "type": "array", "items": { "type": "string" } },
+          "prohibited_actions": { "type": "array", "items": { "type": "string" } },
+          "handoffs": { "type": "array", "items": { "type": "string" } },
+          "fallback": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": false
+      }
+    },
     "outcome": {
       "type": "object",
       "required": ["problem", "target", "success_measures", "failure_signals"],

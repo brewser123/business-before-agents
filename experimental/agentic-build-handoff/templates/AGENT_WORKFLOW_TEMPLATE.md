@@ -5,6 +5,7 @@
 - Pattern: assistant / fixed automation / single bounded agent / coordinated agents / other
 - Why this is the least complex sufficient pattern:
 - Design hypotheses still requiring validation:
+- Role-and-responsibility architecture reference:
 
 ## Trigger and completion
 
@@ -37,6 +38,9 @@ For each step record:
 - approval requirement
 - exception and escalation path
 - logging requirement
+- responsible human or agent
+- accountable human owner
+- handoff acceptance criteria
 
 ## Memory and task state
 
@@ -49,3 +53,5 @@ For each step record:
 ## Exceptions and fallback
 
 Describe expected exceptions, ambiguous cases, unavailable tools, invalid data, timeouts, conflicts, and the human fallback. The workflow must fail safely rather than inventing missing authority or evidence.
+
+An unavailable human approver, owner, or fallback must produce a documented pause, escalation, or stop—not an implicit approval or agent substitution.

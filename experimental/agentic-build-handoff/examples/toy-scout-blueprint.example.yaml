@@ -3,6 +3,45 @@ schema_version: 0.1-experimental
 initiative: Toy Scout lead-triage pilot
 decision: bounded_agentic_pilot
 owner: Fictional business owner
+operating_model: human_team_with_ai_assistance
+
+roles:
+  - id: business-owner
+    kind: human
+    purpose: Own the pilot outcome, sourcing decisions, and customer trust.
+    accountable_human: Fictional business owner
+    responsibilities:
+      - Approve the source, category, limits, and success measures.
+      - Review every suggested lead and make every purchase decision.
+      - Stop the pilot when a failure signal occurs.
+    recommendations: []
+    permitted_actions:
+      - Approve, reject, or investigate a candidate.
+      - Pause or end the pilot.
+    prohibited_actions: []
+    handoffs:
+      - Receive the daily candidate list with original-source evidence from lead-triage-support.
+    fallback: Perform the established manual lead review.
+  - id: lead-triage-support
+    kind: agent
+    purpose: Prepare a private, bounded candidate list for owner review.
+    accountable_human: Fictional business owner
+    responsibilities:
+      - Normalize visible candidate details from the approved source.
+      - Flag missing evidence and explain ranking reasons.
+      - Prepare the review list without contacting a seller.
+    recommendations:
+      - Recommend which candidates deserve human review.
+    permitted_actions:
+      - Read the approved test source within its documented limit.
+      - Prepare a private candidate list.
+    prohibited_actions:
+      - Contact sellers.
+      - Purchase or negotiate for an item.
+      - Make authenticity or appraisal claims.
+    handoffs:
+      - Deliver the candidate list and source links to business-owner for acceptance or rejection.
+    fallback: Stop the run and direct the owner to the manual review process.
 
 outcome:
   problem: Promising vintage-toy leads may be found too late across approved sources.

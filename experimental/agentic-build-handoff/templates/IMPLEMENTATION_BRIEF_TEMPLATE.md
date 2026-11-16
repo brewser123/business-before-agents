@@ -10,6 +10,8 @@ Include the handoff statement from `CONSULTANT_EXTENSION.md`.
 - Intended users:
 - Affected customers, workers, partners, or other parties:
 - Approved assessment and handoff decision:
+- Selected operating model: human team with AI assistance / hybrid human–agent team / agent-supported operating workflow
+- Role-architecture reference:
 
 ## Problem and intended outcome
 
@@ -49,3 +51,5 @@ Address usability, accessibility, reliability, latency, auditability, privacy, s
 ## Dependencies and open questions
 
 Name owners and target resolution dates when possible. Do not hide blockers inside narrative text.
+
+Include unresolved responsibility gaps, unavailable approvers, missing expertise, and roles without a viable human fallback.

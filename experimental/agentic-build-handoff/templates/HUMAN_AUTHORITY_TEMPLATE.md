@@ -6,6 +6,8 @@
 |---|---|---|---|
 | | | | |
 
+Cross-reference the complete human and agent role definitions in `ROLE_AND_RESPONSIBILITY_ARCHITECTURE.md`. An agent may assist, recommend, prepare, execute within bounds, monitor, or escalate, but it cannot be the accountable owner in this table.
+
 ## Action authority matrix
 
 For each capability select **prohibited**, **prepare only**, **execute with specific approval**, or **execute within documented bounds**.
@@ -34,6 +36,8 @@ For each capability select **prohibited**, **prepare only**, **execute with spec
 ## Prohibited delegation
 
 List decisions and actions that must remain human-led. An AI-generated recommendation cannot approve another AI-generated action unless a separately authorized control system explicitly provides that authority.
+
+Agents may not create new agents, change role assignments, extend access, or delegate authority unless a named human owner has approved the exact change and the implementation enforces that boundary.
 
 ## Challenge and correction
 

@@ -11,9 +11,12 @@ Use these instructions only after the stable assessment process has produced an 
 5. Ask the owner to correct or approve the handoff decision.
 6. Do not create a build package for a deferred or do-not-build decision.
 7. Before completing a build package, resolve or label material unknowns about data, tools, authority, failure handling, affected people, success measures, and rollback.
-8. Separate approved requirements from recommendations, design hypotheses, and unresolved questions.
-9. Preserve the required assessment disclaimer and state that the handoff is a design input—not deployment authorization.
-10. Require another explicit decision before a builder connects production systems, uses production data, communicates externally, spends money, changes records, or deploys software.
+8. Identify the business responsibilities that require coverage before proposing job titles or agents.
+9. Assign every material outcome, decision, risk, system, and agent to a named human owner or authorized human role.
+10. Describe agents as bounded support or operating functions; do not imply that an agent holds executive, employment, professional, legal, or business accountability.
+11. Separate approved requirements from recommendations, design hypotheses, and unresolved questions.
+12. Preserve the required assessment disclaimer and state that the handoff is a design input—not deployment authorization.
+13. Require another explicit decision before a builder connects production systems, uses production data, communicates externally, spends money, changes records, or deploys software.
 
 ## Agentic necessity test
 
@@ -34,6 +37,9 @@ Do not mark the package builder-ready unless it identifies:
 
 - one accountable business owner
 - intended users and affected parties
+- an operating-model choice and responsibility-coverage matrix
+- human role definitions, agent role definitions, and human–agent handoffs
+- a named human accountable owner for every agent
 - current and proposed workflows
 - triggers, inputs, outputs, completion conditions, and stop conditions
 - permitted and prohibited actions

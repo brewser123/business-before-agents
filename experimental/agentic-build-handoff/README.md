@@ -34,6 +34,7 @@ If these conditions are not met, return to discovery or record a defer/do-not-bu
 - `templates/HANDOFF_DECISION_TEMPLATE.md` — build/no-build eligibility decision
 - `templates/IMPLEMENTATION_BRIEF_TEMPLATE.md` — problem, outcome, scope, and requirements
 - `templates/AGENT_WORKFLOW_TEMPLATE.md` — triggers, states, steps, exceptions, and completion
+- `templates/ROLE_AND_RESPONSIBILITY_ARCHITECTURE_TEMPLATE.md` — human roles, agent support, accountability, handoffs, and role coverage
 - `templates/HUMAN_AUTHORITY_TEMPLATE.md` — permissions and approval boundaries
 - `templates/DATA_AND_TOOLS_TEMPLATE.md` — sources, tools, access, retention, and provenance
 - `templates/RISK_AND_CONTROLS_TEMPLATE.md` — risk register, monitoring, shutdown, and rollback
@@ -48,10 +49,11 @@ If these conditions are not met, return to discovery or record a defer/do-not-bu
 2. Apply the consultant extension and complete the handoff decision.
 3. Ask the owner to approve or correct the decision.
 4. If a bounded agentic pilot is approved, complete the human-readable templates.
-5. Create `agent-blueprint.yaml` that validates conceptually against the experimental schema.
-6. Run the handoff acceptance tests using synthetic information.
-7. Give the package to a builder only after unresolved blockers are visible.
-8. Require a separate approval before implementation, integration, or deployment.
+5. Confirm that every required business responsibility has a human owner and that each proposed agent has a human accountable owner.
+6. Create `agent-blueprint.yaml` that validates conceptually against the experimental schema.
+7. Run the handoff acceptance tests using synthetic information.
+8. Give the package to a builder only after unresolved blockers are visible.
+9. Require a separate approval before implementation, integration, or deployment.
 
 ## What a builder may assume
 

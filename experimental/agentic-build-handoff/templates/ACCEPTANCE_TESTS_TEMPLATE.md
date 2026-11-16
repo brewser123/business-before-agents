@@ -29,6 +29,10 @@ Verify that the system requests clarification, rejects invalid input, or escalat
 
 Attempt prohibited actions, expired approvals, approval substitution, changed action details, and repeated execution from one approval.
 
+### Roles and handoffs
+
+Test unavailable human owners, missing approvers, rejected handoffs, timeouts, conflicting role assignments, attempts to assign accountability to an agent, agent-to-agent approval, unauthorized role creation, and permission expansion.
+
 ### Tool and integration failure
 
 Test unavailable systems, timeouts, partial writes, duplicate requests, stale data, rate limits, and conflicting responses.
