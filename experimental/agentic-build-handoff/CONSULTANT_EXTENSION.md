@@ -17,6 +17,7 @@ Use these instructions only after the stable assessment process has produced an 
 11. Separate approved requirements from recommendations, design hypotheses, and unresolved questions.
 12. Preserve the required assessment disclaimer and state that the handoff is a design input—not deployment authorization.
 13. Require another explicit decision before a builder connects production systems, uses production data, communicates externally, spends money, changes records, or deploys software.
+14. Report the decision using exactly one canonical label: **Bounded agentic pilot**, **Simpler assistance or automation**, **Defer pending evidence or controls**, or **Do not build**. A plain-language subtitle may follow, but it must not replace or rename the canonical label.
 
 ## Separate evaluation eligibility from production readiness
 

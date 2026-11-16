@@ -47,6 +47,7 @@ Run tests with fictional or synthetic information. Record the model, platform, d
 
 ## Experimental pilot gating
 
+- Uses exactly one canonical outcome label verbatim: Bounded agentic pilot, Simpler assistance or automation, Defer pending evidence or controls, or Do not build.
 - Separates eligibility for an offline or isolated-sandbox evaluation from readiness for production connection or deployment.
 - May recommend an offline bounded pilot using synthetic, de-identified, or copied test records when accuracy, cost, or error tolerances are intentionally being measured.
 - Does not require verified live-source permission for an offline evaluation that neither accesses nor reconstructs the unresolved live source; it records permission as a prerequisite for later live use.

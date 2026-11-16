@@ -28,6 +28,8 @@ Select one:
 - [ ] Defer pending evidence or controls
 - [ ] Do not build
 
+Use the selected wording verbatim in every assessment, summary, handoff decision, and machine-readable record. An explanatory subtitle may follow the canonical label but may not replace it with terms such as “ready,” “readiness required,” “stop,” or numbered outcomes.
+
 ## Gate 1 — safe evaluation eligibility
 
 - Can representative synthetic, de-identified, or copied test records be used safely? yes / no / unknown
