@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Beginner-friendly guided setup for Business Before Agents in ChatGPT or Claude.">
+  <title>Guided setup · Business Before Agents</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="article-page install-page">
+    <a class="back-link" href="index.html">← Business Before Agents</a>
+    <p class="eyebrow">No Git or coding experience needed</p>
+    <h1>Let your AI guide the setup.</h1>
+    <p class="article-lede">Open ChatGPT or Claude, paste the message below, and follow one simple step at a time. Your assistant will first check whether it can read the framework directly.</p>
+
+    <div class="notice">
+      <strong>Setup comes before business discovery.</strong>
+      <p>Do not share confidential business information until the framework files have been verified and you have reviewed the privacy guidance.</p>
+    </div>
+
+    <section class="prompt-section" aria-labelledby="prompt-title">
+      <p class="eyebrow">Copy and paste</p>
+      <h2 id="prompt-title">Your setup-help message</h2>
+      <pre class="prompt-box" id="setup-prompt-text">I would like to use the Business Before Agents framework, but I am not familiar with GitHub or installing files.
+
+Please read the guided setup at:
+https://github.com/brewser123/business-before-agents/blob/v0.1-preview/BOOTSTRAP.md
+
+First, tell me whether you can access that guide and its bootstrap.json file. Then guide me through the easiest setup method available in this version of ChatGPT or Claude.
+
+Please follow these rules:
+- Assume I have no experience with GitHub or AI Projects.
+- Use plain language and give me only one step at a time.
+- Do not ask me to use command-line tools, Git commands, or programming.
+- Do not claim the framework is ready until every required file has been verified.
+- If you cannot access the files directly, tell me exactly what to click, download, extract, or upload.
+- Do not ask me to share confidential business information during setup.
+- Stop after setup is complete and wait for me to say: “Start the Business Before Agents discovery interview.”</pre>
+      <button class="button button-primary" type="button" data-copy-target="setup-prompt-text" data-status-id="setup-copy-status" data-copied-label="Setup message copied">Copy the setup message</button>
+      <p class="copy-status" id="setup-copy-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <h2>What happens next?</h2>
+    <ol class="plain-steps">
+      <li><strong>Your assistant checks access.</strong> It should tell you whether it can read the approved GitHub files.</li>
+      <li><strong>It verifies the framework.</strong> It checks the project name, version, and every required file before continuing.</li>
+      <li><strong>It guides any manual steps.</strong> If direct access is unavailable, it explains exactly what to click and add—without Git commands.</li>
+      <li><strong>You choose when to begin.</strong> Setup stops before the interview and waits for your instruction.</li>
+    </ol>
+
+    <div class="platform-choice-grid">
+      <section class="sample-panel">
+        <p class="eyebrow">Using ChatGPT?</p>
+        <h3>Use a private Project when possible.</h3>
+        <p>A Project can keep related chats, sources, and instructions together. GitHub availability varies by plan and workspace, so the setup prompt includes a manual fallback.</p>
+        <a class="text-link" href="https://github.com/brewser123/business-before-agents/blob/v0.1-preview/platforms/chatgpt/GITHUB_GUIDED_SETUP.md">Read the ChatGPT guide <span aria-hidden="true">→</span></a>
+      </section>
+      <section class="sample-panel sample-panel-muted">
+        <p class="eyebrow">Using Claude?</p>
+        <h3>Add the approved files to Project Knowledge.</h3>
+        <p>Claude's GitHub integration can add selected repository files to a Project and synchronize them after future releases.</p>
+        <a class="text-link" href="https://github.com/brewser123/business-before-agents/blob/v0.1-preview/platforms/claude/GITHUB_GUIDED_SETUP.md">Read the Claude guide <span aria-hidden="true">→</span></a>
+      </section>
+    </div>
+
+    <h2>Prefer to add the files yourself?</h2>
+    <p>You can still download the complete framework and add its required files to a private AI Project. The ZIP includes the same guided setup and manifest.</p>
+    <a class="button button-secondary" href="business-before-agents-v0.1-preview.zip" download>Download the framework</a>
+
+    <div class="notice advisory-notice">
+      <strong>A guided setup is not a permanent automatic installation.</strong>
+      <p>Access, file retention, and available tools depend on the AI product, plan, workspace settings, and permissions. Keep approved checkpoints in private storage the business controls.</p>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

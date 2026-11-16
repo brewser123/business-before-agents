@@ -1,19 +1,28 @@
-const copyButton = document.querySelector('#copy-prompt');
-const copyStatus = document.querySelector('#copy-status');
+const copyButtons = document.querySelectorAll('[data-prompt], [data-copy-target]');
 
-if (copyButton && copyStatus) {
+copyButtons.forEach((copyButton) => {
   copyButton.addEventListener('click', async () => {
-    const prompt = copyButton.dataset.prompt;
+    const target = copyButton.dataset.copyTarget
+      ? document.getElementById(copyButton.dataset.copyTarget)
+      : null;
+    const prompt = copyButton.dataset.prompt || target?.textContent.trim();
+    const copyStatus = copyButton.dataset.statusId
+      ? document.getElementById(copyButton.dataset.statusId)
+      : null;
+    const originalLabel = copyButton.textContent;
+
+    if (!prompt) return;
+
     try {
       await navigator.clipboard.writeText(prompt);
-      copyStatus.textContent = 'Starting prompt copied.';
-      copyButton.textContent = 'Copied';
+      if (copyStatus) copyStatus.textContent = 'Copied to your clipboard.';
+      copyButton.textContent = copyButton.dataset.copiedLabel || 'Copied';
       window.setTimeout(() => {
-        copyButton.textContent = 'Copy the starting prompt';
-        copyStatus.textContent = '';
+        copyButton.textContent = originalLabel;
+        if (copyStatus) copyStatus.textContent = '';
       }, 2400);
     } catch {
-      copyStatus.textContent = prompt;
+      if (copyStatus) copyStatus.textContent = 'Select and copy the message shown above.';
     }
   });
-}
+});

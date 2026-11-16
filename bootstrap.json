@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "name": "Business Before Agents",
+  "version": "0.1-preview",
+  "release": "v0.1-preview",
+  "repository": "https://github.com/brewser123/business-before-agents",
+  "website": "https://business-before-agents.pureboard1.chatgpt.site",
+  "bootstrap_file": "BOOTSTRAP.md",
+  "framework_license": "CC-BY-4.0",
+  "required_files": [
+    "README.md",
+    "config/framework.yaml",
+    "core/CONSULTANT.md",
+    "core/PRINCIPLES.md",
+    "core/DISCOVERY.md",
+    "core/EVIDENCE.md",
+    "core/GOVERNANCE.md",
+    "privacy/PRIVACY.md",
+    "templates/BUSINESS_STATE_TEMPLATE.md",
+    "templates/PRELIMINARY_ASSESSMENT_TEMPLATE.md"
+  ],
+  "optional_files": [
+    "privacy/DATA_CLASSIFICATION.md",
+    "privacy/LOCAL_DEPLOYMENT.md",
+    "references/EVIDENCE_BASE.md",
+    "tests/ACCEPTANCE_TESTS.md",
+    "examples/FICTIONAL_BUSINESSES.md",
+    "examples/SAMPLE_OUTPUT.md"
+  ],
+  "excluded_from_runtime_setup": [
+    "dist/"
+  ],
+  "verification": {
+    "expected_framework_name": "Business Before Agents",
+    "expected_version": "0.1-preview",
+    "all_required_files_must_be_available": true,
+    "private_business_information_during_setup": "prohibited"
+  },
+  "commands": {
+    "start": "Start the Business Before Agents discovery interview.",
+    "pause": "Pause and create my resume checkpoint.",
+    "resume": "Resume from my last approved checkpoint."
+  }
+}

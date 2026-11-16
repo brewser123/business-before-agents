@@ -13,6 +13,8 @@ licensing:
   source: https://github.com/brewser123/business-before-agents
 
 entrypoints:
+  bootstrap: BOOTSTRAP.md
+  bootstrap_manifest: bootstrap.json
   consultant: core/CONSULTANT.md
   principles: core/PRINCIPLES.md
   discovery: core/DISCOVERY.md

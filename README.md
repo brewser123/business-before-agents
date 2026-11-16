@@ -68,14 +68,20 @@ Completed assessments include this disclosure and ask for a simple acknowledgmen
 
 ## Quick start
 
+### Not sure how to use GitHub or install files?
+
+You do not need to understand Git, use a terminal, or write code. Open ChatGPT or Claude and ask it to guide you through [BOOTSTRAP.md](BOOTSTRAP.md), one step at a time. The public website provides a ready-to-copy setup prompt.
+
+### Manual setup
+
 1. Choose a setup guide under `platforms/`.
 2. Review `privacy/PRIVACY.md` before sharing business information.
-3. Load the files in `core/` into your AI project's instructions or knowledge area.
+3. Use `bootstrap.json` to verify and load the required files into your private AI Project's sources, instructions, or knowledge area.
 4. Copy `templates/BUSINESS_STATE_TEMPLATE.md` into private, access-controlled storage.
 5. Begin with: **“Start the Business Before Agents discovery interview.”**
 6. Review and approve each checkpoint before the consultant treats it as established fact.
 7. When you want to stop, say: **“Pause and create my resume checkpoint.”** Save the approved checkpoint with your private business-state file.
-8. When you return, say: **“Resume from my last approved checkpoint.”** Provide the checkpoint if the AI project cannot retrieve it.
+8. When you return, say: **“Resume from my last approved checkpoint.”** Provide the checkpoint if the AI Project cannot retrieve it.
 
 ## Privacy boundary
 
@@ -95,6 +101,7 @@ The framework supports businesses in any lawful industry, including travel and h
 - `references/` — evidence notes, external studies, standards, and news examples
 - `tests/` — acceptance tests for controlled evaluation
 - `config/` — portable framework metadata
+- `BOOTSTRAP.md` and `bootstrap.json` — beginner-friendly, versioned guided setup
 
 For a short illustration of the kind of deliverable an owner might receive—without reproducing the full discovery structure—see [Sample Output: The Toy Scout](examples/SAMPLE_OUTPUT.md).
 

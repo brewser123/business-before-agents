@@ -2,9 +2,11 @@
 
 Interface names and data practices can change; verify the current product documentation and account settings before use.
 
+If you are unfamiliar with GitHub or AI Projects, begin with [Guided GitHub Setup for Claude](GITHUB_GUIDED_SETUP.md). It explains how to add the approved repository files to Project Knowledge and provides a plain-language verification prompt.
+
 1. Create a private project dedicated to one business assessment.
 2. Review `privacy/PRIVACY.md` and determine which information is suitable for this hosted environment.
-3. Add the files in `core/` to project knowledge and place the operating rules from `core/CONSULTANT.md` in project instructions where appropriate.
+3. Add the required files listed in `bootstrap.json` to Project Knowledge and place the operating rules from `core/CONSULTANT.md` in Project Instructions where appropriate.
 4. Keep completed business-state and assessment files in private, access-controlled storage.
 5. Begin with: **“Start the Business Before Agents discovery interview. Ask one question at a time and request approval at each meaningful checkpoint.”**
 6. Reattach or restate the last approved checkpoint when context is uncertain.

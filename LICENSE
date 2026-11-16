@@ -7,8 +7,8 @@ This repository uses a dual-license structure based on the type of material.
 1. Framework content — CC BY 4.0
 
 The written Business Before Agents framework is licensed under the Creative
-Commons Attribution 4.0 International License (CC BY 4.0). This includes the
-README and the material in these directories:
+Commons Attribution 4.0 International License (CC BY 4.0). This includes
+README.md, BOOTSTRAP.md, bootstrap.json, and the material in these directories:
 
   config/
   core/
