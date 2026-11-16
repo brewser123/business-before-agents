@@ -1,7 +1,8 @@
 # Fictional, incomplete illustration. Not builder-ready and not a recommendation for a real business.
-schema_version: 0.1-experimental
+schema_version: 0.2-experimental
 initiative: Toy Scout lead-triage pilot
 decision: bounded_agentic_pilot
+pilot_stage: offline_evaluation
 owner: Fictional business owner
 operating_model: human_team_with_ai_assistance
 
@@ -33,7 +34,7 @@ roles:
     recommendations:
       - Recommend which candidates deserve human review.
     permitted_actions:
-      - Read the approved test source within its documented limit.
+      - Read synthetic or specifically copied test records within the evaluation limit.
       - Prepare a private candidate list.
     prohibited_actions:
       - Contact sellers.
@@ -56,7 +57,7 @@ outcome:
 
 scope:
   included:
-    - One owner-approved source.
+    - Synthetic or specifically copied records representing one proposed source.
     - One narrow product category.
     - Private candidate summaries and ranking explanations.
   excluded:
@@ -70,7 +71,7 @@ workflow:
   trigger: Owner starts the daily review for the approved source.
   steps:
     - id: collect-approved-candidates
-      objective: Read candidate information through the permitted test method.
+      objective: Read synthetic or specifically copied candidate records without connecting to a live source.
       approval_required: false
       on_failure: Stop and report the unavailable or prohibited source.
     - id: prepare-review-list
@@ -83,14 +84,14 @@ workflow:
       on_failure: End the run without contacting a seller or changing a record.
   completion_condition: The owner receives the candidate list and records feedback.
   stop_conditions:
-    - The source is unavailable or its permitted use is uncertain.
+    - A record requires live-source access or reconstructing unavailable source data.
     - The run exceeds its approved time or candidate limit.
     - Required original-source evidence is missing.
 
 authority:
   - capability: Read approved candidate information
     level: bounded_execution
-    approver_or_boundary: One permitted source and the pilot's candidate limit.
+    approver_or_boundary: Synthetic or copied test records only and the pilot's candidate limit.
   - capability: Prepare a private candidate list
     level: prepare_only
     approver_or_boundary: Owner reviews every suggestion.
@@ -99,9 +100,9 @@ authority:
     approver_or_boundary: Human-only during the pilot.
 
 data:
-  - source: Approved test-source candidate information
-    owner: Source platform and listing author
-    classification: Public or owner-authorized listing information
+  - source: Synthetic or specifically copied candidate test records
+    owner: Fictional business owner
+    classification: Non-production test information
     authoritative: false
 
 tools: []
@@ -118,5 +119,5 @@ tests:
   - Stop when the permitted source is unavailable.
 
 open_questions:
-  - Which source and access method are contractually permitted?
+  - Which live source and access method could be permitted for a later connected evaluation?
   - What relevant-suggestion rate justifies continuing the pilot?

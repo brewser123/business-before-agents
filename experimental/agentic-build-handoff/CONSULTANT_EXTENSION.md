@@ -18,6 +18,49 @@ Use these instructions only after the stable assessment process has produced an 
 12. Preserve the required assessment disclaimer and state that the handoff is a design input—not deployment authorization.
 13. Require another explicit decision before a builder connects production systems, uses production data, communicates externally, spends money, changes records, or deploys software.
 
+## Separate evaluation eligibility from production readiness
+
+Apply two distinct gates. Do not combine them into one readiness judgment.
+
+### Gate 1 — safe evaluation eligibility
+
+This gate asks whether the business can learn from a controlled experiment without exposing production systems, confidential records, customers, money, or externally binding actions.
+
+A bounded agentic pilot may begin as an **offline evaluation** when all of the following are true:
+
+- the business outcome and owner are identified
+- the proposed workflow has enough structure to define inputs, outputs, human review, completion, and stop conditions
+- synthetic, de-identified, or specifically copied test records can represent the important cases
+- every output remains a recommendation or private draft for human review
+- no production credentials, live integrations, purchases, record changes, publication, or external communication are required
+- unknown accuracy, cost, and error tolerance can be measured by the evaluation rather than assumed in advance
+- a named person can stop the evaluation and return to the current manual process
+
+Missing live-source permission, a selected vendor, a production budget, finalized error thresholds, or production-grade controls does not automatically require deferment when the offline evaluation is specifically designed to measure those unknowns without using the unresolved source or production environment. Record each item as a production precondition.
+
+Select **defer pending evidence or controls** when the goal, owner, authority boundary, representative test inputs, human fallback, evaluation criteria, or safe test environment is too unclear to design even an isolated experiment. Defer also when the owner cannot authorize the test information or when the proposed learning requires an unsafe or unauthorized action.
+
+### Gate 2 — production readiness
+
+This gate is separate and later. Passing an offline or isolated-sandbox evaluation does not authorize:
+
+- connection to a live source or production system
+- use of production or confidential data
+- spending, purchasing, pricing, publishing, messaging, or record changes
+- reliance by customers, employees, or other affected people
+- deployment, ongoing operation, or expansion of authority
+
+Before any of these activities, verify applicable permissions, data handling, vendor terms, integrations, costs, security, legal obligations, monitoring, incident response, and approved operating thresholds. Record a separate human decision for each implementation stage.
+
+### Pilot stages
+
+For a bounded agentic pilot, select exactly one stage:
+
+1. **Offline evaluation** — synthetic, de-identified, or copied test information; no live integration or external action.
+2. **Isolated sandbox** — approved non-production systems and test accounts with enforced limits; no production or externally binding action.
+
+Production-connected operation is not a pilot stage authorized by this extension. It requires a separate production-readiness review and explicit business approval.
+
 ## Agentic necessity test
 
 Recommend a bounded agentic pilot only when the workflow benefits from several of the following:
@@ -30,6 +73,8 @@ Recommend a bounded agentic pilot only when the workflow benefits from several o
 - iterating within documented limits until a completion or stop condition is reached
 
 Prefer a simpler approach when the need is adequately met by retrieval, summarization, drafting, classification, a fixed workflow, a deterministic rule, a scheduled report, or conventional software.
+
+When an offline evaluation is appropriate, compare the agentic pattern with the simplest credible baseline. The pilot should demonstrate that adaptive multi-step behavior provides useful value beyond a structured template, deterministic check, fixed automation, or ordinary software.
 
 ## Minimum handoff completeness
 
@@ -51,6 +96,7 @@ Do not mark the package builder-ready unless it identifies:
 - logging, monitoring, retention, shutdown, and rollback expectations
 - open questions, dependencies, and assumptions
 - synthetic acceptance tests
+- the selected pilot stage and the production activities that remain prohibited
 
 ## Handoff statement
 

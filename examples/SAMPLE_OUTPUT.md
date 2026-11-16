@@ -64,6 +64,8 @@ Generate first drafts for marketplace listings, customer alerts, newsletters, an
 
 Run a **30-day lead-triage pilot** using one permitted source and one narrow category, such as 1980s action figures in original packaging.
 
+If permission for a live source is not yet verified, begin as an **offline evaluation** using synthetic or specifically copied records. Do not connect to, monitor, or reconstruct the unresolved live source. Treat live-source permission as a prerequisite for any later connected test.
+
 1. Record how the owner currently finds and evaluates leads for one week.
 2. Define a simple interest profile: brands, years, condition, maximum purchase amount, excluded items, and required evidence.
 3. Have AI prepare a private daily candidate list; do not allow it to contact sellers or place orders.

@@ -8,12 +8,23 @@ This extension turns an approved Business Before Agents assessment into a struct
 
 It does not assume that an agent is the correct outcome. It first produces one of four decisions:
 
-1. **Bounded agentic pilot** — a goal-directed workflow is sufficiently understood for a controlled experiment.
+1. **Bounded agentic pilot** — a goal-directed workflow is sufficiently understood for a controlled offline evaluation or isolated-sandbox experiment.
 2. **Simpler assistance or automation** — the need is better served by search, drafting, reporting, rules-based automation, or ordinary software.
 3. **Defer pending evidence or controls** — the opportunity may be useful, but material facts, data, authority, or safeguards are missing.
 4. **Do not build** — the expected value does not justify the risk, cost, complexity, or effect on people and customers.
 
 Only the first decision produces a complete Agentic Build Handoff Package. The second may produce a smaller implementation brief. The third produces a readiness plan. The fourth records the reason for stopping.
+
+### A pilot is not production
+
+A bounded pilot has two permitted stages:
+
+- **Offline evaluation:** synthetic, de-identified, or copied test information with no live integration or external action.
+- **Isolated sandbox:** approved non-production systems and test accounts with enforced limits.
+
+Production-connected operation is not a pilot stage. A successful evaluation may support a later production-readiness review, but it does not authorize live data, credentials, spending, record changes, external communication, or deployment.
+
+The extension evaluates safe experimentation separately from production readiness. Unresolved live-source permissions, vendor selection, production budget, or final operating thresholds may remain production blockers without preventing an offline evaluation designed to measure the unknowns safely.
 
 ## Entry gate
 
@@ -51,9 +62,10 @@ If these conditions are not met, return to discovery or record a defer/do-not-bu
 4. If a bounded agentic pilot is approved, complete the human-readable templates.
 5. Confirm that every required business responsibility has a human owner and that each proposed agent has a human accountable owner.
 6. Create `agent-blueprint.yaml` that validates conceptually against the experimental schema.
-7. Run the handoff acceptance tests using synthetic information.
-8. Give the package to a builder only after unresolved blockers are visible.
-9. Require a separate approval before implementation, integration, or deployment.
+7. Select and record the pilot stage. Begin with offline evaluation unless an approved isolated sandbox is necessary.
+8. Run the handoff acceptance tests using synthetic, de-identified, or specifically copied test information.
+9. Give the package to a builder only after unresolved blockers are visible.
+10. Require a separate approval before implementation, integration, or deployment.
 
 ## What a builder may assume
 

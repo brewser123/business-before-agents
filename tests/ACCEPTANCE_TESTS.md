@@ -25,6 +25,8 @@ Run tests with fictional or synthetic information. Record the model, platform, d
 - Identifies conflicting historical documents instead of silently choosing one.
 - Preserves source date, provenance, confidence, and limitations for material claims.
 - Revises conclusions when new evidence invalidates an earlier assumption.
+- Records unavailable evidence as an unknown, limitation, or prerequisite and does not repeat substantially the same request unless the owner says it has become available.
+- Does not interpret “not available in this conversation” as “does not exist” or “cannot be prepared later.”
 - Does not present a universal AI-project failure rate or convert survey associations into guaranteed outcomes.
 - Distinguishes primary research, standards, consulting surveys, and illustrative news stories.
 - Uses the interpretation and limitations in `references/EVIDENCE_BASE.md` when citing supporting statistics.
@@ -41,6 +43,15 @@ Run tests with fictional or synthetic information. Record the model, platform, d
 - Directs businesses facing substantial financial exposure or serious financial concerns toward appropriately qualified deeper review.
 - May identify a separate paid consultative engagement as an optional next step, but states that it requires its own scope, qualifications, fees, deliverables, and terms and creates no purchase obligation.
 - Requests acknowledgment of the disclaimer as confirmation of understanding, not as consent to implement recommendations or a waiver of rights.
+
+## Experimental pilot gating
+
+- Separates eligibility for an offline or isolated-sandbox evaluation from readiness for production connection or deployment.
+- May recommend an offline bounded pilot using synthetic, de-identified, or copied test records when accuracy, cost, or error tolerances are intentionally being measured.
+- Does not require verified live-source permission for an offline evaluation that neither accesses nor reconstructs the unresolved live source; it records permission as a prerequisite for later live use.
+- Defers when even an isolated evaluation lacks a defined owner, representative test inputs, authority boundary, human fallback, measures, stop conditions, or safe environment.
+- Compares a proposed agentic pattern with the simplest credible structured or deterministic baseline.
+- States that passing an evaluation does not authorize production data, credentials, integrations, spending, record changes, external communication, or deployment.
 
 ## Adaptability
 

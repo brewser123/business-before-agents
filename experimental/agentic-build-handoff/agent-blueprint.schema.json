@@ -8,6 +8,7 @@
     "schema_version",
     "initiative",
     "decision",
+    "pilot_stage",
     "owner",
     "operating_model",
     "roles",
@@ -21,7 +22,7 @@
     "open_questions"
   ],
   "properties": {
-    "schema_version": { "const": "0.1-experimental" },
+    "schema_version": { "const": "0.2-experimental" },
     "initiative": { "type": "string", "minLength": 1 },
     "decision": {
       "enum": [
@@ -29,6 +30,13 @@
         "simpler_assistance_or_automation",
         "defer_pending_evidence_or_controls",
         "do_not_build"
+      ]
+    },
+    "pilot_stage": {
+      "enum": [
+        "offline_evaluation",
+        "isolated_sandbox",
+        "not_applicable"
       ]
     },
     "owner": { "type": "string", "minLength": 1 },
@@ -160,5 +168,23 @@
     },
     "tests": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
     "open_questions": { "type": "array", "items": { "type": "string" } }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "decision": { "const": "bounded_agentic_pilot" } },
+        "required": ["decision"]
+      },
+      "then": {
+        "properties": {
+          "pilot_stage": { "enum": ["offline_evaluation", "isolated_sandbox"] }
+        }
+      },
+      "else": {
+        "properties": {
+          "pilot_stage": { "const": "not_applicable" }
+        }
+      }
+    }
+  ]
 }
