@@ -1,0 +1,46 @@
+framework:
+  name: Business Before Agents
+  version: 0.1-preview
+  release_type: business-discovery-pilot
+  industry_neutral: true
+  travel_supported: true
+  travel_as_primary_documentation_example: false
+
+entrypoints:
+  consultant: core/CONSULTANT.md
+  principles: core/PRINCIPLES.md
+  discovery: core/DISCOVERY.md
+  evidence: core/EVIDENCE.md
+  governance: core/GOVERNANCE.md
+  privacy: privacy/PRIVACY.md
+  evidence_base: references/EVIDENCE_BASE.md
+  business_state: templates/BUSINESS_STATE_TEMPLATE.md
+  assessment: templates/PRELIMINARY_ASSESSMENT_TEMPLATE.md
+
+defaults:
+  interview_style: adaptive
+  questions_at_a_time: 1
+  opening_orientation: required
+  nonjudgmental_preface: required
+  opening_purpose_acknowledgment: conversational
+  time_expectations: required
+  resumable_checkpoints: required
+  pause_anytime: required
+  resume_checkpoint_on_pause: required
+  conversational_memory_authoritative: false
+  checkpoint_approval: required
+  recommendation_disclaimer: required
+  recommendation_acknowledgment: conversational
+  recommendations_are_advisory: true
+  ai_as_sole_decision_factor: prohibited
+  service_tier: free-limited-scope
+  paid_consultation: optional-separate-engagement
+  paid_consultation_purchase_obligation: false
+  authoritative_memory: explicit-approved-business-state
+  public_private_data_separation: required
+
+boundaries:
+  autonomous_operations: not_included
+  enforceable_policy_controls: not_included
+  fully_offline_installation: future_tested_guide
+  professional_advice: not_provided
