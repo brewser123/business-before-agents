@@ -96,6 +96,8 @@ The framework supports businesses in any lawful industry, including travel and h
 - `tests/` — acceptance tests for controlled evaluation
 - `config/` — portable framework metadata
 
+For a short illustration of the kind of deliverable an owner might receive—without reproducing the full discovery structure—see [Sample Output: The Toy Scout](examples/SAMPLE_OUTPUT.md).
+
 ## License and attribution
 
 Business Before Agents uses a dual-license structure:
