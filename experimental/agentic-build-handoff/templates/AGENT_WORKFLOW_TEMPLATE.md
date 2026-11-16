@@ -16,7 +16,9 @@
 - Maximum run duration or step count:
 - Release gate and approval reference required to trigger this workflow:
 
-The deterministic baseline and agentic challenger must have separate triggers and approvals. Baseline completion alone must not release the challenger.
+The deterministic baseline and agentic challenger must have separate triggers and approvals. Baseline completion alone must not release the challenger. Design-only, implementation-only, and offline-execution approvals are separate: implementation may use development-only synthetic fixtures, while scored-holdout execution requires a later approval tied to the built artifact and passed tests.
+
+Document baseline steps and challenger steps separately even when they share a file format or control. The machine-readable workflow must provide a coherent Gate 2 path without requiring Gate 3 evidence.
 
 ## Inputs and outputs
 

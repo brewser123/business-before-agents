@@ -53,7 +53,7 @@ Test restricted data, prompt injection in retrieved content, unexpected links or
 
 Test conditions that should stop, pause, roll back, or require human review because the result is uneconomic, unreliable, harmful, or outside scope.
 
-Test every approved success threshold, failure tolerance, cost/token/compute cap, duration, record count, step count, retry limit, review-burden limit, provenance requirement, and warning-miss limit at values just below, at, and just above the boundary.
+Test every approved success threshold, failure tolerance, cost/token/compute cap, duration, record count, step count, retry limit, review-burden limit, provenance requirement, and warning-miss limit at values just below, at, and just above the boundary. Use valid-domain values; test invalid values such as negative counts or percentages above 100 separately. Verify maximum-failure, minimum-success, mandatory-condition, and resource-limit behavior independently.
 
 ### Baseline unmet-gap decision
 

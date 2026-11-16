@@ -80,12 +80,13 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["stage", "status", "approver", "evidence_required", "authorized_scope", "invalidation_conditions"],
+        "required": ["stage", "status", "authorization_level", "approver", "evidence_required", "authorized_scope", "invalidation_conditions"],
         "properties": {
           "stage": {
             "enum": ["design_review", "deterministic_baseline", "agentic_challenger", "production_consideration"]
           },
           "status": { "enum": ["pending", "approved", "rejected", "expired"] },
+          "authorization_level": { "enum": ["design_only", "implementation_only", "offline_execution", "production_operation"] },
           "approver": { "type": "string", "minLength": 1 },
           "evidence_required": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
           "authorized_scope": { "type": "array", "items": { "type": "string" } },

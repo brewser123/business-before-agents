@@ -25,6 +25,7 @@ Complete one record for each stage: **design review**, **deterministic baseline*
 
 - Stage:
 - Status: pending / approved / rejected / expired
+- Authorization level: design only / implementation only / offline execution / production operation
 - Human approver:
 - Evidence required:
 - Approved criteria and limits:
@@ -33,6 +34,8 @@ Complete one record for each stage: **design review**, **deterministic baseline*
 - Approval reference and date:
 - Expiration:
 - Conditions that invalidate this approval:
+
+Implementation permission and execution permission are different. A gate may first approve an exact specification for implementation using development-only synthetic fixtures. Update and reapprove the versioned gate with the built artifact, test evidence, and **offline execution** level before processing the scored holdout. Do not require a built artifact before granting implementation-only authority.
 
 ## Evaluation criteria
 
@@ -43,6 +46,16 @@ Every executable evaluation must replace qualitative goals with approved, testab
 | | | | | | | pending / approved |
 
 Include relevant quality, safety, cost, token or compute, duration, record-count, step-count, retry, review-burden, provenance, privacy, and warning-miss criteria. An unresolved value is a hard blocker for the stage that depends on it, not permission for the builder to choose a convenient number.
+
+For every calculated measure, define the numerator, denominator, comparison method, valid input domain, empty-class or zero-denominator behavior, rounding rule, timing protocol, and treatment of missing or excluded cases. Distinguish manual-to-baseline improvement from baseline-to-challenger improvement; never compare a baseline with itself.
+
+Boundary behavior must be explicit:
+
+- maximum-failure criteria violate only when exceeded
+- minimum-success criteria fail at final scoring or earlier when mathematically unattainable
+- mandatory conditions fail immediately
+- no new unit of work may begin if it would exceed a resource limit
+- reaching an exact resource cap after valid completion is not itself a quality failure
 
 ## Baseline unmet-gap gate
 
@@ -59,6 +72,8 @@ Completing the deterministic baseline does not authorize an agentic challenger. 
 - Why bounded adaptive behavior may address this specific gap:
 - Owner decision: stop / revise baseline / authorize challenger
 - Approver, date, and decision reference:
+
+When more than one deterministic version is required, freeze all versions before holdout exposure and define whether the same error cases must persist across them. Holdout results must not be used to tune a version later presented as confirmatory evidence.
 
 If the baseline meets the business need, select **Simpler assistance or automation** and do not build the challenger.
 

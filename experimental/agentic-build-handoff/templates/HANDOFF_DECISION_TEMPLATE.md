@@ -19,7 +19,9 @@ Include the handoff statement from `CONSULTANT_EXTENSION.md`.
 - People affected:
 - Consequence if nothing changes:
 
-## Decision
+## Proposed decision — pending owner review
+
+Make clear whether the checked item is the consultant's proposal or an owner-approved decision. A proposed selection must not appear predetermined. The owner may correct it, select another canonical outcome, defer, or stop.
 
 Select one:
 
@@ -47,7 +49,7 @@ If **Bounded agentic pilot** is selected, choose exactly one:
 
 Do not select defer merely because production permissions, vendors, budgets, or final thresholds are unresolved when an offline evaluation can measure the unknowns safely. Do select defer when even an isolated evaluation lacks an owner, representative inputs, authority boundaries, human fallback, measures, or a safe environment.
 
-## Gate 2 — production readiness
+## Production-readiness review — separate from Release Gate 2
 
 - Production readiness reviewed: yes / no
 - Live sources and permissions verified:

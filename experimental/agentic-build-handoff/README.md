@@ -43,6 +43,7 @@ If these conditions are not met, return to discovery or record a defer/do-not-bu
 
 - `CONSULTANT_EXTENSION.md` — additional rules for creating the handoff
 - `templates/HANDOFF_DECISION_TEMPLATE.md` — build/no-build eligibility decision
+- `templates/OWNER_DECISION_SUMMARY_TEMPLATE.md` — three-interaction, plain-language owner view
 - `templates/RELEASE_GATES_TEMPLATE.md` — stage approvals, testable criteria, unmet-gap decision, and authority by stage
 - `templates/IMPLEMENTATION_BRIEF_TEMPLATE.md` — problem, outcome, scope, and requirements
 - `templates/AGENT_WORKFLOW_TEMPLATE.md` — triggers, states, steps, exceptions, and completion
@@ -73,7 +74,7 @@ If these conditions are not met, return to discovery or record a defer/do-not-bu
 
 ## Right-sized owner experience
 
-The owner should normally review a compact decision panel, not every builder-facing file. The consultant should translate the conversation into proposed criteria, explain the few decisions that require human judgment, and generate the detailed authority, workflow, control, test, and schema artifacts behind the scenes. Technical detail remains available for review but should not become an unnecessary questionnaire.
+The owner should normally move through three interactions: confirm the problem and boundary; approve, correct, or stop one plain-language baseline package; then return after results to choose the simpler approach, stop, or consider a separately specified challenger. The owner should not have to approve each technical field individually or read every builder-facing file. The consultant should translate the conversation into proposed criteria, explain the few decisions that require human judgment, and generate the detailed authority, workflow, control, test, and schema artifacts behind the scenes. Technical detail remains available for review but should not become an unnecessary questionnaire.
 
 Use stricter review only when the risk and stage justify it. Evaluation may require sequential named reviewers and no substitutes to protect a scored holdout. A later operating proposal may consider parallel review, delegation, sampling, or exception-only escalation, but only through a separate evidence-based design and approval. Pilot success never relaxes human review automatically.
 

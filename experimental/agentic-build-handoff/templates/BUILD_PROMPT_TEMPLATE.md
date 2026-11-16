@@ -17,9 +17,12 @@ Before writing or changing code:
 7. Produce an implementation and test plan for approval.
 8. Design the deterministic baseline before any agentic challenger.
 9. Verify the release-gate status, approved numeric criteria and limits, and approval reference for the exact stage.
-10. Refuse an agentic implementation unless the approved unmet-gap record identifies the baseline result, required threshold, measured gap, business consequence, simpler options considered, and exact challenger authorization.
-11. Keep evaluation authority separate from proposed operational authority and approved production authority.
-12. Wait for explicit approval before implementation.
+10. Verify the authorization level. Design-only, implementation-only, offline-execution, and production-operation approvals are not interchangeable.
+11. Refuse an agentic implementation unless the approved unmet-gap record identifies the baseline result, required threshold, measured gap, business consequence, simpler options considered, and exact challenger authorization.
+12. Keep evaluation authority separate from proposed operational authority and approved production authority.
+13. Wait for the matching explicit approval before planning, implementation, or execution.
+
+If the design-review gate is pending, perform only the explicitly requested read-only review, report blockers, and stop. After design-only approval, prepare the specification. After implementation-only approval, build only with development fixtures. Process the scored holdout only after offline-execution approval tied to the artifact and passed tests.
 
 During implementation:
 - Do not invent business rules, credentials, permissions, data, or approvals.

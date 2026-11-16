@@ -34,7 +34,9 @@ This section is design-only and grants no authority.
 
 Evaluation success does not approve the proposed operating pattern or production authority.
 
-## Action authority matrix
+## Conditional future action authority matrix
+
+State whether this matrix describes current enforceable authority or the maximum authority a future approved stage may grant. If the current machine-readable authority is default-deny, do not present conditional execution rows as currently available.
 
 For each capability select **prohibited**, **prepare only**, **execute with specific approval**, or **execute within documented bounds**.
 

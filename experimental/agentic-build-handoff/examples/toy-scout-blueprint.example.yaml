@@ -9,6 +9,7 @@ operating_model: human_team_with_ai_assistance
 release_gates:
   - stage: design_review
     status: approved
+    authorization_level: design_only
     approver: Fictional business owner
     evidence_required:
       - Assessment and handoff decision reviewed.
@@ -19,6 +20,7 @@ release_gates:
     approval_reference: Fictional design-review decision
   - stage: deterministic_baseline
     status: pending
+    authorization_level: implementation_only
     approver: Fictional business owner
     evidence_required:
       - Approved synthetic-data manifest, fixed rules, criteria, limits, and test plan.
@@ -28,6 +30,7 @@ release_gates:
     approval_reference: ""
   - stage: agentic_challenger
     status: pending
+    authorization_level: implementation_only
     approver: Fictional business owner
     evidence_required:
       - Baseline results and an approved unmet-gap record explaining why simpler assistance is insufficient.
@@ -37,6 +40,7 @@ release_gates:
     approval_reference: ""
   - stage: production_consideration
     status: pending
+    authorization_level: production_operation
     approver: Fictional business owner
     evidence_required:
       - Separate production-readiness review and explicit production decision.
