@@ -221,6 +221,8 @@ footer p { margin: .25rem 0 0; color: var(--muted); }
 .article-page a { color: var(--green); }
 .back-link { display: inline-block; margin-bottom: 3rem; font-weight: 800; }
 .notice { padding: 1.4rem; background: var(--green-light); border-left: 4px solid var(--green); border-radius: 0 12px 12px 0; }
+.notice p:last-child { margin-bottom: 0; }
+.attribution-copy { margin: 1.5rem 0; padding: 1.4rem; color: var(--ink); background: var(--surface); border: 1px solid var(--border); border-radius: 12px; }
 
 :focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
 

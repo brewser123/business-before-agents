@@ -1,21 +1,45 @@
-MIT License
+Business Before Agents — Licensing
 
 Copyright (c) 2026 Business Before Agents contributors
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This repository uses a dual-license structure based on the type of material.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. Framework content — CC BY 4.0
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+The written Business Before Agents framework is licensed under the Creative
+Commons Attribution 4.0 International License (CC BY 4.0). This includes the
+README and the material in these directories:
+
+  config/
+  core/
+  examples/
+  platforms/
+  privacy/
+  references/
+  templates/
+  tests/
+
+You may share and adapt this material, including for commercial and
+closed-source uses, provided that you give appropriate credit, link to the
+license, and indicate whether changes were made.
+
+License notice: LICENSES/CC-BY-4.0.txt
+Legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+Attribution guidance: ATTRIBUTION.md
+
+2. Website software — MIT
+
+The website source code in dist/, excluding the framework ZIP archive and the
+written content reproduced from the framework, is licensed under the MIT
+License. The MIT License applies to the HTML structure, CSS, and JavaScript
+implementation.
+
+License text: LICENSES/MIT.txt
+
+3. Packaged framework
+
+The downloadable framework ZIP is licensed under CC BY 4.0 except for any
+software files that explicitly state that the MIT License applies.
+
+Third-party material, if any, remains subject to its own stated license. No
+license grants rights to third-party trademarks, service marks, or branding.

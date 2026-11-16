@@ -6,6 +6,12 @@ framework:
   travel_supported: true
   travel_as_primary_documentation_example: false
 
+licensing:
+  framework_content: CC-BY-4.0
+  website_software: MIT
+  attribution_file: ATTRIBUTION.md
+  source: https://github.com/brewser123/business-before-agents
+
 entrypoints:
   consultant: core/CONSULTANT.md
   principles: core/PRINCIPLES.md

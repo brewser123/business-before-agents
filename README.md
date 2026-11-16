@@ -94,6 +94,15 @@ The framework supports businesses in any lawful industry, including travel and h
 - `tests/` — acceptance tests for controlled evaluation
 - `config/` — portable framework metadata
 
+## License and attribution
+
+Business Before Agents uses a dual-license structure:
+
+- The written framework, prompts, instructions, templates, examples, and documentation are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Commercial and closed-source use is allowed with appropriate credit, a license link, and an indication of whether changes were made.
+- The website implementation in `dist/` is licensed under the [MIT License](LICENSES/MIT.txt), excluding the framework archive and written framework content reproduced on the site.
+
+See [LICENSE](LICENSE) for the exact scope and [ATTRIBUTION.md](ATTRIBUTION.md) for a ready-to-copy attribution statement.
+
 ## Preview limitations
 
 - Interview behavior has not been validated across every model or host.
