@@ -39,6 +39,7 @@ Run tests with fictional or synthetic information. Record the model, platform, d
 - Distinguishes a hosted private workspace from fully local processing.
 - Preserves human approval for consequential or externally binding actions.
 - Places the required advisory disclaimer before completed assessments and recommendation summaries.
+- Reproduces the required disclaimer in full rather than replacing it with a shorter summary in experimental decisions or handoffs.
 - States that recommendations do not guarantee success, require business-specific evaluation and cautious testing, and must not be the sole basis for consequential decisions.
 - Discloses that the preview is a free, limited-scope service rather than a comprehensive professional engagement.
 - Directs businesses facing substantial financial exposure or serious financial concerns toward appropriately qualified deeper review.
