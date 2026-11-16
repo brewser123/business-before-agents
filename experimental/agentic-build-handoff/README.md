@@ -1,6 +1,6 @@
 # Experimental Agentic Build Handoff
 
-> **Status: experimental extension.** This material is not part of the stable `v0.1-preview` guided installation. It has not been validated across AI builders or production environments and must not be represented as an automatically deployable system.
+> **Status: experimental extension.** This material is not part of the stable `v0.1-preview` guided installation. It has received limited private validation with multiple AI builder models but has not been broadly validated across businesses, builders, or production environments and must not be represented as an automatically deployable system.
 
 ## Purpose
 
@@ -43,6 +43,7 @@ If these conditions are not met, return to discovery or record a defer/do-not-bu
 
 - `CONSULTANT_EXTENSION.md` — additional rules for creating the handoff
 - `templates/HANDOFF_DECISION_TEMPLATE.md` — build/no-build eligibility decision
+- `templates/RELEASE_GATES_TEMPLATE.md` — stage approvals, testable criteria, unmet-gap decision, and authority by stage
 - `templates/IMPLEMENTATION_BRIEF_TEMPLATE.md` — problem, outcome, scope, and requirements
 - `templates/AGENT_WORKFLOW_TEMPLATE.md` — triggers, states, steps, exceptions, and completion
 - `templates/ROLE_AND_RESPONSIBILITY_ARCHITECTURE_TEMPLATE.md` — human roles, agent support, accountability, handoffs, and role coverage
@@ -59,13 +60,22 @@ If these conditions are not met, return to discovery or record a defer/do-not-bu
 1. Load the approved assessment and approved business-state record.
 2. Apply the consultant extension and complete the handoff decision.
 3. Ask the owner to approve or correct the decision.
-4. If a bounded agentic pilot is approved, complete the human-readable templates.
-5. Confirm that every required business responsibility has a human owner and that each proposed agent has a human accountable owner.
-6. Create `agent-blueprint.yaml` that validates conceptually against the experimental schema.
-7. Select and record the pilot stage. Begin with offline evaluation unless an approved isolated sandbox is necessary.
-8. Run the handoff acceptance tests using synthetic, de-identified, or specifically copied test information.
-9. Give the package to a builder only after unresolved blockers are visible.
-10. Require a separate approval before implementation, integration, or deployment.
+4. Complete the release-gate panel. Keep unresolved values pending; do not let the builder choose business thresholds.
+5. Design and approve the deterministic baseline before any agentic implementation.
+6. After baseline results, require a separate unmet-gap decision. If the baseline meets the need, select simpler assistance or automation and stop the agentic path.
+7. If a bounded agentic challenger is separately approved, complete the remaining human-readable templates.
+8. Confirm that every required business responsibility has a human owner and that each proposed agent has a human accountable owner.
+9. Create `agent-blueprint.yaml` that validates against the experimental schema.
+10. Select and record the pilot stage. Begin with offline evaluation unless an approved isolated sandbox is necessary.
+11. Run the handoff acceptance tests using synthetic, de-identified, or specifically copied test information.
+12. Give the package to a builder only after unresolved blockers are visible.
+13. Require separate approvals for the deterministic baseline, agentic challenger, and any later production consideration.
+
+## Right-sized owner experience
+
+The owner should normally review a compact decision panel, not every builder-facing file. The consultant should translate the conversation into proposed criteria, explain the few decisions that require human judgment, and generate the detailed authority, workflow, control, test, and schema artifacts behind the scenes. Technical detail remains available for review but should not become an unnecessary questionnaire.
+
+Use stricter review only when the risk and stage justify it. Evaluation may require sequential named reviewers and no substitutes to protect a scored holdout. A later operating proposal may consider parallel review, delegation, sampling, or exception-only escalation, but only through a separate evidence-based design and approval. Pilot success never relaxes human review automatically.
 
 ## What a builder may assume
 

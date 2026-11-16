@@ -1,10 +1,123 @@
 # Fictional, incomplete illustration. Not builder-ready and not a recommendation for a real business.
-schema_version: 0.2-experimental
+schema_version: 0.3-experimental
 initiative: Toy Scout lead-triage pilot
 decision: bounded_agentic_pilot
 pilot_stage: offline_evaluation
 owner: Fictional business owner
 operating_model: human_team_with_ai_assistance
+
+release_gates:
+  - stage: design_review
+    status: approved
+    approver: Fictional business owner
+    evidence_required:
+      - Assessment and handoff decision reviewed.
+    authorized_scope:
+      - Design review only.
+    invalidation_conditions:
+      - Business outcome, owner, or evidence boundary changes.
+    approval_reference: Fictional design-review decision
+  - stage: deterministic_baseline
+    status: pending
+    approver: Fictional business owner
+    evidence_required:
+      - Approved synthetic-data manifest, fixed rules, criteria, limits, and test plan.
+    authorized_scope: []
+    invalidation_conditions:
+      - Any dataset, rule, criterion, limit, reviewer, or environment change.
+    approval_reference: ""
+  - stage: agentic_challenger
+    status: pending
+    approver: Fictional business owner
+    evidence_required:
+      - Baseline results and an approved unmet-gap record explaining why simpler assistance is insufficient.
+    authorized_scope: []
+    invalidation_conditions:
+      - Baseline, holdout, model, prompt, tool, criterion, or authority change.
+    approval_reference: ""
+  - stage: production_consideration
+    status: pending
+    approver: Fictional business owner
+    evidence_required:
+      - Separate production-readiness review and explicit production decision.
+    authorized_scope: []
+    invalidation_conditions:
+      - Any material production use, data, integration, control, vendor, or risk change.
+    approval_reference: ""
+
+evaluation_criteria:
+  - id: provenance-completeness
+    measure: Material packet statements with traceable supplied evidence or deterministic calculation
+    criterion_type: minimum_success
+    operator: gte
+    value: 100
+    unit: percent
+    measurement_method: Human reviewer checks each material statement against the provenance trace.
+    status: pending
+    owner: Fictional business owner
+    approval_reference: ""
+  - id: false-positive-tolerance
+    measure: Poor leads incorrectly recommended for review
+    criterion_type: maximum_failure
+    operator: lte
+    value: null
+    unit: percent
+    measurement_method: Compare recommendations with the frozen human-labeled holdout.
+    status: pending
+    owner: Fictional business owner
+    approval_reference: ""
+  - id: warning-miss-tolerance
+    measure: Known condition or authenticity warnings missed
+    criterion_type: maximum_failure
+    operator: lte
+    value: null
+    unit: count
+    measurement_method: Count missed warnings in the frozen labeled holdout.
+    status: pending
+    owner: Fictional business owner
+    approval_reference: ""
+  - id: evaluation-cost-cap
+    measure: Total approved evaluation cost
+    criterion_type: resource_limit
+    operator: lte
+    value: null
+    unit: USD
+    measurement_method: Sum recorded model, compute, and human-review costs for the approved run.
+    status: pending
+    owner: Fictional business owner
+    approval_reference: ""
+
+baseline_gap_gate:
+  status: not_evaluated
+  business_need: Reduce review effort without losing useful discoveries or condition and authenticity warnings.
+  baseline_method: Pending owner approval of a deterministic fixed-workflow comparator.
+  baseline_result: Not evaluated.
+  required_threshold: Pending approved evaluation criteria.
+  measured_gap: Not measured.
+  business_consequence: Unknown until the baseline is evaluated.
+  simpler_options_considered:
+    - Structured review template
+    - Deterministic duplicate and comparison rules
+    - Ordinary AI drafting without agentic control
+  why_simpler_insufficient: Not established.
+  owner_decision: pending
+  approver: Fictional business owner
+  decision_reference: ""
+
+authority_by_stage:
+  evaluation:
+    status: pending
+    human_review_model: Strict sequential review by the named evidence reviewers and owner for a scored evaluation.
+    substitution_rule: No substitution without a new staffing decision, updated tests, and new approval.
+    authority_reference: HUMAN_AUTHORITY.md evaluation section
+  proposed_operations:
+    status: not_designed
+    human_review_model: Must be proposed from evidence after evaluation; evaluation rules do not become operating rules automatically.
+    substitution_rule: Any delegation, parallel review, sampling, or exception-only review requires separate design and approval.
+    authority_reference: HUMAN_AUTHORITY.md proposed-operations section
+  production:
+    status: not_reviewed
+    approval_reference: ""
 
 roles:
   - id: business-owner
@@ -90,11 +203,11 @@ workflow:
 
 authority:
   - capability: Read approved candidate information
-    level: bounded_execution
-    approver_or_boundary: Synthetic or copied test records only and the pilot's candidate limit.
+    level: prohibited
+    approver_or_boundary: Current example is design-only; a separately approved baseline or challenger blueprint must grant bounded access.
   - capability: Prepare a private candidate list
-    level: prepare_only
-    approver_or_boundary: Owner reviews every suggestion.
+    level: prohibited
+    approver_or_boundary: Current example is design-only; future prepare-only authority requires a separate stage approval.
   - capability: Contact sellers or purchase items
     level: prohibited
     approver_or_boundary: Human-only during the pilot.

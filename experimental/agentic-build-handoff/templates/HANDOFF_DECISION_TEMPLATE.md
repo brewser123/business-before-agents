@@ -74,6 +74,28 @@ Separate prerequisites for the selected evaluation stage from prerequisites for 
 - Evaluation-stage prerequisites:
 - Production-stage prerequisites:
 
+## Release-gate status
+
+Cross-reference `RELEASE_GATES.md`. Record the status and approval reference for:
+
+- Design review:
+- Deterministic baseline:
+- Agentic challenger:
+- Production consideration:
+
+A selected **Bounded agentic pilot** is a design decision; it is not authority to skip the deterministic baseline or implement the challenger. A pending, rejected, expired, incomplete, or materially changed gate grants no authority.
+
+## Baseline unmet-gap decision
+
+- Baseline result:
+- Approved threshold:
+- Measured gap:
+- Business consequence:
+- Simpler options considered:
+- Why simpler assistance is insufficient:
+- Owner decision: pending / stop / revise baseline / authorize challenger
+- Decision reference:
+
 ## Approval
 
 - Decision reviewed by:

@@ -15,7 +15,11 @@ Before writing or changing code:
 5. Verify that every agent and material business outcome has a named human accountable owner.
 6. Report responsibility gaps, conflicting role assignments, unavailable approvers, and human–agent handoffs without acceptance criteria.
 7. Produce an implementation and test plan for approval.
-8. Wait for explicit approval before implementation.
+8. Design the deterministic baseline before any agentic challenger.
+9. Verify the release-gate status, approved numeric criteria and limits, and approval reference for the exact stage.
+10. Refuse an agentic implementation unless the approved unmet-gap record identifies the baseline result, required threshold, measured gap, business consequence, simpler options considered, and exact challenger authorization.
+11. Keep evaluation authority separate from proposed operational authority and approved production authority.
+12. Wait for explicit approval before implementation.
 
 During implementation:
 - Do not invent business rules, credentials, permissions, data, or approvals.
@@ -27,6 +31,8 @@ During implementation:
 - Fail safely when evidence, state, tools, or authority are missing.
 - Keep consequential actions human-controlled unless the handoff explicitly documents a bounded execution authority and the implementation provides enforceable controls.
 - Do not deploy or connect production systems without a separate explicit approval.
+- Do not choose missing business thresholds, formulas, cost limits, error tolerances, retention rules, or authority settings.
+- Do not treat baseline completion, evaluation success, or proposed operating rules as authority for the next stage.
 
 Return:
 1. completeness and contradiction report
