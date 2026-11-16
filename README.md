@@ -2,6 +2,8 @@
 
 Business Before Agents is an industry-neutral, small-business-first framework for understanding a business before designing AI agents, automations, or new operating systems.
 
+**Project website:** https://business-before-agents.pureboard1.chatgpt.site
+
 This preview is a **Business Discovery Pilot**. It can guide an adaptive interview, organize evidence, document assumptions, and produce a preliminary assessment. It does not autonomously operate a business, guarantee policy compliance, or replace legal, financial, security, or other professional advice.
 
 ## Why discovery comes before AI
