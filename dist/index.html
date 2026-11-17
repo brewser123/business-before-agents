@@ -121,7 +121,8 @@
       <div class="evidence-copy">
         <p class="eyebrow">Why preparation matters</p>
         <h2 id="evidence-title">The tool is rarely the whole problem—or the whole solution.</h2>
-        <p>Research does not establish one universal AI-project failure rate. It does consistently identify unclear business problems, weak data, poor workflow fit, insufficient ownership, and inadequate operating preparation as recurring barriers to value.</p>
+        <p>Research does not establish one universal AI-project failure rate. It does identify unclear goals, weak data, poor workflow fit, and limited ownership as recurring barriers to value.</p>
+        <p>Long AI conversations introduce another practical risk: earlier details may be summarized or pushed out of the model's working context. A written, owner-approved baseline and saved checkpoints help people restore the right facts and decisions when they return.</p>
         <a class="text-link" href="evidence.html">Read the evidence and limitations <span aria-hidden="true">→</span></a>
       </div>
       <div class="stats-grid" aria-label="Selected research findings">
@@ -183,7 +184,38 @@
         <p class="eyebrow">Common questions</p>
         <h2 id="faq-title">A few things to know before you begin.</h2>
       </div>
-      <div class="faq-list">
+      <div class="faq-search">
+        <label for="faq-search">Search common questions</label>
+        <input id="faq-search" type="search" placeholder="Try “privacy”, “cost”, or “tokens”" autocomplete="off" aria-controls="faq-list">
+        <p id="faq-search-status" role="status" aria-live="polite"></p>
+      </div>
+      <div class="faq-list" id="faq-list">
+        <details>
+          <summary>Is this really free? Will I be asked to subscribe later?</summary>
+          <p>Yes, the framework is free to use. There is no required subscription, payment, or paid consultation. An optional, separately scoped consultation may be offered for deeper review, but you do not need one to use this project. If it helps, you can <a href="https://github.com/brewser123/business-before-agents">star the project on GitHub</a>.</p>
+          <p>This website does not ask for or store your business answers. If you use the framework in an AI chat tool, that provider handles what you enter under its own settings and policies. Review those settings and our <a href="privacy.html">privacy guidance</a> before sharing sensitive information.</p>
+        </details>
+        <details>
+          <summary>Should I be nervous about using AI for my business?</summary>
+          <p>Be thoughtful, as you would with any business decision. Define the problem, check the evidence, set a small budget and a clear stop point, and keep a person responsible for important decisions. The greatest avoidable risk is treating a quick answer as a tested business plan.</p>
+        </details>
+        <details>
+          <summary>What are tokens and tokenomics?</summary>
+          <p>Tokens are the small pieces of text an AI model processes and generates. A token can be part of a word, a whole word, or punctuation; as a rough English guide, 1,000 tokens is about 750 words, but the count varies.</p>
+          <p>“Tokenomics” means the cost and capacity tradeoffs around those tokens: how much a model can consider at once, how much input and output it uses, and how a provider charges for usage. Chat subscriptions and API usage may be priced differently. For a real project, check the current terms of the tool you choose and measure actual usage.</p>
+        </details>
+        <details>
+          <summary>What is inference?</summary>
+          <p>Inference is the work a trained AI model does when it receives a new request and produces a prediction or response. For example, generating a draft answer from your question is inference; training the model is a separate process.</p>
+        </details>
+        <details>
+          <summary>How much should I spend on AI?</summary>
+          <p>Start with the business outcome and a spending limit, then test the least complex tool that could help. A basic chat account may be enough for early exploration. Connected tools, high usage, or custom agents can cost more, and API charges may be separate from a subscription. Compare the full cost with time saved, errors, review effort, and risk before increasing the budget.</p>
+        </details>
+        <details>
+          <summary>Should I use ChatGPT, Claude, Gemini, Grok, or something else?</summary>
+          <p>Choose based on the job, your data rules, and your budget. Compare the tools using the same small, non-sensitive task and look at answer quality, file handling, integrations, privacy controls, ease of use, and total cost. Your account and settings can matter as much as the model name; you can change tools later.</p>
+        </details>
         <details>
           <summary>Will this judge how I have run my business?</summary>
           <p>No. The process is designed to acknowledge strengths and progress while creating an honest baseline for future decisions.</p>
@@ -205,6 +237,7 @@
           <p>Yes, but fully local processing requires local inference, document handling, retrieval, storage, and network controls—not merely a locally installed chat model.</p>
         </details>
       </div>
+      <p class="faq-no-results" id="faq-no-results" hidden>No matching questions. Try a different word.</p>
     </section>
   </main>
 

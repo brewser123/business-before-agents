@@ -67,6 +67,24 @@ The NIST AI Risk Management Framework is not a success-rate study, but it provid
 - [NIST — AI Risk Management Framework 1.0](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10)
 - [NIST AI RMF Playbook — Map: establish and understand context](https://airc.nist.gov/airmf-resources/playbook/map/)
 
+## Further reading: data, project setbacks, and context continuity
+
+Gartner reported that 63% of surveyed data-management leaders said their organizations lacked, or were unsure they had, suitable data-management practices for AI. Its statement that organizations would abandon 60% of projects unsupported by AI-ready data through 2026 was a **prediction about that subset**, not an observed failure rate across all AI projects.
+
+- [Gartner — *Lack of AI-Ready Data Puts AI Projects at Risk*](https://www.gartner.com/en/newsroom/press-releases/2025-02-26-lack-of-ai-ready-data-puts-ai-projects-at-risk)
+
+Long AI tasks can exceed a model's working context. Systems may compress earlier exchanges into summaries or retrieve them from external storage. This helps with continuity, but summaries may omit or distort a material detail. An owner-approved baseline and saved checkpoints provide records to review and restore; they do not guarantee perfect model memory.
+
+- [The AI Forum — *Automatic Context Compression in LLM Agents*](https://medium.com/the-ai-forum/automatic-context-compression-in-llm-agents-why-agents-need-to-forget-and-how-to-help-them-do-it-43bff14c341d) — a technical example, not an outcome study.
+- [Splunk — *Context Engineering for AI Agents in Production*](https://www.splunk.com/en_us/blog/artificial-intelligence/context-engineering-production-agents.html) — practitioner guidance on context failure modes, retrieval, and compaction.
+
+The following articles offer useful perspectives on goals, data, workflow integration, and governance. Several repeat striking failure percentages from other sources. Do not treat those headlines as universal measured rates; check the original study, population, and definition of value.
+
+- [Grid Dynamics — *Why AI Initiatives Fail*](https://aie.griddynamics.com/insights/articles/why-ai-initiatives-fail) — consultancy analysis.
+- [Pertama Partners — *AI Project Failure Statistics 2026*](https://www.pertamapartners.com/insights/ai-project-failure-statistics-2026) — synthesis of other reports.
+- [SR Analytics — *Why 95% of AI Projects Fail and How Data Fixes It*](https://sranalytics.io/blog/why-95-of-ai-projects-fail/) — data-readiness commentary; the headline is broader than the underlying evidence warrants.
+- [Fast Company Executive Board — *Enterprise AI's 5% Success Rate Is a Governance Problem*](https://www.fastcompany.com/91570216/enterprise-ais-5-success-rate-is-a-governance-problem) — an opinion piece, not a new outcome study.
+
 ## Accessible news and real-world examples
 
 These stories are illustrative cases, not statistical proof. They help show why testing, workflow fit, policy alignment, and human accountability matter.

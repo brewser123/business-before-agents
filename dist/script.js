@@ -26,3 +26,27 @@ copyButtons.forEach((copyButton) => {
     }
   });
 });
+
+const faqSearch = document.getElementById('faq-search');
+const faqItems = [...document.querySelectorAll('#faq-list > details')];
+
+if (faqSearch && faqItems.length) {
+  const searchStatus = document.getElementById('faq-search-status');
+  const noResults = document.getElementById('faq-no-results');
+
+  faqSearch.addEventListener('input', () => {
+    const query = faqSearch.value.trim().toLocaleLowerCase();
+    let matches = 0;
+
+    faqItems.forEach((item) => {
+      const visible = item.textContent.toLocaleLowerCase().includes(query);
+      item.hidden = !visible;
+      if (visible) matches += 1;
+    });
+
+    noResults.hidden = matches !== 0;
+    searchStatus.textContent = query
+      ? `${matches} ${matches === 1 ? 'question' : 'questions'} found.`
+      : '';
+  });
+}
