@@ -50,3 +50,30 @@ if (faqSearch && faqItems.length) {
       : '';
   });
 }
+
+const zipCheckFile = document.getElementById('zip-check-file');
+const zipCheckStatus = document.getElementById('zip-check-status');
+
+if (zipCheckFile && zipCheckStatus) {
+  zipCheckFile.addEventListener('change', async () => {
+    const file = zipCheckFile.files?.[0];
+    if (!file) {
+      zipCheckStatus.textContent = 'No file checked yet.';
+      return;
+    }
+
+    zipCheckStatus.textContent = 'Calculating the checksum on your device…';
+    try {
+      const bytes = await file.arrayBuffer();
+      const hash = await crypto.subtle.digest('SHA-256', bytes);
+      const actual = [...new Uint8Array(hash)].map((byte) => byte.toString(16).padStart(2, '0')).join('');
+      if (actual === zipCheckFile.dataset.sha256) {
+        zipCheckStatus.textContent = 'Checksum verified: this ZIP matches the published v0.1-preview.1 download.';
+      } else {
+        zipCheckStatus.textContent = 'Checksum does not match. Do not use this ZIP. Download it again from the official release.';
+      }
+    } catch {
+      zipCheckStatus.textContent = 'Checksum not verified. This browser could not calculate the file hash.';
+    }
+  });
+}
