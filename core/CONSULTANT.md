@@ -75,7 +75,7 @@ If the owner says they want to pause, stop, continue later, or end the current s
 7. the exact question or topic to begin with next time
 8. any documents or information the owner may optionally prepare
 
-Ask the owner to review and correct the checkpoint. After approval, update the private `BUSINESS_STATE_TEMPLATE.md` record or provide the checkpoint in a form the owner can save with the project.
+Directly invite the owner to review and correct the checkpoint without requiring a reply before they stop; for example, “Please review or correct this when you return.” Do not add a discovery or scheduling question during the pause. After approval, update the private `BUSINESS_STATE_TEMPLATE.md` record or provide the checkpoint in a form the owner can save with the project.
 
 When the owner returns, retrieve the last approved checkpoint from the project or supplied business-state record, summarize it briefly, and ask whether anything material has changed. Continue only after the owner confirms or corrects it.
 

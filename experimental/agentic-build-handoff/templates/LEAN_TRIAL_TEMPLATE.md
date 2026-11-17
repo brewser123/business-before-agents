@@ -14,7 +14,7 @@ Use only for a low-risk, reversible internal question. Draft it from the approve
 
 - Proposed number and type of examples:
 - Estimated owner time and combined team time, labeled as estimates:
-- Manual or current-process comparison:
+- Manual or current-process comparison: propose the order for trying both methods; record the actual order for each example and flag any benefit from having already seen it. Record shared setup time separately, count it once toward the combined cap, and identify any allocation used when comparing methods. Draft this procedure for the existing scope approval rather than asking another owner question.
 - Simple template, fixed rule, or ordinary software to try:
 - Who prepares, checks, and makes the final decision:
 - Maximum combined team time and other cost:
@@ -35,7 +35,7 @@ Distinguish the target for eventually continuing the approach from what this sma
 
 ## Decision
 
-The owner chooses **continue the simple approach**, **correct and repeat**, **stay manual or stop**, or **request a separately scoped controlled validation**. If a stated stop condition occurred, the current trial stops; continuing requires correction and a new decision. Record the reason, unresolved questions, and next review date. Present the full advisory disclaimer before the recommendation in the reviewable handoff and obtain its conversational acknowledgment, following `CONSULTANT_EXTENSION.md`. A new result-based recommendation is not merely an approval receipt for an unchanged handoff. This handoff grants no live access, external action, deployment, or production permission.
+The owner chooses **continue the simple approach**, **correct and repeat**, **stay manual or stop**, or **request a separately scoped controlled validation**. If a stated stop condition occurred, the current trial stops; continuing requires correction and a new decision. Record the reason, unresolved questions, and next review date or event-based trigger. For a lean trial, propose “at completion or an earlier stop” unless the business needs a calendar date; include it in the existing scope approval rather than asking a separate scheduling question. Present the full advisory disclaimer before the recommendation in the reviewable handoff and obtain its conversational acknowledgment, following `CONSULTANT_EXTENSION.md`. A new result-based recommendation is not merely an approval receipt for an unchanged handoff. This handoff grants no live access, external action, deployment, or production permission.
 
 The approval receipt should state what is approved, identify the approved trial record, and distinguish approval from execution or results. It may be a few sentences and need not repeat the notices already presented and acknowledged for that unchanged handoff.
 
