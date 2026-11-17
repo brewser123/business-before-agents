@@ -91,6 +91,10 @@ You do not need to understand Git, use a terminal, or write code. Open ChatGPT o
 
 The framework files may be public. Your business documents, interview answers, customer data, financial information, operating model, and completed templates should remain private. A hosted AI workspace is not the same as fully local processing; read the privacy guidance before use.
 
+The website has no assessment form or business-data backend, but its host may process connection metadata and set security cookies. Search and copy controls run in the browser. See [Privacy](privacy/PRIVACY.md) for the boundary between this site and the AI tool you choose.
+
+To report a security problem without exposing details publicly, use [private vulnerability reporting](SECURITY.md).
+
 ## Industry neutrality
 
 The framework supports businesses in any lawful industry, including travel and hospitality. Project documentation, tutorials, walkthroughs, and demonstration examples deliberately avoid using travel as their primary business model so that the framework remains broadly representative.
@@ -108,6 +112,8 @@ The framework supports businesses in any lawful industry, including travel and h
 - `BOOTSTRAP.md` and `bootstrap.json` — beginner-friendly, versioned guided setup
 
 For a short illustration of the kind of deliverable an owner might receive—without reproducing the full discovery structure—see [Sample Output: The Toy Scout](examples/SAMPLE_OUTPUT.md).
+
+Repository maintainers should regenerate the website download with `python3 scripts/build_preview_zip.py` after changing a public framework file. The build uses an explicit file list, and the pull request check rejects a stale archive or an unexpected file in it.
 
 ## License and attribution
 
@@ -127,9 +133,9 @@ See [LICENSE](LICENSE) for the exact scope and [ATTRIBUTION.md](ATTRIBUTION.md) 
 
 ## Experimental build-handoff extension
 
-The stable `v0.1-preview` release ends with assessment and advisory recommendations. Development on `main` now includes an [experimental implementation handoff](experimental/agentic-build-handoff/README.md). Its v0.4 draft starts with a short internal trial for low-risk questions and offers more detailed validation and blueprint materials when the risk or evidence claim requires them.
+The `v0.1-preview.1` guided release ends with assessment and advisory recommendations. Development on `main` also includes an [experimental implementation handoff](experimental/agentic-build-handoff/README.md). Its v0.4 draft starts with a short internal trial for low-risk questions and offers more detailed validation and blueprint materials when the risk or evidence claim requires them.
 
 This extension is not part of the stable guided installation or downloadable v0.1 package. It is intentionally gated and supports four outcomes: a bounded agentic pilot, simpler assistance or automation, defer pending evidence or controls, or do not build. It must not be treated as production authorization or an automatically deployable system.
 
-The [assessment template](templates/PRELIMINARY_ASSESSMENT_TEMPLATE.md) now offers an optional copy-and-paste prompt after an owner approves a completed assessment. It asks the chat tool to verify that it can read the public extension files, help the owner protect private business details, and prepare a small proposed handoff for review. It does not start a trial or authorize development. Owners can also copy the prompt from the [plain-language extension page](dist/extension.html). The website's updated ZIP includes this prompt; the existing `v0.1-preview` Git tag remains an earlier snapshot, so users of that tagged setup can use the website prompt separately.
+The [assessment template](templates/PRELIMINARY_ASSESSMENT_TEMPLATE.md) now offers an optional copy-and-paste prompt after an owner approves a completed assessment. It asks the chat tool to verify that it can read the public extension files, help the owner protect private business details, and prepare a small proposed handoff for review. It does not start a trial or authorize development. Owners can also copy the prompt from the [plain-language extension page](dist/extension.html). The website ZIP and the `v0.1-preview.1` guided setup contain this prompt; the earlier `v0.1-preview` tag remains unchanged.
 

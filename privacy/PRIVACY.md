@@ -21,3 +21,7 @@ The public package may contain methodology, instructions, templates, and fiction
 
 The framework cannot verify a platform's current privacy practices. Review the selected service's documentation at the time of use.
 
+## Website visits
+
+The public website has no assessment form, business-data backend, or added analytics script. Search and copy controls operate in the browser. The hosting provider may still process connection details such as IP addresses and set operational security cookies. The website does not control how a separate AI chat provider stores or uses information entered there.
+

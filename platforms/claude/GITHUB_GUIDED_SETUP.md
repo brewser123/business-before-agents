@@ -22,7 +22,7 @@ Current product guidance:
 ```text
 I would like to use the Business Before Agents framework, but I am not familiar with GitHub or installing files.
 
-Please use the GitHub files attached to this chat or Project Knowledge, beginning with BOOTSTRAP.md and bootstrap.json from the v0.1-preview release.
+Please use the GitHub files attached to this chat or Project Knowledge, beginning with BOOTSTRAP.md and bootstrap.json from the v0.1-preview.1 release.
 
 First, tell me whether every required file is available. Then follow BOOTSTRAP.md and guide me through any remaining setup.
 
