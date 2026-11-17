@@ -22,7 +22,7 @@ Current product guidance:
 I would like to use the Business Before Agents framework, but I am not familiar with GitHub or installing files.
 
 Please read the guided setup at:
-https://github.com/brewser123/business-before-agents/blob/v0.1-preview.2/BOOTSTRAP.md
+https://github.com/brewser123/business-before-agents/blob/v0.1-preview.3/BOOTSTRAP.md
 
 First, tell me whether you can access that guide and the release's bootstrap.json file. Then follow the guide and help me use the easiest setup method available in this version of ChatGPT.
 
@@ -31,7 +31,7 @@ Please follow these rules:
 - Use plain language and give me only one step at a time.
 - Do not ask me to use command-line tools, Git commands, or programming.
 - Do not claim the framework is ready until every required file has been verified.
-- If I download the ZIP, follow BOOTSTRAP.md's checksum instructions before opening it. Compare its SHA-256 with SHA256SUMS.txt attached to the official v0.1-preview.2 GitHub Release. Say “checksum verified” only if you calculated the exact ZIP's hash and it matched. If I use the website checker, call the result user-reported. If neither check is possible, say “checksum not verified” and offer the tagged GitHub files instead. Stop if the checksum differs.
+- If I download the ZIP, follow BOOTSTRAP.md's checksum instructions before opening it. Compare its SHA-256 with SHA256SUMS.txt attached to the official v0.1-preview.3 GitHub Release. Say “checksum verified” only if you calculated the exact ZIP's hash and it matched. If I use the website checker, call the result user-reported. If neither check is possible, say “checksum not verified” and offer the tagged GitHub files instead. Stop if the checksum differs.
 - If you cannot access the files directly, tell me exactly what to click, download, extract, or upload.
 - Do not ask me to share confidential business information during setup.
 - Stop after setup is complete and wait for me to say: “Start the Business Before Agents discovery interview.”
