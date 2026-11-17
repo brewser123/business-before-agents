@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A plain-language guide to the experimental Business Before Agents build-handoff extension, AI agents, tools, and multi-agent workflows.">
+  <title>Experimental extension · Business Before Agents</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <main class="article-page extension-page" id="main">
+    <a class="back-link" href="index.html">← Business Before Agents</a>
+
+    <header class="extension-hero">
+      <p class="eyebrow">Optional next step · Experimental v0.4</p>
+      <h1>What happens after the business assessment?</h1>
+      <p class="article-lede">The build-handoff extension helps an owner turn an approved business assessment into a small, reviewable next step. That step might be a better checklist, a simple automation, a carefully limited AI test, or a decision to wait.</p>
+      <div class="notice extension-status">
+        <strong>This is planning guidance, not an agent installer.</strong>
+        <p>The extension is experimental and is not included in the v0.1 Preview download or guided setup. It does not run a trial, connect to business systems, or authorize a build or deployment.</p>
+        <p><strong>Why experimental?</strong> This tool draws on many years of experience helping people and businesses use technology to achieve better results. We have checked the extension with fictional scenarios, but have not yet tested it with real businesses or shown that it improves their outcomes. Its behavior may vary across AI tools, and the guidance may change as real-world evidence comes in.</p>
+      </div>
+    </header>
+
+    <section aria-labelledby="flow-title">
+      <p class="eyebrow">The process</p>
+      <h2 id="flow-title">From an approved baseline to a careful decision</h2>
+      <p>The owner stays in charge at every step. The extension makes the proposed work and its limits visible before anyone begins.</p>
+      <ol class="extension-flow" aria-label="Build-handoff process">
+        <li>
+          <span class="extension-flow-number">01</span>
+          <h3>Start with the business</h3>
+          <p>Use the approved assessment: the goal, current way of working, strengths, unknowns, and people responsible.</p>
+        </li>
+        <li>
+          <span class="extension-flow-number">02</span>
+          <h3>Choose the simplest fit</h3>
+          <p>Compare a checklist or ordinary software with a possible agent. It is fine to defer or decide not to build.</p>
+        </li>
+        <li>
+          <span class="extension-flow-number">03</span>
+          <h3>Set a small test</h3>
+          <p>Agree on allowed examples, people, time and cost limits, measures, stop rules, and the current-method fallback.</p>
+        </li>
+        <li>
+          <span class="extension-flow-number">04</span>
+          <h3>Review what happened</h3>
+          <p>Record actual effort and errors. The owner decides whether to continue, correct, stay with the current method, or consider another test.</p>
+        </li>
+      </ol>
+      <p class="flow-caption">A paper test does not grant access to live data or permission to contact customers, spend money, change records, or deploy software. Those need separate decisions.</p>
+    </section>
+
+    <section aria-labelledby="choices-title">
+      <p class="eyebrow">Possible outcomes</p>
+      <h2 id="choices-title">The answer is not always “build an agent.”</h2>
+      <div class="extension-choice-grid">
+        <article>
+          <span class="choice-mark" aria-hidden="true">↗</span>
+          <h3>Simpler assistance or automation</h3>
+          <p>A clearer form, a checklist, search, or a fixed rule may solve the problem with less cost and review work.</p>
+        </article>
+        <article>
+          <span class="choice-mark" aria-hidden="true">◎</span>
+          <h3>Bounded agentic pilot</h3>
+          <p>If a simpler method leaves a measured gap, propose a separate, limited agent test with human review and stop rules.</p>
+        </article>
+        <article>
+          <span class="choice-mark" aria-hidden="true">⋯</span>
+          <h3>Defer pending evidence or controls</h3>
+          <p>Clarify the goal, permissions, test examples, or fallback before deciding whether any test is sensible.</p>
+        </article>
+        <article>
+          <span class="choice-mark" aria-hidden="true">—</span>
+          <h3>Do not build</h3>
+          <p>Stay with the current method when the likely benefit does not justify the cost, risk, or complexity.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="agent-key" id="agent-key" aria-labelledby="agent-key-title">
+      <p class="eyebrow">A short key</p>
+      <h2 id="agent-key-title">Chatbot, tool, agent: what is the difference?</h2>
+      <p>A chat window tells you how you communicate with AI. It does not, by itself, tell you what the AI is allowed to do.</p>
+      <dl class="agent-key-grid">
+        <div>
+          <dt>Chatbot</dt>
+          <dd>Usually responds to a question or message, then waits for the next one. A chatbot can also use tools; the chat interface alone does not make it an agent.</dd>
+        </div>
+        <div>
+          <dt>Tool</dt>
+          <dd>A specific capability, such as looking up approved information, running a calculation, or preparing a draft. Its access and allowed actions should be limited.</dd>
+        </div>
+        <div>
+          <dt>AI agent</dt>
+          <dd>An AI system given a goal, instructions, and permitted tools. It can choose and carry out a sequence of steps, check the results, and continue within its limits.</dd>
+        </div>
+        <div>
+          <dt>Multi-agent workflow</dt>
+          <dd>Two or more specialized AI agents coordinate or hand work to one another. For example, one may prepare a draft and another may check it. They are software roles, not extra employees.</dd>
+        </div>
+      </dl>
+      <div class="extension-contrast" aria-label="How a chatbot and an agentic workflow differ">
+        <div>
+          <span class="contrast-label">Typical chat</span>
+          <p>Person asks <span aria-hidden="true">→</span> AI replies <span aria-hidden="true">→</span> waits</p>
+        </div>
+        <div>
+          <span class="contrast-label">Agentic workflow</span>
+          <p>Person sets a goal and limits <span aria-hidden="true">→</span> AI chooses an approved step or tool <span aria-hidden="true">→</span> checks the result <span aria-hidden="true">→</span> stops or asks for human review</p>
+        </div>
+      </div>
+      <p class="flow-caption">Modern chat tools can host agentic workflows, including workflows with multiple agents. The meaningful difference is the sequence of work and the authority granted—not whether it appears in a chat window. People remain responsible for business decisions.</p>
+    </section>
+
+    <section class="extension-example" aria-labelledby="example-title">
+      <div>
+        <p class="eyebrow">A small example</p>
+        <h2 id="example-title">A repair shop might need a checklist first.</h2>
+      </div>
+      <p>If missing details on paper intake tickets cause follow-up calls, the extension could suggest comparing the current ticket with a clearer checklist using invented cases. The team would count omissions and total time. If the checklist works, there may be no reason to add an agent. A more complex approach would require a measured unmet need and another owner decision.</p>
+    </section>
+
+    <section class="prompt-section" aria-labelledby="extension-prompt-title">
+      <p class="eyebrow">Optional after your assessment</p>
+      <h2 id="extension-prompt-title">Ask your chat tool to guide the next step</h2>
+      <p>Once you have approved your assessment, copy this message into your chat tool. It asks for a proposal you can review. You remain in charge of whether any test or build begins.</p>
+      <pre class="prompt-box" id="extension-prompt-text">I have an approved Business Before Agents assessment and would like to explore the optional experimental build-handoff extension.
+
+Please read the public extension guide at https://github.com/brewser123/business-before-agents/tree/main/experimental/agentic-build-handoff and the consultant instructions and relevant templates it identifies. Tell me which files you could actually read. If you cannot access them, guide me through providing the needed files one step at a time. Do not claim to have read a file you could not access.
+
+Before I share my assessment, help me decide what business information to omit or summarize for privacy. Use only the approved assessment and other information I choose to provide in this workspace. Explain the extension's experimental status and choices in plain language. Then prepare the smallest useful next-step proposal for my review, including a simpler approach, deferral, or no build when appropriate. Ask one owner decision question at a time.
+
+Do not start a trial, use live systems or sensitive data, contact anyone, spend money, change records, write or deploy code, or treat this request as approval for any later stage. Ask for separate, explicit approval before any of those steps.</pre>
+      <button class="button button-primary" type="button" data-copy-target="extension-prompt-text" data-status-id="extension-copy-status" data-copied-label="Message copied">Copy the message</button>
+      <p class="copy-status" id="extension-copy-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="extension-next" aria-labelledby="next-title">
+      <p class="eyebrow">Explore further</p>
+      <h2 id="next-title">Begin with the assessment. Read the extension when you are ready.</h2>
+      <p>The experimental files are written for an AI consultant or builder after the owner has approved a baseline. You do not need them to start the free discovery process.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="install.html">Start guided setup</a>
+        <a class="button button-secondary" href="https://github.com/brewser123/business-before-agents/tree/main/experimental/agentic-build-handoff">Read the experimental files on GitHub</a>
+      </div>
+      <p class="extension-sources">For more on tools and multiple agents, see the <a href="https://openai.github.io/openai-agents-python/">OpenAI Agents SDK guide</a> and <a href="https://www.anthropic.com/research/building-effective-agents">Anthropic's agent guide</a>. These explain general capabilities; they do not validate this experimental extension.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

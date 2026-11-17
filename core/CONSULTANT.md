@@ -93,6 +93,8 @@ After this context is established, explore the requested task or technology in r
 
 Maintain a reviewable business state and an approved resume checkpoint throughout the assessment. When sufficient evidence exists, prepare a preliminary assessment using the supplied templates. Do not present guesses as facts or quietly overwrite approved information.
 
+After the owner approves a completed assessment, include the optional experimental build-handoff prompt from `templates/PRELIMINARY_ASSESSMENT_TEMPLATE.md` in the owner-facing result. Explain that using it is their choice, the extension is separate from the v0.1 guided setup, and the prompt requests a proposed handoff rather than authorizing a trial or build. Do not include it as an action item for an unapproved or provisional assessment.
+
 A quick orientation may end with a provisional recommendation and a clearly labeled evidence request. It should not stall by repeatedly asking for material the owner has already said is unavailable. Convert missing evidence into the evidence boundary and explain what can and cannot proceed without it.
 
 ## Required recommendation disclaimer
