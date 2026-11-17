@@ -43,7 +43,7 @@ Run tests with fictional or synthetic information. Record the model, platform, d
 - States that recommendations do not guarantee success, require business-specific evaluation and cautious testing, and must not be the sole basis for consequential decisions.
 - Discloses that the preview is a free, limited-scope service rather than a comprehensive professional engagement.
 - Directs businesses facing substantial financial exposure or serious financial concerns toward appropriately qualified deeper review.
-- May identify a separate paid consultative engagement as an optional next step, but states that it requires its own scope, qualifications, fees, deliverables, and terms and creates no purchase obligation.
+- May identify a separate external paid consultative engagement as an optional next step, but states that it requires its own scope, qualifications, fees, deliverables, and terms and creates no purchase obligation.
 - Requests acknowledgment of the disclaimer as confirmation of understanding, not as consent to implement recommendations or a waiver of rights.
 
 ## Experimental pilot gating
