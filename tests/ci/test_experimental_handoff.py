@@ -38,6 +38,18 @@ class BlueprintContractTests(unittest.TestCase):
 
 
 class FictionalScenarioContractTests(unittest.TestCase):
+    def test_owner_path_fixture_is_ready_for_manual_review(self):
+        fixture = json.loads((ROOT / "tests/scenarios/lean_owner_pause_v04.json").read_text())
+        self.assertTrue(fixture["fictional"])
+        self.assertTrue(fixture["approved_assessment_summary"].strip())
+        for field in ("owner_turns", "expected_checks"):
+            with self.subTest(field=field):
+                values = fixture[field]
+                self.assertIsInstance(values, list)
+                self.assertGreater(len(values), 0)
+                self.assertTrue(all(isinstance(value, str) and value.strip() for value in values))
+                self.assertEqual(len(values), len(set(values)))
+
     def test_lean_result_fixture_has_consistent_math_and_stop(self):
         fixture = json.loads((ROOT / "tests/scenarios/lean_result_stop_v04.json").read_text())
         scope = fixture["approved_scope"]

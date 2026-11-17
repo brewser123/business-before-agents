@@ -12,7 +12,9 @@ These are proportional options, not a maturity ladder that every business must c
 
 ## Staffing is a business decision
 
-Describe every named person or function in the role record. Separate employee headcount from temporary contractors and from roles worn by existing staff. State availability, qualifications, independence, expected hours, and cost status. A model must not invent a contractor, treat an unconfirmed person as available, or count unpaid software cost as total project cost. If a profile depends on a function the business cannot staff, propose a smaller test, a costed specialist engagement, or defer.
+Describe every named person or function in the role record. Separate employee headcount from temporary contractors and from roles worn by existing staff. For controlled or high-assurance evaluation, state availability, qualifications, independence, expected hours, and cost status. A model must not invent a contractor, treat an unconfirmed person as available, or count unpaid software cost as total project cost. If a profile depends on a function the business cannot staff, propose a smaller test, a costed specialist engagement, or defer.
+
+For `lean_internal_test`, a compact role record is sufficient: name, trial responsibility, existing team member or proposed outside help, confirmed availability, estimated effort, and any additional cash cost. Relevant qualifications or reviewer independence need further detail only when the task or evidence claim depends on them. Do not require an independent reviewer for an ordinary lean trial. A combined team-effort estimate plus an owner-effort estimate is sufficient unless individual allocations affect feasibility.
 
 ## Small samples
 

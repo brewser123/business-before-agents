@@ -1,6 +1,6 @@
 # Lean internal test handoff
 
-Use only for a low-risk, reversible internal question. Draft it from the approved assessment; do not present the fields as a questionnaire. Ask one missing owner decision at a time and show the owner a short plain-language proposal. This handoff does not require the full agent blueprint. Keep the required advisory disclaimer from `core/CONSULTANT.md` in the completed owner decision, and state what the current approval actually permits.
+Use only for a low-risk, reversible internal question. Draft it from the approved assessment; do not present the fields as a questionnaire. Ask one missing owner decision at a time and show the owner a short plain-language proposal. This handoff does not require the full agent blueprint. Present the required advisory disclaimer from `core/CONSULTANT.md` in the reviewable handoff, following the acknowledgment and approval-receipt rules in `CONSULTANT_EXTENSION.md`, and state what the current approval actually permits.
 
 ## Owner view
 
@@ -19,6 +19,7 @@ Use only for a low-risk, reversible internal question. Draft it from the approve
 - Who prepares, checks, and makes the final decision:
 - Maximum combined team time and other cost:
 - Owner's minimum improvement worth continuing, set before the trial:
+- How the trial will inform that improvement: identify the necessary observations, who records them, and any missing volume or frequency information. For a weekly time-saving goal, include preparation, checking, correction, and review time for both methods. Use a supported weekly case volume before estimating weekly savings. If volume is unavailable, report only the observed trial difference and leave weekly savings unproven. Do not delay a safe feasibility trial solely to obtain that volume.
 - Actual minutes, raw errors, warnings, corrections, and exceptions to record:
 - Immediate stop conditions:
 - On a stop event, manual fallback and who decides whether a corrected repeat is allowed:
@@ -30,8 +31,12 @@ Do not require a current time breakdown when the trial can measure it. Distingui
 
 Before reporting results, check the arithmetic and missing components. For example, 40 minutes total plus 28 minutes total is 68 recorded minutes; it does not exceed a 150-minute combined cap unless additional recorded work makes the total greater than 150. If correction or review time is unknown, say the full actual effort is unknown. Do not infer a weekly saving from a handful of invented cases without a justified weekly case volume. Ask one decision question at a time.
 
+Distinguish the target for eventually continuing the approach from what this small trial can establish. Invented examples provide preliminary feasibility evidence, not proof of normal weekly savings.
+
 ## Decision
 
-The owner chooses **continue the simple approach**, **correct and repeat**, **stay manual or stop**, or **request a separately scoped controlled validation**. If a stated stop condition occurred, the current trial stops; continuing requires correction and a new decision. Record the reason, unresolved questions, and next review date. Reproduce the full advisory disclaimer before a completed recommendation and obtain its conversational acknowledgment. This handoff grants no live access, external action, deployment, or production permission.
+The owner chooses **continue the simple approach**, **correct and repeat**, **stay manual or stop**, or **request a separately scoped controlled validation**. If a stated stop condition occurred, the current trial stops; continuing requires correction and a new decision. Record the reason, unresolved questions, and next review date. Present the full advisory disclaimer before the recommendation in the reviewable handoff and obtain its conversational acknowledgment, following `CONSULTANT_EXTENSION.md`. A new result-based recommendation is not merely an approval receipt for an unchanged handoff. This handoff grants no live access, external action, deployment, or production permission.
+
+The approval receipt should state what is approved, identify the approved trial record, and distinguish approval from execution or results. It may be a few sentences and need not repeat the notices already presented and acknowledged for that unchanged handoff.
 
 The short handoff statement in `CONSULTANT_EXTENSION.md` is an additional authority notice. It cannot replace the full **How to use this assessment** advisory text in `core/CONSULTANT.md`.

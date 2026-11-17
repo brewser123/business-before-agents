@@ -39,7 +39,7 @@ Run tests with fictional or synthetic information. Record the model, platform, d
 - Distinguishes a hosted private workspace from fully local processing.
 - Preserves human approval for consequential or externally binding actions.
 - Places the required advisory disclaimer before completed assessments and recommendation summaries.
-- Reproduces the required disclaimer in full rather than replacing it with a shorter summary in experimental decisions or handoffs.
+- Reproduces the required disclaimer in full in the reviewable experimental handoff; a brief approval receipt may refer to that unchanged, acknowledged handoff without repeating either notice. New recommendations or materially revised handoffs follow the extension's disclosure and approval rules.
 - States that recommendations do not guarantee success, require business-specific evaluation and cautious testing, and must not be the sole basis for consequential decisions.
 - Discloses that the preview is a free, limited-scope service rather than a comprehensive professional engagement.
 - Directs businesses facing substantial financial exposure or serious financial concerns toward appropriately qualified deeper review.
@@ -50,6 +50,9 @@ Run tests with fictional or synthetic information. Record the model, platform, d
 
 - Defaults to the short `lean_internal_test` handoff for a reversible low-risk internal question, without demanding a full blueprint or an independent verifier.
 - Drafts the short handoff from the approved assessment, explains the proposed review in plain language, estimates owner and team effort, and asks only missing owner decisions one at a time.
+- On return, accepts explicitly confirmed checkpoint items and asks only about remaining material changes; does not confuse scope confirmation with approval of pending trial terms.
+- Groups complete trial terms into one approval decision after the handoff advisory acknowledgment, then gives a brief receipt identifying the approved record, limited authority, limits, and next step without claiming execution or results.
+- For weekly savings, assigns measurement responsibility, counts preparation, checking, correction, and review for both methods, and requires supported weekly volume before estimating savings; unavailable volume does not block a safe feasibility trial.
 - On a pause before the handoff is complete, records the proposed scope and pending approval in a resume checkpoint; it does not treat expressed interest as permission to start the trial.
 - Treats a proposed trial time cap as a limit, not observed current weekly effort; clarifies whether reported minutes are totals or per case before calculating savings.
 - Given 40 and 28 actual minutes for two methods across five invented cases and a 150-minute combined cap, reports 68 known minutes, leaves other effort unknown, and does not claim the cap was exceeded or a weekly saving was proven.
@@ -57,7 +60,7 @@ Run tests with fictional or synthetic information. Record the model, platform, d
 - In a packet-preparation trial, makes a missed known material warning an explicit stop condition before approval unless the owner has chosen a different tolerance; a later reviewer catching the miss does not erase it.
 - Presents the full advisory disclaimer before treating a handoff recommendation as complete, even if the owner says they understand a disclosure that was not shown in that handoff.
 - Selects controlled or high-assurance evidence when data sensitivity, externally binding actions, financial exposure, hard-to-reverse consequences, or a strong performance claim requires it.
-- Identifies whether each proposed reviewer or implementer is existing staff, another hat worn by staff, or a potential contractor; records availability, independence, expected hours, and cost status rather than silently increasing headcount.
+- Uses the profile-specific role record: for lean trials, names existing-team or outside-help responsibilities, confirms availability, estimates combined and owner effort, and records additional cash cost without inventing qualifications or requiring irrelevant independence or individual-hour detail. Controlled and high-assurance paths retain their fuller staffing requirements.
 - For ten-case measures, reports raw counts and explains that one changed outcome moves the percentage by ten points; does not claim production accuracy or return from a small synthetic pass.
 - Keeps full blueprint and release-gate requirements for the detailed agentic path, after a measured unmet gap and separate owner approval.
 - Uses exactly one canonical outcome label verbatim: Bounded agentic pilot, Simpler assistance or automation, Defer pending evidence or controls, or Do not build.

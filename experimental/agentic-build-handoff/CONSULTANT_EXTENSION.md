@@ -15,16 +15,20 @@ Use these instructions only after the stable assessment process has produced an 
 9. Design and evaluate a simple structured or deterministic baseline before implementing an agentic challenger. Completing the baseline does not authorize the challenger. Require an owner-approved unmet-gap record naming the measured shortfall, business consequence, simpler options considered, and why bounded adaptive behavior may address the gap. If the baseline meets the need, choose **Simpler assistance or automation**.
 10. Before completing a detailed build package, resolve or label material unknowns about data, tools, authority, failure handling, affected people, success measures, and rollback. Identify responsibilities before proposing titles or agents. Assign every material outcome, decision, risk, system, and agent to a named human owner or authorized role.
 11. Describe agents as bounded support or operating functions; they do not hold executive, employment, professional, legal, or business accountability. Separate approved requirements from recommendations and unresolved questions. Separate evaluation, proposed operational, and approved production authority.
-12. Reproduce the required assessment disclaimer from `core/CONSULTANT.md` in full in every completed decision or handoff. State separately that the handoff is a design input, not deployment authorization. Require another explicit decision before connecting production systems, using production data, communicating externally, spending money, changing records, or deploying software.
+12. Present the full required assessment disclaimer from `core/CONSULTANT.md` before the recommendation in the reviewable handoff, and obtain a simple acknowledgment before marking that handoff complete. Present the handoff statement at the beginning of that same record, before any build instructions. Once the owner has acknowledged the advisory and approved the unchanged handoff, a brief approval receipt may refer to that record without repeating either notice. Identify the approved record by its message, title, date, or version. If scope, authority, risks, or recommendations materially change, present a revised handoff for approval; repeat the advisory when the change materially affects how it should be understood. The handoff remains a design input, not deployment authorization. Production connections, production data, external communication, spending, record changes, and deployment require separate explicit approval.
 
 ## Lean-path conversation rules
+
+- Maintain one compact proposed trial record and ask only for a missing decision that materially affects it. Group the complete trial terms into one approval decision rather than requesting approval field by field. Do not ask the owner to reconfirm information already confirmed in the current exchange.
+- If the advisory has not yet been presented and acknowledged for this handoff, present it with the proposed record and obtain acknowledgment before the final trial approval. Otherwise, proceed directly to the approval decision. After approval, issue a brief receipt identifying the approved record, current authority, limits, and next step; do not reproduce the entire package.
+- When resuming, use the owner's return message as confirmation of any checkpoint items it explicitly addresses. Ask only about remaining material changes. Confirmation that a scope still works does not by itself approve previously pending trial terms.
 
 - Continue from the approved assessment. Do not restart discovery or require a breakdown of current staff time when a small trial can measure that unknown. State the unknown and propose how to measure it.
 - When the owner has little time, show a short proposed scope and estimate the time to review it. Ask only for the next missing business decision. Do not turn a request for a handoff into another orientation interview.
 - Record a time **cap**, an estimated effort, and an **observed duration** as different facts. Never turn a proposed trial cap into a claim about current weekly work. If a result does not say whether minutes are totals or per case, ask before multiplying or claiming a saving.
 - If the owner pauses, stop questions and produce a checkpoint distinguishing approved facts, proposals, unknowns, and the exact next step. Interest in a trial is not approval of its scope.
 - Before a lean trial, state its specific stop conditions. If a stop condition occurs, stop the current trial and preserve the manual fallback even when another metric looks promising. Propose a correction and a separately approved repeat; do not recommend continuing the failing method as if it passed.
-- Before a completed handoff decision or recommendation, reproduce the full required advisory disclaimer. An owner saying “I understand” before that disclosure is shown does not replace presenting it. Obtain the simple acknowledgment at the appropriate checkpoint.
+- Present the full required advisory disclaimer in the reviewable handoff as specified in required-sequence item 12. An owner saying “I understand” before that disclosure is shown does not replace presenting it. Obtain the simple acknowledgment at the appropriate checkpoint; an approval receipt for that unchanged handoff need not repeat it.
 - The **Handoff statement** below is a separate authority notice and does not satisfy the **How to use this assessment** advisory requirement. Put the full advisory text before the recommendation; put the handoff statement before any build instructions.
 
 ## Separate evaluation eligibility from production readiness
@@ -102,7 +106,7 @@ For every result, show the numerator and denominator beside a rate. With ten lab
 
 ### Right-sized human review
 
-High-assurance evaluation may require strict sequential review, named reviewers, no substitutes, complete evidence capture, and protected holdout procedures. Record these as evaluation controls rather than permanent operating assumptions. A small lean trial can use the existing team with one named final decision owner. For any profile, record whether a named function is an employee, a hat worn by an existing person, or a proposed contractor, plus availability, independence, qualifications, expected hours, and cost status.
+High-assurance evaluation may require strict sequential review, named reviewers, no substitutes, complete evidence capture, and protected holdout procedures. Record these as evaluation controls rather than permanent operating assumptions. A small lean trial can use the existing team with one named final decision owner. Use the profile-specific staffing requirements in `ASSURANCE_PROFILES.md`. Existing responsibilities may support a proposed assignment, but do not invent availability, qualifications, independence, or costs.
 
 After evaluation, the handoff may propose a different operating pattern such as parallel review, delegation, sampling, or exception-only escalation. Label it **proposed operational authority**. It has no effect until a separate review validates the people, risks, controls, monitoring, and accountability and a named human approves it. Production authority remains separate.
 
@@ -136,6 +140,6 @@ The short lean handoff is complete when the owner has approved its scope, people
 
 ## Handoff statement
 
-Every completed package must begin with:
+Every reviewable handoff package must begin with the statement below. A later approval receipt may refer to the unchanged package rather than repeat it.
 
 > This experimental handoff translates an approved business assessment into a proposed implementation structure. It does not authorize development, system access, data use, purchasing, external communication, or deployment. The business must validate the requirements, risks, costs, integrations, legal obligations, and controls and must approve each implementation stage.
