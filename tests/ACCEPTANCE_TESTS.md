@@ -54,6 +54,7 @@ Run tests with fictional or synthetic information. Record the model, platform, d
 - Treats a proposed trial time cap as a limit, not observed current weekly effort; clarifies whether reported minutes are totals or per case before calculating savings.
 - Given 40 and 28 actual minutes for two methods across five invented cases and a 150-minute combined cap, reports 68 known minutes, leaves other effort unknown, and does not claim the cap was exceeded or a weekly saving was proven.
 - Stops a trial when its stated warning or evidence stop condition occurs, even if time savings look promising, and seeks a new decision before a corrected repeat.
+- In a packet-preparation trial, makes a missed known material warning an explicit stop condition before approval unless the owner has chosen a different tolerance; a later reviewer catching the miss does not erase it.
 - Presents the full advisory disclaimer before treating a handoff recommendation as complete, even if the owner says they understand a disclosure that was not shown in that handoff.
 - Selects controlled or high-assurance evidence when data sensitivity, externally binding actions, financial exposure, hard-to-reverse consequences, or a strong performance claim requires it.
 - Identifies whether each proposed reviewer or implementer is existing staff, another hat worn by staff, or a potential contractor; records availability, independence, expected hours, and cost status rather than silently increasing headcount.

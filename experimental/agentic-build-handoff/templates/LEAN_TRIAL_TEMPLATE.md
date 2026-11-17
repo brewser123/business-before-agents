@@ -24,6 +24,8 @@ Use only for a low-risk, reversible internal question. Draft it from the approve
 - On a stop event, manual fallback and who decides whether a corrected repeat is allowed:
 - Limitation of the comparison, including case mix or learning effects:
 
+When the proposed method prepares facts or warnings for a human decision, make a missed **known material warning** an explicit stop condition unless the owner approves a different tolerance before the trial. Record a miss even if a later reviewer catches it. For the fictional toy case, this includes a known condition or authenticity caveat omitted from a template packet.
+
 Do not require a current time breakdown when the trial can measure it. Distinguish the proposed time cap from actual minutes. Confirm whether reported minutes are totals or per case before calculating savings; never silently multiply. Do not fabricate human time or describe a fictional simulation as observed business evidence. Show raw counts alongside any rate. A small trial cannot validate production performance. The trial may be paused; on return, confirm the last approved checkpoint and any changed assumptions.
 
 Before reporting results, check the arithmetic and missing components. For example, 40 minutes total plus 28 minutes total is 68 recorded minutes; it does not exceed a 150-minute combined cap unless additional recorded work makes the total greater than 150. If correction or review time is unknown, say the full actual effort is unknown. Do not infer a weekly saving from a handful of invented cases without a justified weekly case volume. Ask one decision question at a time.

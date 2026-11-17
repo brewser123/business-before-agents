@@ -10,7 +10,7 @@ In plain language:
 - Who is involved:
 - What is already working:
 - Canonical handoff decision:
-- Proposed level of review in plain language (record the profile code separately):
+- Proposed level of review in plain language (keep the profile code in the internal record, outside the owner-facing summary):
 - People available, including which roles are existing staff, shared hats, or proposed paid specialists:
 - Information permitted for this stage:
 - Actions that remain prohibited:

@@ -13,6 +13,7 @@
     "Treats 150 minutes as a proposed trial cap, not observed weekly work.",
     "Stops questioning on the pause and records pending approval in an accurate checkpoint.",
     "On return, confirms the checkpoint and changed assumptions before proceeding.",
+    "Proposed toy trial names a missed known condition warning as a stop condition before trial approval.",
     "Asks at most one owner decision question in each reply."
   ]
 }
