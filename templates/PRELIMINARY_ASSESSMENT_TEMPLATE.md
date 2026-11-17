@@ -56,3 +56,15 @@ Name areas where evidence or governance is insufficient. Do not manufacture cert
 - Items withheld from approval:
 - Date:
 
+## Optional next step: experimental build-handoff
+
+Include this copy-and-paste prompt only after the owner has approved the assessment. The extension is separate from the v0.1 guided setup and may recommend a simple process change, a limited test, more preparation, or no build. This prompt requests a proposed handoff for review; it does not approve a trial or implementation.
+
+> I have an approved Business Before Agents assessment and would like to explore the optional experimental build-handoff extension.
+>
+> Please read the public extension guide at https://github.com/brewser123/business-before-agents/tree/main/experimental/agentic-build-handoff and the consultant instructions and relevant templates it identifies. Tell me which files you could actually read. If you cannot access them, guide me through providing the needed files one step at a time. Do not claim to have read a file you could not access.
+>
+> Before I share my assessment, help me decide what business information to omit or summarize for privacy. Use only the approved assessment and other information I choose to provide in this workspace. Explain the extension's experimental status and choices in plain language. Then prepare the smallest useful next-step proposal for my review, including a simpler approach, deferral, or no build when appropriate. Ask one owner decision question at a time.
+>
+> Do not start a trial, use live systems or sensitive data, contact anyone, spend money, change records, write or deploy code, or treat this request as approval for any later stage. Ask for separate, explicit approval before any of those steps.
+

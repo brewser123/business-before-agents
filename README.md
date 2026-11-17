@@ -131,3 +131,5 @@ The stable `v0.1-preview` release ends with assessment and advisory recommendati
 
 This extension is not part of the stable guided installation or downloadable v0.1 package. It is intentionally gated and supports four outcomes: a bounded agentic pilot, simpler assistance or automation, defer pending evidence or controls, or do not build. It must not be treated as production authorization or an automatically deployable system.
 
+The [assessment template](templates/PRELIMINARY_ASSESSMENT_TEMPLATE.md) now offers an optional copy-and-paste prompt after an owner approves a completed assessment. It asks the chat tool to verify that it can read the public extension files, help the owner protect private business details, and prepare a small proposed handoff for review. It does not start a trial or authorize development. Owners can also copy the prompt from the [plain-language extension page](dist/extension.html). The website's updated ZIP includes this prompt; the existing `v0.1-preview` Git tag remains an earlier snapshot, so users of that tagged setup can use the website prompt separately.
+
