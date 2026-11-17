@@ -26,7 +26,7 @@
       <pre class="prompt-box" id="setup-prompt-text">I would like to use the Business Before Agents framework, but I am not familiar with GitHub or installing files.
 
 Please read the guided setup at:
-https://github.com/brewser123/business-before-agents/blob/v0.1-preview.1/BOOTSTRAP.md
+https://github.com/brewser123/business-before-agents/blob/v0.1-preview.2/BOOTSTRAP.md
 
 First, tell me whether you can access that guide and its bootstrap.json file. Then guide me through the easiest setup method available in this version of ChatGPT or Claude.
 
@@ -35,7 +35,7 @@ Please follow these rules:
 - Use plain language and give me only one step at a time.
 - Do not ask me to use command-line tools, Git commands, or programming.
 - Do not claim the framework is ready until every required file has been verified.
-- If I use the ZIP download, help me check its SHA-256 checksum against SHA256SUMS.txt in the official v0.1-preview.1 GitHub Release. The setup page has a local browser checker. Say “checksum verified” only if you actually calculated the downloaded ZIP's hash and it matched. If I report a browser result, call it a user-reported result. If neither check is possible, say “checksum not verified”; do not infer a match from the filename, version, or file list.
+- If I use the ZIP download, follow BOOTSTRAP.md's checksum instructions before opening it. Compare its SHA-256 with SHA256SUMS.txt in the official v0.1-preview.2 GitHub Release. This page has a local browser checker. Say “checksum verified” only if you calculated the downloaded ZIP's hash and it matched. If I report a browser result, call it user-reported. If neither check is possible, say “checksum not verified” and offer the tagged GitHub files instead. Stop if the checksum differs.
 - If you cannot access the files directly, tell me exactly what to click, download, extract, or upload.
 - Do not ask me to share confidential business information during setup.
 - Stop after setup is complete and wait for me to say: “Start the Business Before Agents discovery interview.”</pre>
@@ -56,29 +56,29 @@ Please follow these rules:
         <p class="eyebrow">Using ChatGPT?</p>
         <h3>Use a private Project when possible.</h3>
         <p>A Project can keep related chats, sources, and instructions together. GitHub availability varies by plan and workspace, so the setup prompt includes a manual fallback.</p>
-        <a class="text-link" href="https://github.com/brewser123/business-before-agents/blob/v0.1-preview.1/platforms/chatgpt/GITHUB_GUIDED_SETUP.md">Read the ChatGPT guide <span aria-hidden="true">→</span></a>
+        <a class="text-link" href="https://github.com/brewser123/business-before-agents/blob/v0.1-preview.2/platforms/chatgpt/GITHUB_GUIDED_SETUP.md">Read the ChatGPT guide <span aria-hidden="true">→</span></a>
       </section>
       <section class="sample-panel sample-panel-muted">
         <p class="eyebrow">Using Claude?</p>
         <h3>Add the approved files to Project Knowledge.</h3>
         <p>Claude's GitHub integration can add selected repository files to a Project and synchronize them after future releases.</p>
-        <a class="text-link" href="https://github.com/brewser123/business-before-agents/blob/v0.1-preview.1/platforms/claude/GITHUB_GUIDED_SETUP.md">Read the Claude guide <span aria-hidden="true">→</span></a>
+        <a class="text-link" href="https://github.com/brewser123/business-before-agents/blob/v0.1-preview.2/platforms/claude/GITHUB_GUIDED_SETUP.md">Read the Claude guide <span aria-hidden="true">→</span></a>
       </section>
     </div>
 
     <h2>Prefer to add the files yourself?</h2>
     <p>You can still download the complete framework and add its required files to a private AI Project. The ZIP includes the same guided setup and manifest.</p>
-    <a class="button button-secondary" href="business-before-agents-v0.1-preview.zip" download>Download the framework</a>
+    <a class="button button-secondary" href="business-before-agents-v0.1-preview.2.zip" download>Download the framework</a>
 
     <section class="verification-panel" id="verify-download" aria-labelledby="verify-download-title">
       <p class="eyebrow">Optional download check</p>
       <h2 id="verify-download-title">Check your ZIP before opening it.</h2>
-      <p>Select the ZIP you downloaded. This page calculates its SHA-256 checksum in your browser and compares it with the checksum published for the <a href="https://github.com/brewser123/business-before-agents/releases/tag/v0.1-preview.1">official v0.1-preview.1 release</a>. The file stays on your device.</p>
+      <p>Select the ZIP you downloaded. This page calculates its SHA-256 checksum in your browser and compares it with the checksum published for the <a href="https://github.com/brewser123/business-before-agents/releases/tag/v0.1-preview.2">official v0.1-preview.2 release</a>. The file stays on your device.</p>
       <label for="zip-check-file"><strong>Choose the downloaded ZIP</strong></label>
-      <input id="zip-check-file" type="file" accept=".zip,application/zip" data-sha256="82c54c8564b1dd54e79fb1cb3c31a074cd8bddecd289d1469fd34ba735df376b">
+      <input id="zip-check-file" type="file" accept=".zip,application/zip" data-sha256="908251293b5eaab130abe91e5db92c0b7d40827e5b1d70aa36a4f822f360c4c2">
       <p id="zip-check-status" role="status" aria-live="polite">No file checked yet.</p>
-      <p class="checksum-value">Expected SHA-256: <code>82c54c8564b1dd54e79fb1cb3c31a074cd8bddecd289d1469fd34ba735df376b</code></p>
-      <p class="fine-print">You can also <a href="https://github.com/brewser123/business-before-agents/releases/download/v0.1-preview.1/SHA256SUMS.txt">read the checksum file on GitHub</a>. A matching checksum confirms the downloaded bytes match this published ZIP; it does not prove that the site or your device is uncompromised.</p>
+      <p class="checksum-value">Expected SHA-256: <code>908251293b5eaab130abe91e5db92c0b7d40827e5b1d70aa36a4f822f360c4c2</code></p>
+      <p class="fine-print">You can also <a href="https://github.com/brewser123/business-before-agents/releases/download/v0.1-preview.2/SHA256SUMS.txt">read the checksum file on GitHub</a>. A matching checksum confirms the downloaded bytes match this published ZIP; it does not prove that the site or your device is uncompromised.</p>
     </section>
 
     <div class="notice advisory-notice">

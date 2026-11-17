@@ -76,6 +76,8 @@ Completed assessments include this disclosure and ask for a simple acknowledgmen
 
 You do not need to understand Git, use a terminal, or write code. Open ChatGPT or Claude and ask it to guide you through [BOOTSTRAP.md](BOOTSTRAP.md), one step at a time. The public website provides a ready-to-copy setup prompt.
 
+If you download the ZIP, compare its SHA-256 checksum with `SHA256SUMS.txt` attached to the [current GitHub Release](https://github.com/brewser123/business-before-agents/releases/tag/v0.1-preview.2) before opening it. The [website's browser checker](https://business-before-agents.pureboard1.chatgpt.site/install#verify-download) can do this on your device without Git or a terminal. A mismatched ZIP must not be used. An AI assistant should report a checksum match only if it actually calculated the downloaded file's hash; a browser-check result relayed by the user is user-reported.
+
 ### Manual setup
 
 1. Choose a setup guide under `platforms/`.
@@ -115,6 +117,8 @@ For a short illustration of the kind of deliverable an owner might receive—wit
 
 Repository maintainers should regenerate the website download with `python3 scripts/build_preview_zip.py` after changing a public framework file. The build uses an explicit file list, and the pull request check rejects a stale archive or an unexpected file in it.
 
+For each Release, publish the matching `SHA256SUMS.txt` alongside the ZIP. The repository check also ensures the website's displayed checksum matches its downloadable archive.
+
 ## License and attribution
 
 Business Before Agents uses a dual-license structure:
@@ -133,9 +137,9 @@ See [LICENSE](LICENSE) for the exact scope and [ATTRIBUTION.md](ATTRIBUTION.md) 
 
 ## Experimental build-handoff extension
 
-The `v0.1-preview.1` guided release ends with assessment and advisory recommendations. Development on `main` also includes an [experimental implementation handoff](experimental/agentic-build-handoff/README.md). Its v0.4 draft starts with a short internal trial for low-risk questions and offers more detailed validation and blueprint materials when the risk or evidence claim requires them.
+The `v0.1-preview.2` guided release ends with assessment and advisory recommendations. Development on `main` also includes an [experimental implementation handoff](experimental/agentic-build-handoff/README.md). Its v0.4 draft starts with a short internal trial for low-risk questions and offers more detailed validation and blueprint materials when the risk or evidence claim requires them.
 
 This extension is not part of the stable guided installation or downloadable v0.1 package. It is intentionally gated and supports four outcomes: a bounded agentic pilot, simpler assistance or automation, defer pending evidence or controls, or do not build. It must not be treated as production authorization or an automatically deployable system.
 
-The [assessment template](templates/PRELIMINARY_ASSESSMENT_TEMPLATE.md) now offers an optional copy-and-paste prompt after an owner approves a completed assessment. It asks the chat tool to verify that it can read the public extension files, help the owner protect private business details, and prepare a small proposed handoff for review. It does not start a trial or authorize development. Owners can also copy the prompt from the [plain-language extension page](dist/extension.html). The website ZIP and the `v0.1-preview.1` guided setup contain this prompt; the earlier `v0.1-preview` tag remains unchanged.
+The [assessment template](templates/PRELIMINARY_ASSESSMENT_TEMPLATE.md) now offers an optional copy-and-paste prompt after an owner approves a completed assessment. It asks the chat tool to verify that it can read the public extension files, help the owner protect private business details, and prepare a small proposed handoff for review. It does not start a trial or authorize development. Owners can also copy the prompt from the [plain-language extension page](dist/extension.html). The website ZIP and the `v0.1-preview.2` guided setup contain this prompt; the earlier `v0.1-preview` tag remains unchanged.
 

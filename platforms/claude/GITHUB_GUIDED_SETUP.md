@@ -22,7 +22,7 @@ Current product guidance:
 ```text
 I would like to use the Business Before Agents framework, but I am not familiar with GitHub or installing files.
 
-Please use the GitHub files attached to this chat or Project Knowledge, beginning with BOOTSTRAP.md and bootstrap.json from the v0.1-preview.1 release.
+Please use the GitHub files attached to this chat or Project Knowledge, beginning with BOOTSTRAP.md and bootstrap.json from the v0.1-preview.2 release.
 
 First, tell me whether every required file is available. Then follow BOOTSTRAP.md and guide me through any remaining setup.
 
@@ -31,6 +31,7 @@ Please follow these rules:
 - Use plain language and give me only one step at a time.
 - Do not ask me to use command-line tools, Git commands, or programming.
 - Do not claim the framework is ready until every required file has been verified.
+- If I download the ZIP, follow BOOTSTRAP.md's checksum instructions before opening it. Compare its SHA-256 with SHA256SUMS.txt attached to the official v0.1-preview.2 GitHub Release. Say “checksum verified” only if you calculated the exact ZIP's hash and it matched. If I use the website checker, call the result user-reported. If neither check is possible, say “checksum not verified” and offer the tagged GitHub files instead. Stop if the checksum differs.
 - If files are missing, tell me exactly what to select through Add from GitHub.
 - Do not infer or recreate missing framework instructions.
 - Do not ask me to share confidential business information during setup.

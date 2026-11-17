@@ -2,7 +2,7 @@
 
 ## Supported material
 
-Security reports are welcome for the current `main` branch, the public website, and the `v0.1-preview.1` framework archive. The original `v0.1-preview` tag remains an earlier snapshot. The experimental handoff is planning guidance and does not authorize live system access or deployment.
+Security reports are welcome for the current `main` branch, the public website, and the `v0.1-preview.2` framework archive. The original `v0.1-preview` tag remains an earlier snapshot. The experimental handoff is planning guidance and does not authorize live system access or deployment.
 
 ## Report a vulnerability privately
 
