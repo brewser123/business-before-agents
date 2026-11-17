@@ -9,4 +9,6 @@ The public ZIP and website are versioned separately from the experimental implem
 5. Create a **draft** GitHub Release for the tag, attach the exact ZIP and `SHA256SUMS.txt`, and publish the draft. Repository release immutability applies at publication, so attach everything before publishing. Verify the published Release and its downloaded asset with GitHub CLI and the checksum file.
 6. Publish the matching merged source to the public website. Check the live ZIP against the Release asset, test the browser checker, and verify setup links point to the new tag.
 
+Review [HOSTING_SECURITY.md](HOSTING_SECURITY.md) before changing the website host or claiming HTTP response-header coverage.
+
 An immutable-release attestation proves which tag and assets GitHub published. It does not by itself prove how a locally built ZIP was produced. Build provenance would require a separate, verified build attestation from a controlled build workflow.
