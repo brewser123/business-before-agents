@@ -1,6 +1,6 @@
 # Experimental implementation handoff
 
-> **Status: v0.4 draft experimental extension.** This material is not part of the stable `v0.1-preview` guided installation. Earlier handoff versions received limited private validation with multiple AI builder models. A scripted local-model walkthrough of v0.4 found unresolved errors in time-cap interpretation, disclosure order, and owner-facing pace; the latest wording corrections have not yet passed a model rerun. It has not been validated with real businesses. None of these materials is an automatically deployable system.
+> **Status: v0.4 draft experimental extension.** This material is not part of the stable `v0.1-preview` guided installation. Earlier handoff versions received limited private validation with multiple AI builder models. A scripted local-model walkthrough of v0.4 exposed time-cap, disclosure, and owner-facing pace errors. After focused corrections, one fresh ChatGPT run of the fictional ambiguous-time stop scenario passed all seven critical checks; the full transcript and human review are kept privately. The broader owner-path pass was reported by the test chat but its full replies were not independently reviewed here. The extension has not been validated with real businesses. None of these materials is an automatically deployable system.
 
 ## Purpose
 
@@ -95,4 +95,4 @@ The templates may be public. Completed handoff packages will usually contain pri
 
 ## Draft checks
 
-The [fictional test scenarios](../../tests/scenarios/README.md) define the owner-pause and missed-warning cases. The proposed GitHub workflow checks the blueprint schema and the scenario's arithmetic on pull requests. It does not run an AI conversation or show that a model follows the instructions; that still needs a separate model connection and human review. The v0.4 draft has not passed that behavioral check.
+The [fictional test scenarios](../../tests/scenarios/README.md) define the owner-pause and missed-warning cases. The GitHub workflow checks the blueprint schema and scenario arithmetic on pull requests. It does not run an AI conversation or show that a model follows the instructions. A separate, human-reviewed ChatGPT run passed the focused ambiguous-time stop scenario on the current v0.4 instructions. That single pass does not establish consistent behavior across models, an easy owner experience, real business value, or production readiness.
