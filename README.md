@@ -6,6 +6,8 @@ Business Before Agents is an industry-neutral, small-business-first framework fo
 
 **Project website:** https://business-before-agents.pureboard1.chatgpt.site
 
+The website is a good starting point for visitors who are unfamiliar with GitHub.
+
 This preview is a **Business Discovery Pilot**. It can guide an adaptive interview, organize evidence, document assumptions, and produce a preliminary assessment. It does not autonomously operate a business, guarantee policy compliance, or replace legal, financial, security, or other professional advice.
 
 ## Why discovery comes before AI
@@ -64,7 +66,7 @@ Each use case must be evaluated carefully for business fit, people, customers, f
 
 This preview is a free, limited-scope service and is not a comprehensive professional engagement. When a proposed decision creates substantial financial exposure, or the owner has serious financial concerns, the assessment should be treated only as an initial baseline. The business should seek appropriately qualified financial, legal, operational, security, or business advice before proceeding.
 
-The free baseline may be used as the starting point for a separate paid consultative engagement that reviews the business plan, evidence, risks, and recommendations more closely. Any paid engagement should disclose its own scope, provider qualifications, fees, deliverables, and terms. Completing the free assessment does not create an obligation to purchase another service.
+The free baseline provided may be used as the starting point for a separate external paid consultative engagement that reviews the business plan, evidence, risks, and recommendations more closely. Any paid engagement should disclose its own scope, provider qualifications, fees, deliverables, and terms. Completing the free assessment does not create an obligation to purchase another service.
 
 Completed assessments include this disclosure and ask for a simple acknowledgment that it is understood. The acknowledgment is not an agreement to proceed, a waiver of any rights, or a commitment to purchase a paid service.
 
