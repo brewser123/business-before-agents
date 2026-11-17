@@ -11,8 +11,8 @@ from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[2]
 DIST = ROOT / "dist"
-ARCHIVE = DIST / "business-before-agents-v0.1-preview.2.zip"
-PREFIX = "business-before-agents-v0.1-preview.2/"
+ARCHIVE = DIST / "business-before-agents-v0.1-preview.3.zip"
+PREFIX = "business-before-agents-v0.1-preview.3/"
 PACKAGE_EXTRAS = {
     "ATTRIBUTION.md", "BOOTSTRAP.md", "LICENSE", "SECURITY.md",
     "LICENSES/CC-BY-4.0.txt", "LICENSES/MIT.txt", "bootstrap.json",
@@ -52,6 +52,11 @@ class PublicPackageTests(unittest.TestCase):
         self.assertEqual(
             hashlib.sha256(earlier.read_bytes()).hexdigest(),
             "82c54c8564b1dd54e79fb1cb3c31a074cd8bddecd289d1469fd34ba735df376b",
+        )
+        previous = DIST / "business-before-agents-v0.1-preview.2.zip"
+        self.assertEqual(
+            hashlib.sha256(previous.read_bytes()).hexdigest(),
+            "908251293b5eaab130abe91e5db92c0b7d40827e5b1d70aa36a4f822f360c4c2",
         )
 
     def test_download_checksum_matches_archive_and_checker(self):

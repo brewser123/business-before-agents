@@ -9,8 +9,8 @@ from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ARCHIVE = ROOT / "dist/business-before-agents-v0.1-preview.2.zip"
-PREFIX = "business-before-agents-v0.1-preview.2/"
+ARCHIVE = ROOT / "dist/business-before-agents-v0.1-preview.3.zip"
+PREFIX = "business-before-agents-v0.1-preview.3/"
 EXTRAS = {
     "ATTRIBUTION.md", "BOOTSTRAP.md", "LICENSE", "SECURITY.md",
     "LICENSES/CC-BY-4.0.txt", "LICENSES/MIT.txt", "bootstrap.json",
