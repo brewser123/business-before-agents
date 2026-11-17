@@ -28,6 +28,7 @@ class PageAssets(HTMLParser):
     def __init__(self):
         super().__init__()
         self.csp = None
+        self.referrer_policy = None
         self.scripts = []
         self.stylesheets = []
         self.inline_handlers = []
@@ -36,6 +37,8 @@ class PageAssets(HTMLParser):
         attrs = dict(attrs)
         if tag == "meta" and attrs.get("http-equiv", "").lower() == "content-security-policy":
             self.csp = attrs.get("content")
+        if tag == "meta" and attrs.get("name", "").lower() == "referrer":
+            self.referrer_policy = attrs.get("content")
         if tag == "script":
             self.scripts.append(attrs.get("src"))
         if tag == "link" and attrs.get("rel") == "stylesheet":
@@ -115,15 +118,15 @@ class PublicPackageTests(unittest.TestCase):
     def test_static_pages_use_local_assets_and_restrictive_csp(self):
         pages = list(DIST.glob("*.html"))
         self.assertTrue(pages)
-        header_rules = (DIST / "_headers").read_text()
-        header_policy = header_rules.split("Content-Security-Policy: ", 1)[1].splitlines()[0]
-        self.assertIn("X-Content-Type-Options: nosniff", header_rules)
+        self.assertFalse((DIST / "_headers").exists(), "This host serves _headers as a file")
+        policies = set()
         for page in pages:
             with self.subTest(page=page.name):
                 parsed = PageAssets()
                 parsed.feed(page.read_text())
                 self.assertIsNotNone(parsed.csp)
-                self.assertEqual(parsed.csp, header_policy)
+                policies.add(parsed.csp)
+                self.assertEqual(parsed.referrer_policy, "no-referrer")
                 self.assertIn("default-src 'none'", parsed.csp)
                 self.assertIn("script-src 'self'", parsed.csp)
                 self.assertIn("object-src 'none'", parsed.csp)
@@ -134,6 +137,7 @@ class PublicPackageTests(unittest.TestCase):
                     self.assertIsNotNone(asset, "Inline script is not allowed")
                     self.assertFalse(asset.startswith(("http:", "https:", "//", "/")), asset)
                     self.assertTrue((DIST / asset).is_file(), asset)
+        self.assertEqual(len(policies), 1, "All public pages should use the same CSP")
 
 
 if __name__ == "__main__":
