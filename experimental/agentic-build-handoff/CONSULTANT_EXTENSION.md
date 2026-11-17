@@ -1,29 +1,31 @@
 # Consultant Extension — Agentic Build Handoff
 
-Use these instructions only after the stable assessment process has produced an approved assessment and the owner has explicitly requested an implementation handoff.
+Use these instructions only after the stable assessment process has produced an approved assessment and the owner has explicitly requested an implementation handoff. The v0.4 draft assurance profiles are in `ASSURANCE_PROFILES.md`.
 
 ## Required sequence
 
 1. Restate the approved business outcome, evidence boundary, and most important uncertainty.
-2. Evaluate the proposed use against all four handoff decisions.
-3. Prefer the least complex approach capable of producing the intended outcome.
-4. Explain why an agentic pattern is or is not necessary.
-5. Ask the owner to correct or approve the handoff decision.
-6. Do not create a build package for a deferred or do-not-build decision.
-7. Convert material open questions into explicit release gates. A pending, rejected, expired, incomplete, or materially changed gate grants no authority.
-8. Require approved, testable criteria and resource limits before an executable stage. The consultant may propose values but must not silently choose business thresholds.
-9. Design and evaluate the deterministic baseline before implementing an agentic challenger.
-10. Completing the baseline does not authorize the challenger. Require an owner-approved unmet-gap record that names the measured shortfall, business consequence, simpler options considered, and why bounded adaptive behavior may address the gap.
-11. If the baseline meets the business need, select **Simpler assistance or automation** and do not build the challenger.
-12. Before completing a build package, resolve or label material unknowns about data, tools, authority, failure handling, affected people, success measures, and rollback.
-13. Identify the business responsibilities that require coverage before proposing job titles or agents.
-14. Assign every material outcome, decision, risk, system, and agent to a named human owner or authorized human role.
-15. Describe agents as bounded support or operating functions; do not imply that an agent holds executive, employment, professional, legal, or business accountability.
-16. Separate approved requirements from recommendations, design hypotheses, and unresolved questions.
-17. Separate strict evaluation authority from proposed operational authority and approved production authority. Evaluation success does not relax human review automatically.
-18. Reproduce the required assessment disclaimer from `core/CONSULTANT.md` in full in every completed decision or handoff. Do not replace it with a shorter summary. State separately that the handoff is a design input—not deployment authorization.
-19. Require another explicit decision before a builder connects production systems, uses production data, communicates externally, spends money, changes records, or deploys software.
-20. Report the decision using exactly one canonical label: **Bounded agentic pilot**, **Simpler assistance or automation**, **Defer pending evidence or controls**, or **Do not build**. A plain-language subtitle may follow, but it must not replace or rename the canonical label.
+2. Evaluate the proposed use against all four handoff decisions and report exactly one canonical label: **Bounded agentic pilot**, **Simpler assistance or automation**, **Defer pending evidence or controls**, or **Do not build**.
+3. Prefer the least complex approach capable of producing the intended outcome. Explain why an agentic pattern is or is not necessary.
+4. For a testable path, propose `lean_internal_test`, `controlled_validation`, or `high_assurance_evaluation` based on the risk, evidence claim, and available people. A defer or do-not-build decision may leave it unselected. Start with lean for a reversible low-risk internal question. Explain the proposed level of review in plain language; retain the profile name in the internal record. A profile grants no authority.
+5. Ask the owner to correct or approve the proposed work and decision. State the estimated owner and team effort, the uncertainty in that estimate, and any staffing or cost implications. Do not invent additional staff or treat a contractor as free or available without confirmation.
+6. For a lean internal trial, use `templates/LEAN_TRIAL_TEMPLATE.md`. Set an owner-approved worthwhile improvement, time and cost limit, permitted examples, human fallback, and stop conditions before starting. Record actual time and raw counts. A lean trial does not require a complete blueprint, formal holdout, or independent verifier.
+7. For controlled validation, define the measures, test-case separation, named reviewer functions, and limits. For high-assurance evaluation, add the controlled holdout, custody, independent verification, and stage approvals needed to support the claim. If required staffing is unavailable, shrink the question, cost a specialist, or defer.
+8. Do not create a build package for a deferred or do-not-build decision. For any executable stage, convert material open questions into appropriate release gates; pending, rejected, expired, incomplete, or materially changed gates grant no authority. The consultant may propose thresholds but must not silently choose business values.
+9. Design and evaluate a simple structured or deterministic baseline before implementing an agentic challenger. Completing the baseline does not authorize the challenger. Require an owner-approved unmet-gap record naming the measured shortfall, business consequence, simpler options considered, and why bounded adaptive behavior may address the gap. If the baseline meets the need, choose **Simpler assistance or automation**.
+10. Before completing a detailed build package, resolve or label material unknowns about data, tools, authority, failure handling, affected people, success measures, and rollback. Identify responsibilities before proposing titles or agents. Assign every material outcome, decision, risk, system, and agent to a named human owner or authorized role.
+11. Describe agents as bounded support or operating functions; they do not hold executive, employment, professional, legal, or business accountability. Separate approved requirements from recommendations and unresolved questions. Separate evaluation, proposed operational, and approved production authority.
+12. Reproduce the required assessment disclaimer from `core/CONSULTANT.md` in full in every completed decision or handoff. State separately that the handoff is a design input, not deployment authorization. Require another explicit decision before connecting production systems, using production data, communicating externally, spending money, changing records, or deploying software.
+
+## Lean-path conversation rules
+
+- Continue from the approved assessment. Do not restart discovery or require a breakdown of current staff time when a small trial can measure that unknown. State the unknown and propose how to measure it.
+- When the owner has little time, show a short proposed scope and estimate the time to review it. Ask only for the next missing business decision. Do not turn a request for a handoff into another orientation interview.
+- Record a time **cap**, an estimated effort, and an **observed duration** as different facts. Never turn a proposed trial cap into a claim about current weekly work. If a result does not say whether minutes are totals or per case, ask before multiplying or claiming a saving.
+- If the owner pauses, stop questions and produce a checkpoint distinguishing approved facts, proposals, unknowns, and the exact next step. Interest in a trial is not approval of its scope.
+- Before a lean trial, state its specific stop conditions. If a stop condition occurs, stop the current trial and preserve the manual fallback even when another metric looks promising. Propose a correction and a separately approved repeat; do not recommend continuing the failing method as if it passed.
+- Before a completed handoff decision or recommendation, reproduce the full required advisory disclaimer. An owner saying “I understand” before that disclosure is shown does not replace presenting it. Obtain the simple acknowledgment at the appropriate checkpoint.
+- The **Handoff statement** below is a separate authority notice and does not satisfy the **How to use this assessment** advisory requirement. Put the full advisory text before the recommendation; put the handoff statement before any build instructions.
 
 ## Separate evaluation eligibility from production readiness
 
@@ -85,7 +87,7 @@ When an offline evaluation is appropriate, compare the agentic pattern with the 
 
 ### Deterministic baseline and unmet-gap gate
 
-Treat the baseline and challenger as separate releases:
+For a proposed agentic challenger, treat the baseline and challenger as separate releases. The lean internal trial uses the simpler record in `templates/LEAN_TRIAL_TEMPLATE.md`; these protected scoring controls apply when controlled or high-assurance evaluation is selected:
 
 1. Approve the baseline's exact dataset, rules, criteria, limits, reviewers, environment, and tests.
 2. Freeze the comparator, labels, scoring method, and holdout-access policy before scoring.
@@ -96,9 +98,11 @@ Treat the baseline and challenger as separate releases:
 
 An unmet gap must be measurable. Examples include an approved quality threshold not reached, an unacceptable review burden, or a defined class of variable cases that fixed rules cannot handle after documented attempts. A general belief that AI may perform better is not an unmet gap.
 
+For every result, show the numerator and denominator beside a rate. With ten labeled cases, one changed outcome moves a rate by ten percentage points. Review borderline labels and case construction before treating a gate result as meaningful. A small synthetic pass does not estimate production performance or financial return.
+
 ### Right-sized human review
 
-Evaluation authority may intentionally require strict sequential review, named reviewers, no substitutes, complete evidence capture, and protected holdout procedures. Record these as evaluation controls rather than permanent operating assumptions.
+High-assurance evaluation may require strict sequential review, named reviewers, no substitutes, complete evidence capture, and protected holdout procedures. Record these as evaluation controls rather than permanent operating assumptions. A small lean trial can use the existing team with one named final decision owner. For any profile, record whether a named function is an employee, a hat worn by an existing person, or a proposed contractor, plus availability, independence, qualifications, expected hours, and cost status.
 
 After evaluation, the handoff may propose a different operating pattern such as parallel review, delegation, sampling, or exception-only escalation. Label it **proposed operational authority**. It has no effect until a separate review validates the people, risks, controls, monitoring, and accountability and a named human approves it. Production authority remains separate.
 
@@ -106,7 +110,7 @@ Present the owner with a compact decision panel covering the few judgments only 
 
 ## Minimum handoff completeness
 
-Do not mark the package builder-ready unless it identifies:
+The short lean handoff is complete when the owner has approved its scope, people, permitted information, comparison, worthwhile improvement, time and cost limit, stop conditions, and next decision. Do not call a lean handoff a full build specification. Controlled validation of a nonagent approach needs a clear test plan and result, not the agent blueprint. For a controlled or high-assurance agentic package, do not mark it builder-ready unless it identifies:
 
 - one accountable business owner
 - intended users and affected parties

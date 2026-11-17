@@ -32,6 +32,21 @@ Select one:
 
 Use the selected wording verbatim in every assessment, summary, handoff decision, and machine-readable record. An explanatory subtitle may follow the canonical label but may not replace it with terms such as “ready,” “readiness required,” “stop,” or numbered outcomes.
 
+## Proposed assurance profile — pending owner review
+
+Select the smallest profile that supports the intended learning and consequences:
+
+- [ ] `lean_internal_test` — low-risk, reversible internal question; use the short trial handoff
+- [ ] `controlled_validation` — predefined measures and separated test cases
+- [ ] `high_assurance_evaluation` — protected evidence and independent verification for a consequential claim
+
+- Why this profile fits:
+- Existing people and shared hats available for the work:
+- Proposed specialists, qualifications, availability, expected hours, and cost status:
+- What would trigger a stronger or narrower review:
+
+A defer or do-not-build decision may leave the profile unselected until a safe question exists. Profile selection grants no execution authority.
+
 ## Gate 1 — safe evaluation eligibility
 
 - Can representative synthetic, de-identified, or copied test records be used safely? yes / no / unknown
@@ -76,9 +91,9 @@ Separate prerequisites for the selected evaluation stage from prerequisites for 
 - Evaluation-stage prerequisites:
 - Production-stage prerequisites:
 
-## Release-gate status
+## Release-gate status — detailed path only
 
-Cross-reference `RELEASE_GATES.md`. Record the status and approval reference for:
+For a controlled or high-assurance agentic handoff, cross-reference `RELEASE_GATES.md`. Record the status and approval reference for:
 
 - Design review:
 - Deterministic baseline:
@@ -87,7 +102,7 @@ Cross-reference `RELEASE_GATES.md`. Record the status and approval reference for
 
 A selected **Bounded agentic pilot** is a design decision; it is not authority to skip the deterministic baseline or implement the challenger. A pending, rejected, expired, incomplete, or materially changed gate grants no authority.
 
-## Baseline unmet-gap decision
+## Baseline unmet-gap decision — agentic challenger only
 
 - Baseline result:
 - Approved threshold:

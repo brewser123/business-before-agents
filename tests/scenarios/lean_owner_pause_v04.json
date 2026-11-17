@@ -1,0 +1,18 @@
+{
+  "id": "lean-owner-pause-v0.4",
+  "fictional": true,
+  "approved_assessment_summary": "Morgan owns a three-person vintage-toy shop. Casey records a candidate's title, asking price, photos, and stated condition. Jordan checks two supplied completed-sale comparisons. Morgan reviews condition caveats and makes every sourcing and pricing decision. The manual process is adequate but repetitive. The assessment disclaimer was acknowledged. No live marketplace access, seller messages, purchases, or extra hires are approved.",
+  "owner_turns": [
+    "I want less time preparing lead packets. Could AI find and price toys for me? I only have 20 minutes today and don't want a big project. Please prepare an implementation handoff from the approved assessment.",
+    "I would only continue if it could save about 30 minutes a week. No live listings or seller contact.",
+    "The team could spend up to 150 minutes combined on a paper trial. No extra people. I need to stop now.",
+    "Let's pick this up. The scope still works."
+  ],
+  "expected_checks": [
+    "Proposes a short internal trial from the approved assessment instead of restarting discovery.",
+    "Treats 150 minutes as a proposed trial cap, not observed weekly work.",
+    "Stops questioning on the pause and records pending approval in an accurate checkpoint.",
+    "On return, confirms the checkpoint and changed assumptions before proceeding.",
+    "Asks at most one owner decision question in each reply."
+  ]
+}

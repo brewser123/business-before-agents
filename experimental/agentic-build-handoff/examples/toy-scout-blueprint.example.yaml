@@ -1,16 +1,17 @@
 # Fictional, incomplete illustration. Not builder-ready and not a recommendation for a real business.
-schema_version: 0.3-experimental
+schema_version: 0.4-experimental
+assurance_profile: controlled_validation
 initiative: Toy Scout lead-triage pilot
 decision: bounded_agentic_pilot
 pilot_stage: offline_evaluation
-owner: Fictional business owner
+owner: Morgan (fictional business owner)
 operating_model: human_team_with_ai_assistance
 
 release_gates:
   - stage: design_review
     status: approved
     authorization_level: design_only
-    approver: Fictional business owner
+    approver: Morgan
     evidence_required:
       - Assessment and handoff decision reviewed.
     authorized_scope:
@@ -21,7 +22,7 @@ release_gates:
   - stage: deterministic_baseline
     status: pending
     authorization_level: implementation_only
-    approver: Fictional business owner
+    approver: Morgan
     evidence_required:
       - Approved synthetic-data manifest, fixed rules, criteria, limits, and test plan.
     authorized_scope: []
@@ -31,7 +32,7 @@ release_gates:
   - stage: agentic_challenger
     status: pending
     authorization_level: implementation_only
-    approver: Fictional business owner
+    approver: Morgan
     evidence_required:
       - Baseline results and an approved unmet-gap record explaining why simpler assistance is insufficient.
     authorized_scope: []
@@ -41,7 +42,7 @@ release_gates:
   - stage: production_consideration
     status: pending
     authorization_level: production_operation
-    approver: Fictional business owner
+    approver: Morgan
     evidence_required:
       - Separate production-readiness review and explicit production decision.
     authorized_scope: []
@@ -111,7 +112,7 @@ baseline_gap_gate:
 authority_by_stage:
   evaluation:
     status: pending
-    human_review_model: Strict sequential review by the named evidence reviewers and owner for a scored evaluation.
+    human_review_model: Casey reviews source evidence, Jordan reviews comparisons, and Morgan makes the final decision; the exact scored-review plan remains pending.
     substitution_rule: No substitution without a new staffing decision, updated tests, and new approval.
     authority_reference: HUMAN_AUTHORITY.md evaluation section
   proposed_operations:
@@ -127,7 +128,7 @@ roles:
   - id: business-owner
     kind: human
     purpose: Own the pilot outcome, sourcing decisions, and customer trust.
-    accountable_human: Fictional business owner
+    accountable_human: Morgan
     responsibilities:
       - Approve the source, category, limits, and success measures.
       - Review every suggested lead and make every purchase decision.
@@ -140,10 +141,28 @@ roles:
     handoffs:
       - Receive the daily candidate list with original-source evidence from lead-triage-support.
     fallback: Perform the established manual lead review.
+  - id: source-reviewer
+    kind: human
+    purpose: Check source evidence as an existing team responsibility.
+    accountable_human: Casey
+    responsibilities:
+      - Check supplied source references and candidate facts before owner review.
+    handoffs:
+      - Send reviewed candidate evidence to Jordan and Morgan.
+    fallback: Pause the scored review until Morgan assigns an approved reviewer.
+  - id: comparison-reviewer
+    kind: human
+    purpose: Check supplied comparison evidence as an existing team responsibility.
+    accountable_human: Jordan
+    responsibilities:
+      - Check comparison records and visible condition warnings before owner review.
+    handoffs:
+      - Send checked comparisons and exceptions to Morgan.
+    fallback: Pause the scored review until Morgan assigns an approved reviewer.
   - id: lead-triage-support
     kind: agent
     purpose: Prepare a private, bounded candidate list for owner review.
-    accountable_human: Fictional business owner
+    accountable_human: Morgan
     responsibilities:
       - Normalize visible candidate details from the approved source.
       - Flag missing evidence and explain ranking reasons.
@@ -218,7 +237,7 @@ authority:
 
 data:
   - source: Synthetic or specifically copied candidate test records
-    owner: Fictional business owner
+    owner: Morgan
     classification: Non-production test information
     authoritative: false
 
@@ -236,5 +255,6 @@ tests:
   - Stop when the permitted source is unavailable.
 
 open_questions:
+  - Are Casey and Jordan available, qualified, and independent enough for the proposed review, and what are their expected hours and costs?
   - Which live source and access method could be permitted for a later connected evaluation?
   - What relevant-suggestion rate justifies continuing the pilot?

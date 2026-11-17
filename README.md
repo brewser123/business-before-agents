@@ -123,7 +123,7 @@ See [LICENSE](LICENSE) for the exact scope and [ATTRIBUTION.md](ATTRIBUTION.md) 
 
 ## Experimental build-handoff extension
 
-The stable `v0.1-preview` release ends with assessment and advisory recommendations. Development on `main` now includes an [experimental Agentic Build Handoff](experimental/agentic-build-handoff/README.md) that explores how an approved assessment could become a builder-facing implementation brief, authority map, workflow, controls, tests, build prompt, and machine-readable blueprint.
+The stable `v0.1-preview` release ends with assessment and advisory recommendations. Development on `main` now includes an [experimental implementation handoff](experimental/agentic-build-handoff/README.md). Its v0.4 draft starts with a short internal trial for low-risk questions and offers more detailed validation and blueprint materials when the risk or evidence claim requires them.
 
 This extension is not part of the stable guided installation or downloadable v0.1 package. It is intentionally gated and supports four outcomes: a bounded agentic pilot, simpler assistance or automation, defer pending evidence or controls, or do not build. It must not be treated as production authorization or an automatically deployable system.
 

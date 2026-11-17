@@ -6,6 +6,7 @@
   "additionalProperties": false,
   "required": [
     "schema_version",
+    "assurance_profile",
     "initiative",
     "decision",
     "pilot_stage",
@@ -26,7 +27,8 @@
     "open_questions"
   ],
   "properties": {
-    "schema_version": { "const": "0.3-experimental" },
+    "schema_version": { "const": "0.4-experimental" },
+    "assurance_profile": { "enum": ["lean_internal_test", "controlled_validation", "high_assurance_evaluation"] },
     "initiative": { "type": "string", "minLength": 1 },
     "decision": {
       "enum": [
@@ -46,6 +48,7 @@
     "owner": { "type": "string", "minLength": 1 },
     "operating_model": {
       "enum": [
+        "human_team_with_fixed_automation",
         "human_team_with_ai_assistance",
         "hybrid_human_agent_team",
         "agent_supported_operating_workflow"

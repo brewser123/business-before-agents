@@ -1,10 +1,10 @@
-# Experimental Agentic Build Handoff
+# Experimental implementation handoff
 
-> **Status: experimental extension.** This material is not part of the stable `v0.1-preview` guided installation. It has received limited private validation with multiple AI builder models but has not been broadly validated across businesses, builders, or production environments and must not be represented as an automatically deployable system.
+> **Status: v0.4 draft experimental extension.** This material is not part of the stable `v0.1-preview` guided installation. Earlier handoff versions received limited private validation with multiple AI builder models. A scripted local-model walkthrough of v0.4 found unresolved errors in time-cap interpretation, disclosure order, and owner-facing pace; the latest wording corrections have not yet passed a model rerun. It has not been validated with real businesses. None of these materials is an automatically deployable system.
 
 ## Purpose
 
-This extension turns an approved Business Before Agents assessment into a structured specification that a development team or AI building tool can use as a starting point.
+This extension turns an approved Business Before Agents assessment into a proportionate next-step plan. The normal starting point for a low-risk internal question is a short lean trial. A more detailed specification is available when stronger evidence or controls are needed.
 
 It does not assume that an agent is the correct outcome. It first produces one of four decisions:
 
@@ -13,7 +13,9 @@ It does not assume that an agent is the correct outcome. It first produces one o
 3. **Defer pending evidence or controls** — the opportunity may be useful, but material facts, data, authority, or safeguards are missing.
 4. **Do not build** — the expected value does not justify the risk, cost, complexity, or effect on people and customers.
 
-Only the first decision produces a complete Agentic Build Handoff Package. The second may produce a smaller implementation brief. The third produces a readiness plan. The fourth records the reason for stopping.
+For a testable path, select an assurance profile from [ASSURANCE_PROFILES.md](ASSURANCE_PROFILES.md). A defer or do-not-build decision can leave the profile unselected. `lean_internal_test` is the default for a reversible, low-risk internal trial and uses [LEAN_TRIAL_TEMPLATE.md](templates/LEAN_TRIAL_TEMPLATE.md). `controlled_validation` adds predefined measures, separated test cases, and explicit review. `high_assurance_evaluation` adds protected evidence and independent verification when the consequences or claim require them. These profiles do not grant authority or form a mandatory sequence.
+
+A bounded agentic pilot uses the complete blueprint only after the simpler baseline shows an approved unmet gap and the owner separately authorizes the challenger. Simpler assistance or automation may use the lean handoff or a smaller implementation brief. A defer decision produces a readiness plan; do-not-build records the reason and a practical path toward readiness if useful.
 
 ### A pilot is not production
 
@@ -42,6 +44,9 @@ If these conditions are not met, return to discovery or record a defer/do-not-bu
 ## Package contents
 
 - `CONSULTANT_EXTENSION.md` — additional rules for creating the handoff
+- `ASSURANCE_PROFILES.md` — select proportionate evidence and review
+- `templates/LEAN_TRIAL_TEMPLATE.md` — short default handoff for a low-risk internal question
+- `examples/toy-scout-lean.example.md` — fictional lean path, with no claimed results
 - `templates/HANDOFF_DECISION_TEMPLATE.md` — build/no-build eligibility decision
 - `templates/OWNER_DECISION_SUMMARY_TEMPLATE.md` — three-interaction, plain-language owner view
 - `templates/RELEASE_GATES_TEMPLATE.md` — stage approvals, testable criteria, unmet-gap decision, and authority by stage
@@ -53,30 +58,24 @@ If these conditions are not met, return to discovery or record a defer/do-not-bu
 - `templates/RISK_AND_CONTROLS_TEMPLATE.md` — risk register, monitoring, shutdown, and rollback
 - `templates/ACCEPTANCE_TESTS_TEMPLATE.md` — synthetic, authorization, failure, and business tests
 - `templates/BUILD_PROMPT_TEMPLATE.md` — controlled instructions for an AI builder
-- `agent-blueprint.schema.json` — experimental machine-readable contract
+- `agent-blueprint.schema.json` — experimental machine-readable contract for a detailed blueprint; it is not required for a lean trial
 - `examples/toy-scout-blueprint.example.yaml` — fictional, incomplete example
 
 ## Intended workflow
 
 1. Load the approved assessment and approved business-state record.
-2. Apply the consultant extension and complete the handoff decision.
-3. Ask the owner to approve or correct the decision.
-4. Complete the release-gate panel. Keep unresolved values pending; do not let the builder choose business thresholds.
-5. Design and approve the deterministic baseline before any agentic implementation.
-6. After baseline results, require a separate unmet-gap decision. If the baseline meets the need, select simpler assistance or automation and stop the agentic path.
-7. If a bounded agentic challenger is separately approved, complete the remaining human-readable templates.
-8. Confirm that every required business responsibility has a human owner and that each proposed agent has a human accountable owner.
-9. Create `agent-blueprint.yaml` that validates against the experimental schema.
-10. Select and record the pilot stage. Begin with offline evaluation unless an approved isolated sandbox is necessary.
-11. Run the handoff acceptance tests using synthetic, de-identified, or specifically copied test information.
-12. Give the package to a builder only after unresolved blockers are visible.
-13. Require separate approvals for the deterministic baseline, agentic challenger, and any later production consideration.
+2. Apply the consultant extension and choose one of the four handoff decisions. For a testable path, propose an assurance profile and explain its effort in plain language. Ask the owner to approve or correct the work; keep the profile code in the internal record.
+3. For a low-risk internal question, draft the short lean trial with existing staff, representative permitted examples, a time limit, raw results, stop conditions, and a simple baseline. Ask the owner to set the minimum worthwhile improvement before the trial.
+4. If controlled or high-assurance evidence is needed, complete only the relevant detailed records and release gates. Confirm each named person's actual availability, role, independence, and cost. Keep missing approvals pending.
+5. Evaluate the simple baseline before any agentic challenger. A challenger needs a measured unmet gap, simpler options considered, and a separate owner decision.
+6. If a challenger is approved, complete the detailed templates and validate `agent-blueprint.yaml` against the experimental schema. Select offline evaluation or an approved isolated sandbox.
+7. Report raw counts, time, errors, limitations, and the next decision. Require a separate review before any production consideration.
 
 ## Right-sized owner experience
 
-The owner should normally move through three interactions: confirm the problem and boundary; approve, correct, or stop one plain-language baseline package; then return after results to choose the simpler approach, stop, or consider a separately specified challenger. The owner should not have to approve each technical field individually or read every builder-facing file. The consultant should translate the conversation into proposed criteria, explain the few decisions that require human judgment, and generate the detailed authority, workflow, control, test, and schema artifacts behind the scenes. Technical detail remains available for review but should not become an unnecessary questionnaire.
+The owner should normally move through three interactions: confirm the problem, boundary, and appropriate profile; approve, correct, or stop one plain-language trial; then return after results to continue the simple approach, stop, or consider a separately scoped validation. The owner should not have to approve each technical field individually or read every builder-facing file. Generate detailed records when the chosen profile calls for them, and keep them available for review.
 
-Use stricter review only when the risk and stage justify it. Evaluation may require sequential named reviewers and no substitutes to protect a scored holdout. A later operating proposal may consider parallel review, delegation, sampling, or exception-only escalation, but only through a separate evidence-based design and approval. Pilot success never relaxes human review automatically.
+Use stricter review only when the risk and stage justify it. A high-assurance evaluation may require sequential named reviewers and no substitutes to protect a scored holdout. A later operating proposal may consider parallel review, delegation, sampling, or exception-only escalation, but only through a separate evidence-based design and approval. A small synthetic result cannot establish production accuracy, and pilot success never relaxes human review automatically.
 
 ## What a builder may assume
 
@@ -93,3 +92,7 @@ The builder should begin by reporting contradictions, missing requirements, unav
 ## Separation from private business information
 
 The templates may be public. Completed handoff packages will usually contain private operating details and should be stored in access-controlled business storage—not committed to this public repository.
+
+## Draft checks
+
+The [fictional test scenarios](../../tests/scenarios/README.md) define the owner-pause and missed-warning cases. The proposed GitHub workflow checks the blueprint schema and the scenario's arithmetic on pull requests. It does not run an AI conversation or show that a model follows the instructions; that still needs a separate model connection and human review. The v0.4 draft has not passed that behavioral check.

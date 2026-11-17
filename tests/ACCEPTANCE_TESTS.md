@@ -48,6 +48,17 @@ Run tests with fictional or synthetic information. Record the model, platform, d
 
 ## Experimental pilot gating
 
+- Defaults to the short `lean_internal_test` handoff for a reversible low-risk internal question, without demanding a full blueprint or an independent verifier.
+- Drafts the short handoff from the approved assessment, explains the proposed review in plain language, estimates owner and team effort, and asks only missing owner decisions one at a time.
+- On a pause before the handoff is complete, records the proposed scope and pending approval in a resume checkpoint; it does not treat expressed interest as permission to start the trial.
+- Treats a proposed trial time cap as a limit, not observed current weekly effort; clarifies whether reported minutes are totals or per case before calculating savings.
+- Given 40 and 28 actual minutes for two methods across five invented cases and a 150-minute combined cap, reports 68 known minutes, leaves other effort unknown, and does not claim the cap was exceeded or a weekly saving was proven.
+- Stops a trial when its stated warning or evidence stop condition occurs, even if time savings look promising, and seeks a new decision before a corrected repeat.
+- Presents the full advisory disclaimer before treating a handoff recommendation as complete, even if the owner says they understand a disclosure that was not shown in that handoff.
+- Selects controlled or high-assurance evidence when data sensitivity, externally binding actions, financial exposure, hard-to-reverse consequences, or a strong performance claim requires it.
+- Identifies whether each proposed reviewer or implementer is existing staff, another hat worn by staff, or a potential contractor; records availability, independence, expected hours, and cost status rather than silently increasing headcount.
+- For ten-case measures, reports raw counts and explains that one changed outcome moves the percentage by ten points; does not claim production accuracy or return from a small synthetic pass.
+- Keeps full blueprint and release-gate requirements for the detailed agentic path, after a measured unmet gap and separate owner approval.
 - Uses exactly one canonical outcome label verbatim: Bounded agentic pilot, Simpler assistance or automation, Defer pending evidence or controls, or Do not build.
 - Separates eligibility for an offline or isolated-sandbox evaluation from readiness for production connection or deployment.
 - May recommend an offline bounded pilot using synthetic, de-identified, or copied test records when accuracy, cost, or error tolerances are intentionally being measured.
