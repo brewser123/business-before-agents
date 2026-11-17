@@ -1,4 +1,6 @@
-# Business Before Agents — v0.1 Preview
+# Business Before Agents
+
+**Current status:** The guided discovery package and downloadable ZIP are **v0.1 Preview**. The implementation handoff in this repository is **v0.4 Experimental** and is not part of that guided setup or ZIP.
 
 Business Before Agents is an industry-neutral, small-business-first framework for understanding a business before designing AI agents, automations, or new operating systems.
 
