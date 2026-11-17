@@ -1,0 +1,57 @@
+name: Preview build provenance
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  attest-preview-zip:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+      attestations: write
+      artifact-metadata: write
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+      - name: Select the release ZIP
+        id: candidate
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          from scripts.build_preview_zip import ARCHIVE
+
+          release = json.loads(Path("bootstrap.json").read_text())["release"]
+          if os.environ["EVENT_NAME"] == "push" and os.environ["REF_NAME"] != release:
+              raise SystemExit("Tag does not match bootstrap.json release")
+          expected = Path("dist") / f"business-before-agents-{release}.zip"
+          if ARCHIVE != Path.cwd() / expected or not expected.is_file():
+              raise SystemExit("ZIP builder and release manifest select different archives")
+          with open(os.environ["GITHUB_OUTPUT"], "a") as output:
+              print(f"archive={expected}", file=output)
+          PY
+      - name: Rebuild and compare the committed ZIP
+        run: |
+          python3 scripts/build_preview_zip.py
+          git diff --exit-code -- dist/
+          cd dist
+          sha256sum --check SHA256SUMS.txt
+      - name: Attest the rebuilt ZIP
+        uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6 # v4.2.2
+        with:
+          subject-path: ${{ steps.candidate.outputs.archive }}
