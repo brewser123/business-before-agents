@@ -68,7 +68,7 @@ if (zipCheckFile && zipCheckStatus) {
       const hash = await crypto.subtle.digest('SHA-256', bytes);
       const actual = [...new Uint8Array(hash)].map((byte) => byte.toString(16).padStart(2, '0')).join('');
       if (actual === zipCheckFile.dataset.sha256) {
-        zipCheckStatus.textContent = 'Checksum verified: this ZIP matches the published v0.1-preview.1 download.';
+        zipCheckStatus.textContent = 'Checksum verified: this ZIP matches the published v0.1-preview.2 download.';
       } else {
         zipCheckStatus.textContent = 'Checksum does not match. Do not use this ZIP. Download it again from the official release.';
       }

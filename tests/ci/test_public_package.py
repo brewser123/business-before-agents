@@ -11,8 +11,8 @@ from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[2]
 DIST = ROOT / "dist"
-ARCHIVE = DIST / "business-before-agents-v0.1-preview.zip"
-PREFIX = "business-before-agents-v0.1-preview/"
+ARCHIVE = DIST / "business-before-agents-v0.1-preview.2.zip"
+PREFIX = "business-before-agents-v0.1-preview.2/"
 PACKAGE_EXTRAS = {
     "ATTRIBUTION.md", "BOOTSTRAP.md", "LICENSE", "SECURITY.md",
     "LICENSES/CC-BY-4.0.txt", "LICENSES/MIT.txt", "bootstrap.json",
@@ -44,11 +44,35 @@ class PageAssets(HTMLParser):
 
 
 class PublicPackageTests(unittest.TestCase):
+    def test_earlier_website_download_remains_the_published_revision(self):
+        earlier = DIST / "business-before-agents-v0.1-preview.zip"
+        self.assertEqual(
+            hashlib.sha256(earlier.read_bytes()).hexdigest(),
+            "82c54c8564b1dd54e79fb1cb3c31a074cd8bddecd289d1469fd34ba735df376b",
+        )
+
     def test_download_checksum_matches_archive_and_checker(self):
         digest = hashlib.sha256(ARCHIVE.read_bytes()).hexdigest()
         expected = (DIST / "SHA256SUMS.txt").read_text().strip()
         self.assertEqual(expected, f"{digest}  {ARCHIVE.name}")
-        self.assertIn(f'data-sha256="{digest}"', (DIST / "install.html").read_text())
+        install = (DIST / "install.html").read_text()
+        self.assertIn(f'data-sha256="{digest}"', install)
+        self.assertIn(f"<code>{digest}</code>", install)
+
+    def test_checksum_and_extension_guidance_is_versioned(self):
+        release = json.loads((ROOT / "bootstrap.json").read_text())["release"]
+        for path in (
+            "BOOTSTRAP.md",
+            "platforms/chatgpt/GITHUB_GUIDED_SETUP.md",
+            "platforms/claude/GITHUB_GUIDED_SETUP.md",
+            "dist/install.html",
+        ):
+            with self.subTest(path=path):
+                self.assertIn("SHA256SUMS.txt", (ROOT / path).read_text())
+        extension_link = f"/tree/{release}/experimental/agentic-build-handoff"
+        for path in ("templates/PRELIMINARY_ASSESSMENT_TEMPLATE.md", "dist/extension.html"):
+            with self.subTest(path=path):
+                self.assertIn(extension_link, (ROOT / path).read_text())
 
     def test_guided_setup_points_to_the_packaged_release(self):
         manifest = json.loads((ROOT / "bootstrap.json").read_text())
