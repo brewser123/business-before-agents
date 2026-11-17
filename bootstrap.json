@@ -2,7 +2,7 @@
   "schema_version": 1,
   "name": "Business Before Agents",
   "version": "0.1-preview",
-  "release": "v0.1-preview",
+  "release": "v0.1-preview.1",
   "repository": "https://github.com/brewser123/business-before-agents",
   "website": "https://business-before-agents.pureboard1.chatgpt.site",
   "bootstrap_file": "BOOTSTRAP.md",

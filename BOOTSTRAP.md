@@ -12,19 +12,19 @@ Setup must be completed before requesting confidential business information.
 
 - Project: **Business Before Agents**
 - Version: **0.1-preview**
-- Release: **v0.1-preview**
+- Release: **v0.1-preview.1**
 - Repository: https://github.com/brewser123/business-before-agents
 - Machine-readable manifest: `bootstrap.json`
 - Framework license: CC BY 4.0
 - Website code license: MIT
 
-For a stable setup, use files from the `v0.1-preview` release rather than a later version of the `main` branch.
+For a stable setup, use files from the `v0.1-preview.1` release rather than a later version of the `main` branch. The earlier `v0.1-preview` tag is preserved as its original snapshot.
 
 ## Instructions for the AI assistant
 
-1. Confirm whether you can access the canonical repository and the `v0.1-preview` release.
+1. Confirm whether you can access the canonical repository and the `v0.1-preview.1` release.
 2. Read `bootstrap.json` and retrieve only the files it lists as required or optional.
-3. Verify that `config/framework.yaml` identifies the framework as **Business Before Agents** with version **0.1-preview**.
+3. Verify that `bootstrap.json` names release **v0.1-preview.1** and that `config/framework.yaml` identifies the framework as **Business Before Agents** with version **0.1-preview**. Stop if the files disagree.
 4. List every required file you successfully read and every required file that is missing.
 5. Do not claim setup is complete if any required file is unavailable.
 6. Do not reconstruct missing framework content from memory or general knowledge.

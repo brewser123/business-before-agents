@@ -22,7 +22,7 @@ Current product guidance:
 I would like to use the Business Before Agents framework, but I am not familiar with GitHub or installing files.
 
 Please read the guided setup at:
-https://github.com/brewser123/business-before-agents/blob/v0.1-preview/BOOTSTRAP.md
+https://github.com/brewser123/business-before-agents/blob/v0.1-preview.1/BOOTSTRAP.md
 
 First, tell me whether you can access that guide and the release's bootstrap.json file. Then follow the guide and help me use the easiest setup method available in this version of ChatGPT.
 
