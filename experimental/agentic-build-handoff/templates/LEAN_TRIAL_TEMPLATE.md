@@ -1,11 +1,11 @@
 # Lean internal test handoff
 
-Use only for a low-risk, reversible internal question. Draft it from the approved assessment; do not present the fields as a questionnaire. Ask one missing owner decision at a time and show the owner a short plain-language proposal. This handoff does not require the full agent blueprint. Present the required advisory disclaimer from `core/CONSULTANT.md` in the reviewable handoff, following the acknowledgment and approval-receipt rules in `CONSULTANT_EXTENSION.md`, and state what the current approval actually permits.
+Use only for a low-risk, reversible internal question. Draft it from the approved assessment; do not present the fields as a questionnaire. Ask one missing owner decision at a time and show the owner a short plain-language proposal; keep assurance profile codes in the internal record. This handoff does not require the full agent blueprint. Present the required advisory disclaimer from `core/CONSULTANT.md` before the recommendation in the reviewable handoff, following the acknowledgment and approval-receipt rules in `CONSULTANT_EXTENSION.md`, and state what the current approval actually permits.
 
 ## Owner view
 
 - Business problem and what is already working:
-- Existing people and their responsibilities for this trial:
+- Existing people, their responsibilities, and whether they have confirmed availability for this trial:
 - What a small trial should teach us:
 - Information allowed in the trial:
 - Actions and information outside the trial:
@@ -18,7 +18,7 @@ Use only for a low-risk, reversible internal question. Draft it from the approve
 - Simple template, fixed rule, or ordinary software to try:
 - Who prepares, checks, and makes the final decision:
 - Maximum combined team time and other cost:
-- Owner's minimum improvement worth continuing, set before the trial:
+- Owner's minimum improvement worth continuing, set before approval of the trial; if unknown, ask rather than supplying a business threshold on the owner's behalf:
 - How the trial will inform that improvement: identify who records preparation, checking, correction, and review time for both methods; who can supply a typical weekly case count; and what later representative work would be needed. A weekly estimate needs both representative measured end-to-end time per case and a supported weekly case count. If either is missing, report only the observed trial difference and leave weekly savings unproven. Do not delay a safe feasibility trial solely to obtain them.
 - Actual minutes, raw errors, warnings, corrections, and exceptions to record:
 - Immediate stop conditions:
