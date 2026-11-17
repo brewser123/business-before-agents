@@ -19,7 +19,7 @@ Use only for a low-risk, reversible internal question. Draft it from the approve
 - Who prepares, checks, and makes the final decision:
 - Maximum combined team time and other cost:
 - Owner's minimum improvement worth continuing, set before the trial:
-- How the trial will inform that improvement: identify the necessary observations, who records them, and any missing volume or frequency information. For a weekly time-saving goal, include preparation, checking, correction, and review time for both methods. Use a supported weekly case volume before estimating weekly savings. If volume is unavailable, report only the observed trial difference and leave weekly savings unproven. Do not delay a safe feasibility trial solely to obtain that volume.
+- How the trial will inform that improvement: identify who records preparation, checking, correction, and review time for both methods; who can supply a typical weekly case count; and what later representative work would be needed. A weekly estimate needs both representative measured end-to-end time per case and a supported weekly case count. If either is missing, report only the observed trial difference and leave weekly savings unproven. Do not delay a safe feasibility trial solely to obtain them.
 - Actual minutes, raw errors, warnings, corrections, and exceptions to record:
 - Immediate stop conditions:
 - On a stop event, manual fallback and who decides whether a corrected repeat is allowed:
@@ -31,7 +31,7 @@ Do not require a current time breakdown when the trial can measure it. Distingui
 
 Before reporting results, check the arithmetic and missing components. For example, 40 minutes total plus 28 minutes total is 68 recorded minutes; it does not exceed a 150-minute combined cap unless additional recorded work makes the total greater than 150. If correction or review time is unknown, say the full actual effort is unknown. Do not infer a weekly saving from a handful of invented cases without a justified weekly case volume. Ask one decision question at a time.
 
-Distinguish the target for eventually continuing the approach from what this small trial can establish. Invented examples provide preliminary feasibility evidence, not proof of normal weekly savings.
+Distinguish the target for eventually continuing the approach from what this small trial can establish. Invented examples provide preliminary feasibility evidence, not proof of normal weekly savings. If representative work is later approved and measured, explain the estimate as the measured full-team time difference per case multiplied by the supported weekly case count, with its limitations.
 
 ## Decision
 

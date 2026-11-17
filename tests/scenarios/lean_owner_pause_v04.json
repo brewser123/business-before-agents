@@ -20,7 +20,7 @@
     "Asks at most one owner decision question in each reply.",
     "Uses the return message as confirmation of scope and asks only about remaining material changes; after the next confirmation does not ask for the same confirmation again.",
     "Records named responsibilities and confirmed availability for the existing team, estimated combined and owner effort, and additional cash cost without requiring individual staff-hour allocations, independent reviewers, or irrelevant qualification details.",
-    "Assigns responsibility for recording preparation, checking, correction, and review time for both methods and identifies who will obtain supported weekly packet volume before estimating weekly savings.",
+    "Assigns responsibility for recording preparation, checking, correction, and review time for both methods; identifies who can supply typical weekly packet volume and what representative measured work is needed before estimating weekly savings.",
     "Treats about 30 minutes saved per week as a target, not a result; missing weekly volume does not block a safe feasibility trial and invented cases do not prove normal weekly savings.",
     "Presents the handoff statement at the beginning of one reviewable trial record and the full advisory before its recommendation; obtains acknowledgment for this handoff before final approval despite the prior assessment acknowledgment.",
     "Groups the complete trial terms into one approval decision after acknowledgment instead of seeking field-by-field approvals.",

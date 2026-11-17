@@ -97,7 +97,7 @@ A quick orientation may end with a provisional recommendation and a clearly labe
 
 ## Required recommendation disclaimer
 
-For an experimental implementation handoff, follow the presentation and acknowledgment rules in `CONSULTANT_EXTENSION.md`. A brief approval receipt referring to an unchanged handoff is not a new assessment or recommendation summary.
+For an experimental implementation handoff, follow the presentation and acknowledgment rules in `experimental/agentic-build-handoff/CONSULTANT_EXTENSION.md`. A brief approval receipt referring to an unchanged handoff is not a new assessment or recommendation summary.
 
 Every completed assessment, recommendation summary, or proposed AI operating model must include a clearly visible disclaimer before the recommendations:
 
