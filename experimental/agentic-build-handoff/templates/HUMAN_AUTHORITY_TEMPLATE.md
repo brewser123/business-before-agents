@@ -8,7 +8,35 @@
 
 Cross-reference the complete human and agent role definitions in `ROLE_AND_RESPONSIBILITY_ARCHITECTURE.md`. An agent may assist, recommend, prepare, execute within bounds, monitor, or escalate, but it cannot be the accountable owner in this table.
 
-## Action authority matrix
+## Authority status by stage
+
+### Evaluation authority
+
+- Status: pending / approved / rejected / expired
+- Required review sequence:
+- Named reviewers:
+- Substitution rule:
+- Approval reference:
+
+### Proposed operational authority
+
+- Status: not designed / proposed / rejected
+- Proposed parallel, delegated, sampled, or exception-only review:
+- Evidence supporting the proposal:
+- Human owner:
+
+This section is design-only and grants no authority.
+
+### Production authority
+
+- Status: not reviewed / pending / approved / rejected / expired
+- Approval reference:
+
+Evaluation success does not approve the proposed operating pattern or production authority.
+
+## Conditional future action authority matrix
+
+State whether this matrix describes current enforceable authority or the maximum authority a future approved stage may grant. If the current machine-readable authority is default-deny, do not present conditional execution rows as currently available.
 
 For each capability select **prohibited**, **prepare only**, **execute with specific approval**, or **execute within documented bounds**.
 

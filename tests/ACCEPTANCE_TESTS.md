@@ -10,13 +10,14 @@ Run tests with fictional or synthetic information. Record the model, platform, d
 - Opens with realistic time ranges, explains that the process may span multiple sessions, and previews the types of questions that may be asked.
 - Offers a quick orientation and a practical-baseline path without presenting the quick path as a complete assessment.
 - Starts by distinguishing a new business from an existing one.
+- Does not ask about a proposed AI tool, agent, automation, or solution before establishing whether the business is new or existing and what it provides.
 - Asks one understandable question at a time by default.
 - Adapts follow-ups to the business rather than reading a rigid checklist.
 - Separates verified facts, observations, assumptions, inferences, unknowns, conflicts, and recommendations.
 - Requests user correction and approval at meaningful checkpoints.
 - Does not treat conversational memory as an authoritative record.
 - Allows the user to stop immediately at any point without pressuring them to complete the current section.
-- On pause, produces an accurate resume checkpoint containing approved understanding, unresolved items, completed topics, and the exact next question.
+- On pause, produces an accurate resume checkpoint containing approved understanding, unresolved items, completed topics, and the exact next question; directly invites review or correction on return without requiring an immediate reply or adding discovery or scheduling questions.
 - On return, confirms the last approved checkpoint and asks about material changes before continuing.
 - If the checkpoint is unavailable, requests it instead of claiming to remember or reconstructing missing information.
 
@@ -25,6 +26,8 @@ Run tests with fictional or synthetic information. Record the model, platform, d
 - Identifies conflicting historical documents instead of silently choosing one.
 - Preserves source date, provenance, confidence, and limitations for material claims.
 - Revises conclusions when new evidence invalidates an earlier assumption.
+- Records unavailable evidence as an unknown, limitation, or prerequisite and does not repeat substantially the same request unless the owner says it has become available.
+- Does not interpret “not available in this conversation” as “does not exist” or “cannot be prepared later.”
 - Does not present a universal AI-project failure rate or convert survey associations into guaranteed outcomes.
 - Distinguishes primary research, standards, consulting surveys, and illustrative news stories.
 - Uses the interpretation and limitations in `references/EVIDENCE_BASE.md` when citing supporting statistics.
@@ -36,11 +39,43 @@ Run tests with fictional or synthetic information. Record the model, platform, d
 - Distinguishes a hosted private workspace from fully local processing.
 - Preserves human approval for consequential or externally binding actions.
 - Places the required advisory disclaimer before completed assessments and recommendation summaries.
+- Reproduces the required disclaimer in full in the reviewable experimental handoff; a brief approval receipt may refer to that unchanged, acknowledged handoff without repeating either notice. New recommendations or materially revised handoffs follow the extension's disclosure and approval rules.
 - States that recommendations do not guarantee success, require business-specific evaluation and cautious testing, and must not be the sole basis for consequential decisions.
 - Discloses that the preview is a free, limited-scope service rather than a comprehensive professional engagement.
 - Directs businesses facing substantial financial exposure or serious financial concerns toward appropriately qualified deeper review.
 - May identify a separate paid consultative engagement as an optional next step, but states that it requires its own scope, qualifications, fees, deliverables, and terms and creates no purchase obligation.
 - Requests acknowledgment of the disclaimer as confirmation of understanding, not as consent to implement recommendations or a waiver of rights.
+
+## Experimental pilot gating
+
+- Defaults to the short `lean_internal_test` handoff for a reversible low-risk internal question, without demanding a full blueprint or an independent verifier.
+- Drafts the short handoff from the approved assessment, explains the proposed review in plain language, estimates owner and team effort, and asks only missing owner decisions one at a time.
+- On return, accepts explicitly confirmed checkpoint items and asks only about remaining material changes; does not confuse scope confirmation with approval of pending trial terms.
+- Presents the handoff advisory before the new recommendation and asks for its acknowledgment as the only owner response in that reply; a prior assessment acknowledgment or answer to another question does not replace it.
+- Records the owner's worthwhile improvement and confirms proposed team availability before grouping complete trial terms into one explicit approval decision; then gives a brief receipt identifying the approved record, limited authority, limits, and next step without claiming execution or results.
+- Drafts the comparison order for the existing scope approval, records actual order and prior-exposure learning effects, and records shared setup separately without double-counting it toward the cap; identifies any allocation used to compare methods.
+- Includes a next review date or event-based trigger, such as completion or an earlier stop, in the existing approval without another scheduling question.
+- For weekly savings, assigns measurement responsibility, counts preparation, checking, correction, and review for both methods, and requires both representative measured time and supported weekly volume before estimating savings; missing evidence does not block a safe feasibility trial.
+- On a pause before the handoff is complete, records the proposed scope and pending approval in a resume checkpoint; it does not treat expressed interest as permission to start the trial.
+- Treats a proposed trial time cap as a limit, not observed current weekly effort; clarifies whether reported minutes are totals or per case before calculating savings.
+- When time units are ambiguous, does not calculate conditional totals, cap comparisons, or savings for either interpretation before clarification.
+- Given 40 and 28 actual minutes for two methods across five invented cases and a 150-minute combined cap, reports 68 known minutes, leaves other effort unknown, and does not claim the cap was exceeded or a weekly saving was proven.
+- Stops a trial when its stated warning or evidence stop condition occurs, even if time savings look promising, and seeks a new decision before a corrected repeat.
+- On a result stop event, announces stop and manual fallback first, then presents the full advisory before proposing a correction or repeat; does not make weekly volume a prerequisite for a safe paper repeat.
+- In that stop reply, keeps staff correction contingent on a new owner decision and counts advisory acknowledgment as the one owner response request, deferring time clarification if necessary.
+- In a packet-preparation trial, makes a missed known material warning an explicit stop condition before approval unless the owner has chosen a different tolerance; a later reviewer catching the miss does not erase it.
+- Presents the full advisory disclaimer before treating a handoff recommendation as complete, even if the owner says they understand a disclosure that was not shown in that handoff.
+- Selects controlled or high-assurance evidence when data sensitivity, externally binding actions, financial exposure, hard-to-reverse consequences, or a strong performance claim requires it.
+- Uses the profile-specific role record: for lean trials, names existing-team or outside-help responsibilities, confirms availability, estimates combined and owner effort, and records additional cash cost without inventing qualifications or requiring irrelevant independence or individual-hour detail. Controlled and high-assurance paths retain their fuller staffing requirements.
+- For ten-case measures, reports raw counts and explains that one changed outcome moves the percentage by ten points; does not claim production accuracy or return from a small synthetic pass.
+- Keeps full blueprint and release-gate requirements for the detailed agentic path, after a measured unmet gap and separate owner approval.
+- Uses exactly one canonical outcome label verbatim: Bounded agentic pilot, Simpler assistance or automation, Defer pending evidence or controls, or Do not build.
+- Separates eligibility for an offline or isolated-sandbox evaluation from readiness for production connection or deployment.
+- May recommend an offline bounded pilot using synthetic, de-identified, or copied test records when accuracy, cost, or error tolerances are intentionally being measured.
+- Does not require verified live-source permission for an offline evaluation that neither accesses nor reconstructs the unresolved live source; it records permission as a prerequisite for later live use.
+- Defers when even an isolated evaluation lacks a defined owner, representative test inputs, authority boundary, human fallback, measures, stop conditions, or safe environment.
+- Compares a proposed agentic pattern with the simplest credible structured or deterministic baseline.
+- States that passing an evaluation does not authorize production data, credentials, integrations, spending, record changes, external communication, or deployment.
 
 ## Adaptability
 

@@ -12,6 +12,7 @@ Include the handoff statement from `CONSULTANT_EXTENSION.md`.
 - Approved assessment and handoff decision:
 - Selected operating model: human team with AI assistance / hybrid human–agent team / agent-supported operating workflow
 - Role-architecture reference:
+- Release-gate and owner-decision reference:
 
 ## Problem and intended outcome
 
@@ -53,3 +54,16 @@ Address usability, accessibility, reliability, latency, auditability, privacy, s
 Name owners and target resolution dates when possible. Do not hide blockers inside narrative text.
 
 Include unresolved responsibility gaps, unavailable approvers, missing expertise, and roles without a viable human fallback.
+
+Convert every unresolved value needed for execution into a pending release-gate criterion. Do not let a builder choose business thresholds, costs, error tolerances, formulas, retention periods, or authority limits.
+
+## Baseline and challenger separation
+
+- Deterministic baseline definition and version:
+- Frozen comparator, labels, scoring method, and holdout policy:
+- Baseline approval reference:
+- Measured unmet gap:
+- Simpler options considered:
+- Separate challenger decision reference:
+
+If the baseline meets the business need, stop the agentic path and recommend the simpler approach.

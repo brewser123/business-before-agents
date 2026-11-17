@@ -6,10 +6,16 @@
   "additionalProperties": false,
   "required": [
     "schema_version",
+    "assurance_profile",
     "initiative",
     "decision",
+    "pilot_stage",
     "owner",
     "operating_model",
+    "release_gates",
+    "evaluation_criteria",
+    "baseline_gap_gate",
+    "authority_by_stage",
     "roles",
     "outcome",
     "scope",
@@ -21,7 +27,8 @@
     "open_questions"
   ],
   "properties": {
-    "schema_version": { "const": "0.1-experimental" },
+    "schema_version": { "const": "0.4-experimental" },
+    "assurance_profile": { "enum": ["lean_internal_test", "controlled_validation", "high_assurance_evaluation"] },
     "initiative": { "type": "string", "minLength": 1 },
     "decision": {
       "enum": [
@@ -31,13 +38,177 @@
         "do_not_build"
       ]
     },
+    "pilot_stage": {
+      "enum": [
+        "offline_evaluation",
+        "isolated_sandbox",
+        "not_applicable"
+      ]
+    },
     "owner": { "type": "string", "minLength": 1 },
     "operating_model": {
       "enum": [
+        "human_team_with_fixed_automation",
         "human_team_with_ai_assistance",
         "hybrid_human_agent_team",
         "agent_supported_operating_workflow"
       ]
+    },
+    "release_gates": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "allOf": [
+        {
+          "contains": { "type": "object", "properties": { "stage": { "const": "design_review" } }, "required": ["stage"] },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": { "type": "object", "properties": { "stage": { "const": "deterministic_baseline" } }, "required": ["stage"] },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": { "type": "object", "properties": { "stage": { "const": "agentic_challenger" } }, "required": ["stage"] },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": { "type": "object", "properties": { "stage": { "const": "production_consideration" } }, "required": ["stage"] },
+          "minContains": 1,
+          "maxContains": 1
+        }
+      ],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["stage", "status", "authorization_level", "approver", "evidence_required", "authorized_scope", "invalidation_conditions"],
+        "properties": {
+          "stage": {
+            "enum": ["design_review", "deterministic_baseline", "agentic_challenger", "production_consideration"]
+          },
+          "status": { "enum": ["pending", "approved", "rejected", "expired"] },
+          "authorization_level": { "enum": ["design_only", "implementation_only", "offline_execution", "production_operation"] },
+          "approver": { "type": "string", "minLength": 1 },
+          "evidence_required": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "authorized_scope": { "type": "array", "items": { "type": "string" } },
+          "invalidation_conditions": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "approval_reference": { "type": "string" }
+        },
+        "allOf": [
+          {
+            "if": { "properties": { "status": { "const": "approved" } }, "required": ["status"] },
+            "then": { "properties": { "approval_reference": { "type": "string", "minLength": 1 } }, "required": ["approval_reference"] }
+          }
+        ]
+      }
+    },
+    "evaluation_criteria": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "measure", "criterion_type", "operator", "value", "unit", "measurement_method", "status", "owner"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "measure": { "type": "string", "minLength": 1 },
+          "criterion_type": { "enum": ["minimum_success", "maximum_failure", "resource_limit", "mandatory_condition"] },
+          "operator": { "enum": ["gte", "lte", "eq", "required"] },
+          "value": { "type": ["number", "string", "boolean", "null"] },
+          "unit": { "type": "string" },
+          "measurement_method": { "type": "string", "minLength": 1 },
+          "status": { "enum": ["pending", "approved"] },
+          "owner": { "type": "string", "minLength": 1 },
+          "approval_reference": { "type": "string" }
+        },
+        "allOf": [
+          {
+            "if": { "properties": { "status": { "const": "approved" } }, "required": ["status"] },
+            "then": {
+              "properties": {
+                "value": { "not": { "type": "null" } },
+                "approval_reference": { "type": "string", "minLength": 1 }
+              },
+              "required": ["value", "approval_reference"]
+            }
+          }
+        ]
+      }
+    },
+    "baseline_gap_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "business_need", "baseline_method", "baseline_result", "required_threshold", "measured_gap", "business_consequence", "simpler_options_considered", "why_simpler_insufficient", "owner_decision", "approver"],
+      "properties": {
+        "status": { "enum": ["not_evaluated", "no_material_gap", "material_gap_pending", "material_gap_approved", "material_gap_rejected"] },
+        "business_need": { "type": "string" },
+        "baseline_method": { "type": "string" },
+        "baseline_result": { "type": "string" },
+        "required_threshold": { "type": "string" },
+        "measured_gap": { "type": "string" },
+        "business_consequence": { "type": "string" },
+        "simpler_options_considered": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "why_simpler_insufficient": { "type": "string" },
+        "owner_decision": { "enum": ["pending", "stop", "revise_baseline", "authorize_challenger"] },
+        "approver": { "type": "string", "minLength": 1 },
+        "decision_reference": { "type": "string" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "owner_decision": { "const": "authorize_challenger" } }, "required": ["owner_decision"] },
+          "then": {
+            "properties": {
+              "status": { "const": "material_gap_approved" },
+              "decision_reference": { "type": "string", "minLength": 1 }
+            },
+            "required": ["status", "decision_reference"]
+          }
+        },
+        {
+          "if": { "properties": { "status": { "const": "material_gap_approved" } }, "required": ["status"] },
+          "then": { "properties": { "owner_decision": { "const": "authorize_challenger" } }, "required": ["owner_decision"] }
+        }
+      ]
+    },
+    "authority_by_stage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evaluation", "proposed_operations", "production"],
+      "properties": {
+        "evaluation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "human_review_model", "substitution_rule", "authority_reference"],
+          "properties": {
+            "status": { "enum": ["pending", "approved", "rejected", "expired"] },
+            "human_review_model": { "type": "string", "minLength": 1 },
+            "substitution_rule": { "type": "string", "minLength": 1 },
+            "authority_reference": { "type": "string", "minLength": 1 }
+          }
+        },
+        "proposed_operations": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "human_review_model", "substitution_rule", "authority_reference"],
+          "properties": {
+            "status": { "enum": ["not_designed", "proposed", "rejected"] },
+            "human_review_model": { "type": "string", "minLength": 1 },
+            "substitution_rule": { "type": "string", "minLength": 1 },
+            "authority_reference": { "type": "string", "minLength": 1 }
+          }
+        },
+        "production": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "approval_reference"],
+          "properties": {
+            "status": { "enum": ["not_reviewed", "pending", "approved", "rejected", "expired"] },
+            "approval_reference": { "type": "string" }
+          }
+        }
+      }
     },
     "roles": {
       "type": "array",
@@ -160,5 +331,23 @@
     },
     "tests": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
     "open_questions": { "type": "array", "items": { "type": "string" } }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "decision": { "const": "bounded_agentic_pilot" } },
+        "required": ["decision"]
+      },
+      "then": {
+        "properties": {
+          "pilot_stage": { "enum": ["offline_evaluation", "isolated_sandbox"] }
+        }
+      },
+      "else": {
+        "properties": {
+          "pilot_stage": { "const": "not_applicable" }
+        }
+      }
+    }
+  ]
 }
