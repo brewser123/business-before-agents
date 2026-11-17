@@ -1,6 +1,6 @@
 # Experimental implementation handoff
 
-> **Status: v0.4 draft experimental extension.** This material is not part of the stable `v0.1-preview` guided installation. Earlier handoff versions received limited private validation with multiple AI builder models. A scripted local-model walkthrough of v0.4 exposed time-cap, disclosure, and owner-facing pace errors. After focused corrections, one fresh ChatGPT run of the fictional ambiguous-time stop scenario passed all seven critical checks; the full transcript and human review are kept privately. The broader owner-path pass was reported by the test chat but its full replies were not independently reviewed here. The extension has not been validated with real businesses. None of these materials is an automatically deployable system.
+> **Status: v0.4 draft experimental extension.** This material is not part of the stable `v0.1-preview` guided installation. Earlier handoff versions received limited private validation with multiple AI builder models. A scripted local-model walkthrough of v0.4 exposed time-cap, disclosure, and owner-facing pace errors. After corrections, independently reviewed ChatGPT runs passed the focused fictional ambiguous-time stop scenario and the revised fictional three-person-shop handoff sequence. A person acting as the shop owner found an earlier version clear, but the revised sequence has not been tested with a real business owner. The broader owner-pause scenario's reported pass was not independently reviewed in full. Private transcripts and reviews are not published. No business trial was executed, and none of these materials is an automatically deployable system.
 
 ## Purpose
 
@@ -48,7 +48,7 @@ If these conditions are not met, return to discovery or record a defer/do-not-bu
 - `templates/LEAN_TRIAL_TEMPLATE.md` — short default handoff for a low-risk internal question
 - `examples/toy-scout-lean.example.md` — fictional lean path, with no claimed results
 - `templates/HANDOFF_DECISION_TEMPLATE.md` — build/no-build eligibility decision
-- `templates/OWNER_DECISION_SUMMARY_TEMPLATE.md` — three-interaction, plain-language owner view
+- `templates/OWNER_DECISION_SUMMARY_TEMPLATE.md` — three-part, plain-language owner view
 - `templates/RELEASE_GATES_TEMPLATE.md` — stage approvals, testable criteria, unmet-gap decision, and authority by stage
 - `templates/IMPLEMENTATION_BRIEF_TEMPLATE.md` — problem, outcome, scope, and requirements
 - `templates/AGENT_WORKFLOW_TEMPLATE.md` — triggers, states, steps, exceptions, and completion
@@ -73,7 +73,7 @@ If these conditions are not met, return to discovery or record a defer/do-not-bu
 
 ## Right-sized owner experience
 
-The owner should normally move through three interactions: confirm the problem, boundary, and appropriate profile; approve, correct, or stop one plain-language trial; then return after results to continue the simple approach, stop, or consider a separately scoped validation. The owner should not have to approve each technical field individually or read every builder-facing file. Generate detailed records when the chosen profile calls for them, and keep them available for review.
+For a lean trial, ask only for decisions that are still missing: acknowledgment of the handoff advisory, a worthwhile improvement, confirmation that the proposed team and limits work, and one decision on the complete trial. Facts already confirmed in the approved assessment need not be asked again. After results, the owner decides whether to continue the simple approach, stop, or consider a separately scoped validation. The owner should not have to approve each technical field individually or read every builder-facing file. Generate detailed records when the chosen profile calls for them, and keep them available for review.
 
 Use stricter review only when the risk and stage justify it. A high-assurance evaluation may require sequential named reviewers and no substitutes to protect a scored holdout. A later operating proposal may consider parallel review, delegation, sampling, or exception-only escalation, but only through a separate evidence-based design and approval. A small synthetic result cannot establish production accuracy, and pilot success never relaxes human review automatically.
 
@@ -95,4 +95,4 @@ The templates may be public. Completed handoff packages will usually contain pri
 
 ## Draft checks
 
-The [fictional test scenarios](../../tests/scenarios/README.md) define the owner-pause and missed-warning cases. The GitHub workflow checks the blueprint schema and scenario arithmetic on pull requests. It does not run an AI conversation or show that a model follows the instructions. A separate, human-reviewed ChatGPT run passed the focused ambiguous-time stop scenario on the current v0.4 instructions. That single pass does not establish consistent behavior across models, an easy owner experience, real business value, or production readiness.
+The [fictional test scenarios](../../tests/scenarios/README.md) define the owner-pause and missed-warning cases. The GitHub workflow checks the blueprint schema and scenario arithmetic on pull requests. It does not run an AI conversation or show that a model follows the instructions. Separate human reviews found a focused ambiguous-time stop run and a revised three-person-shop handoff run passed their observed checks. These narrow fictional passes do not establish consistent behavior across models, an easy experience for real owners, business value, or production readiness.

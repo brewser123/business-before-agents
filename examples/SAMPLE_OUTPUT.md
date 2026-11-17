@@ -60,11 +60,11 @@ Generate first drafts for marketplace listings, customer alerts, newsletters, an
 
 **A person must:** verify every factual claim, disclose repairs or uncertainty, confirm image rights, and approve publication.
 
-## Recommended first experiment
+## Proposed staged experiment
 
-Run a **30-day lead-triage pilot** using one permitted source and one narrow category, such as 1980s action figures in original packaging.
+Begin with an **offline comparison** of the current review method and a simple interest-profile checklist using invented or specifically approved copied records. Record time, useful leads, errors, and missed condition or authenticity caveats. Do not connect to, monitor, or reconstruct a live source whose permission is unresolved. Consider AI ranking only if the simpler method leaves a measured gap and the owner separately approves that next test.
 
-If permission for a live source is not yet verified, begin as an **offline evaluation** using synthetic or specifically copied records. Do not connect to, monitor, or reconstruct the unresolved live source. Treat live-source permission as a prerequisite for any later connected test.
+If the offline comparison is worthwhile and live-source permission is verified, propose a **separately approved 30-day lead-triage pilot** using one permitted source and one narrow category, such as 1980s action figures in original packaging. That later pilot would:
 
 1. Record how the owner currently finds and evaluates leads for one week.
 2. Define a simple interest profile: brands, years, condition, maximum purchase amount, excluded items, and required evidence.
@@ -95,7 +95,7 @@ Automated purchasing, seller negotiation, authenticity claims, appraisal languag
 
 ## Suggested next owner decision
 
-Decide whether saving time on lead review is valuable enough to justify a limited 30-day test. If yes, select one permitted source, one product category, a maximum pilot budget, and the person who can stop the experiment.
+Decide whether saving time on lead review is valuable enough to justify a small offline comparison. A connected 30-day test would require a later decision on source permission, product category, budget, stop conditions, and who can stop it.
 
 ## Advisory acknowledgment
 

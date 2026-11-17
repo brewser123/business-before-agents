@@ -16,7 +16,7 @@ In plain language:
 - Actions that remain prohibited:
 - Today's decision permits:
 
-Ask the owner to choose **continue**, **correct this summary**, or **stop**.
+Carry confirmed facts into the proposed trial. If a material problem or boundary remains unclear, ask for that correction as the next single owner question. Do not add a preliminary “continue” approval when the complete trial can be presented for one decision in section 2.
 
 ## 2. Review the proposed small trial or validation
 
@@ -55,6 +55,6 @@ If a stop condition occurred, show it before a positive metric. Stop the current
 
 Do not include production approval in the normal baseline or challenger flow. If production is later proposed, begin a separate production-readiness review.
 
-## Required advisory summary
+## Required advisory
 
-Explain briefly that this free, limited-scope assessment is advisory, does not guarantee success, and is not the sole basis for consequential decisions. Link or append the full required disclaimer and obtain the framework's conversational acknowledgment without presenting it as a contract.
+Begin the reviewable handoff with the authority statement and the full **How to use this assessment** advisory from `core/CONSULTANT.md`, before any new recommendation. Ask for its simple conversational acknowledgment as the only owner response in that reply. A brief summary or link cannot replace the full text. This acknowledgment is not a contract or approval of the trial.

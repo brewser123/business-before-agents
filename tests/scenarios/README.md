@@ -4,7 +4,7 @@ These files contain fictional, public-safe cases for testing the draft implement
 
 ## What the GitHub check does
 
-The proposed GitHub Actions check validates the experimental blueprint against its JSON Schema and checks that the result fixture's math and stop expectation are internally consistent, and validates the owner-path fixture's basic structure. It uses a read-only repository token. It does not call an AI model or certify that a model follows the framework.
+The GitHub Actions check validates the experimental blueprint against its JSON Schema, checks that the result fixture's math and stop expectation are internally consistent, and validates the owner-path fixture's basic structure. It uses a read-only repository token. It does not call an AI model or certify that a model follows the framework.
 
 ## How to use the model scenarios
 
