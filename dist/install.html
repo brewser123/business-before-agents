@@ -35,6 +35,7 @@ Please follow these rules:
 - Use plain language and give me only one step at a time.
 - Do not ask me to use command-line tools, Git commands, or programming.
 - Do not claim the framework is ready until every required file has been verified.
+- If I use the ZIP download, help me check its SHA-256 checksum against SHA256SUMS.txt in the official v0.1-preview.1 GitHub Release. The setup page has a local browser checker. Say “checksum verified” only if you actually calculated the downloaded ZIP's hash and it matched. If I report a browser result, call it a user-reported result. If neither check is possible, say “checksum not verified”; do not infer a match from the filename, version, or file list.
 - If you cannot access the files directly, tell me exactly what to click, download, extract, or upload.
 - Do not ask me to share confidential business information during setup.
 - Stop after setup is complete and wait for me to say: “Start the Business Before Agents discovery interview.”</pre>
@@ -45,7 +46,7 @@ Please follow these rules:
     <h2>What happens next?</h2>
     <ol class="plain-steps">
       <li><strong>Your assistant checks access.</strong> It should tell you whether it can read the approved GitHub files.</li>
-      <li><strong>It verifies the framework.</strong> It checks the project name, version, and every required file before continuing.</li>
+      <li><strong>It verifies the framework.</strong> It checks the project name, version, and every required file. If you use the ZIP, it also helps you check the download's checksum.</li>
       <li><strong>It guides any manual steps.</strong> If direct access is unavailable, it explains exactly what to click and add—without Git commands.</li>
       <li><strong>You choose when to begin.</strong> Setup stops before the interview and waits for your instruction.</li>
     </ol>
@@ -68,6 +69,17 @@ Please follow these rules:
     <h2>Prefer to add the files yourself?</h2>
     <p>You can still download the complete framework and add its required files to a private AI Project. The ZIP includes the same guided setup and manifest.</p>
     <a class="button button-secondary" href="business-before-agents-v0.1-preview.zip" download>Download the framework</a>
+
+    <section class="verification-panel" id="verify-download" aria-labelledby="verify-download-title">
+      <p class="eyebrow">Optional download check</p>
+      <h2 id="verify-download-title">Check your ZIP before opening it.</h2>
+      <p>Select the ZIP you downloaded. This page calculates its SHA-256 checksum in your browser and compares it with the checksum published for the <a href="https://github.com/brewser123/business-before-agents/releases/tag/v0.1-preview.1">official v0.1-preview.1 release</a>. The file stays on your device.</p>
+      <label for="zip-check-file"><strong>Choose the downloaded ZIP</strong></label>
+      <input id="zip-check-file" type="file" accept=".zip,application/zip" data-sha256="82c54c8564b1dd54e79fb1cb3c31a074cd8bddecd289d1469fd34ba735df376b">
+      <p id="zip-check-status" role="status" aria-live="polite">No file checked yet.</p>
+      <p class="checksum-value">Expected SHA-256: <code>82c54c8564b1dd54e79fb1cb3c31a074cd8bddecd289d1469fd34ba735df376b</code></p>
+      <p class="fine-print">You can also <a href="https://github.com/brewser123/business-before-agents/releases/download/v0.1-preview.1/SHA256SUMS.txt">read the checksum file on GitHub</a>. A matching checksum confirms the downloaded bytes match this published ZIP; it does not prove that the site or your device is uncompromised.</p>
+    </section>
 
     <div class="notice advisory-notice">
       <strong>A guided setup is not a permanent automatic installation.</strong>

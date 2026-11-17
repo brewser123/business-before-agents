@@ -1,6 +1,7 @@
 """Guard against accidental publication of private files or stale downloads."""
 
 import json
+import hashlib
 import stat
 import unittest
 from html.parser import HTMLParser
@@ -43,6 +44,12 @@ class PageAssets(HTMLParser):
 
 
 class PublicPackageTests(unittest.TestCase):
+    def test_download_checksum_matches_archive_and_checker(self):
+        digest = hashlib.sha256(ARCHIVE.read_bytes()).hexdigest()
+        expected = (DIST / "SHA256SUMS.txt").read_text().strip()
+        self.assertEqual(expected, f"{digest}  {ARCHIVE.name}")
+        self.assertIn(f'data-sha256="{digest}"', (DIST / "install.html").read_text())
+
     def test_guided_setup_points_to_the_packaged_release(self):
         manifest = json.loads((ROOT / "bootstrap.json").read_text())
         release = manifest["release"]
