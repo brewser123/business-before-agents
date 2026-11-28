@@ -16,6 +16,7 @@ Use only for a low-risk, reversible internal question. Draft it from the approve
 - Estimated owner time and combined team time, labeled as estimates:
 - Manual or current-process comparison: propose the order for trying both methods; record the actual order for each example and flag any benefit from having already seen it. Record shared setup time separately, count it once toward the combined cap, and identify any allocation used when comparing methods. Draft this procedure for the existing scope approval rather than asking another owner question.
 - Simple template, fixed rule, or ordinary software to try:
+- Possible reusable skill for a later stage, if a stable procedure emerges (one internal line or “none”; no skill authoring is needed for this trial):
 - Who prepares, checks, and makes the final decision:
 - Maximum combined team time and other cost:
 - Owner's minimum improvement worth continuing, set before approval of the trial; if unknown, ask rather than supplying a business threshold on the owner's behalf:

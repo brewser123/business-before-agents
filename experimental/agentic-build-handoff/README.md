@@ -51,6 +51,7 @@ If these conditions are not met, return to discovery or record a defer/do-not-bu
 - `templates/OWNER_DECISION_SUMMARY_TEMPLATE.md` — three-part, plain-language owner view
 - `templates/RELEASE_GATES_TEMPLATE.md` — stage approvals, testable criteria, unmet-gap decision, and authority by stage
 - `templates/IMPLEMENTATION_BRIEF_TEMPLATE.md` — problem, outcome, scope, and requirements
+- `templates/SKILL_PLANNING_TEMPLATE.md` — optional reusable-skill fit, design, and safety/legal pre-use review
 - `templates/AGENT_WORKFLOW_TEMPLATE.md` — triggers, states, steps, exceptions, and completion
 - `templates/ROLE_AND_RESPONSIBILITY_ARCHITECTURE_TEMPLATE.md` — human roles, agent support, accountability, handoffs, and role coverage
 - `templates/HUMAN_AUTHORITY_TEMPLATE.md` — permissions and approval boundaries
@@ -68,8 +69,11 @@ If these conditions are not met, return to discovery or record a defer/do-not-bu
 3. For a low-risk internal question, draft the short lean trial with existing staff, representative permitted examples, a time limit, raw results, stop conditions, and a simple baseline. Ask the owner to set the minimum worthwhile improvement before the trial.
 4. If controlled or high-assurance evidence is needed, complete only the relevant detailed records and release gates. Confirm each named person's actual availability, role, independence, and cost. Keep missing approvals pending.
 5. Evaluate the simple baseline before any agentic challenger. A challenger needs a measured unmet gap, simpler options considered, and a separate owner decision.
-6. If a challenger is approved, complete the detailed templates and validate `agent-blueprint.yaml` against the experimental schema. Select offline evaluation or an approved isolated sandbox.
-7. Report raw counts, time, errors, limitations, and the next decision. Require a separate review before any production consideration.
+6. If a repeatable AI-assisted procedure would help either the simpler path or an approved challenger, record a skill-fit decision. A lean trial may note a candidate briefly. Plan its `SKILL.md` during an approved design stage, then review the actual files for safety and legal issues before any separately approved installation or execution. A skill does not grant tool access or business authority.
+7. If a challenger is approved, complete the detailed templates and validate `agent-blueprint.yaml` against the experimental schema. Select offline evaluation or an approved isolated sandbox.
+8. Report raw counts, time, errors, limitations, and the next decision. Require a separate review before any production consideration.
+
+Claude and ChatGPT/Codex both support reusable skills centered on `SKILL.md`; their discovery and installation steps differ. See [Anthropic's Agent Skills overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview) and [OpenAI's Skills guide](https://developers.openai.com/api/docs/guides/tools-skills). Check the selected host's current requirements before preparing a skill for use.
 
 ## Right-sized owner experience
 

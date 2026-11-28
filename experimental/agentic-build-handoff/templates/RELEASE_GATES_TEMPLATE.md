@@ -37,6 +37,10 @@ Complete one record for each stage: **design review**, **deterministic baseline*
 
 Implementation permission and execution permission are different. A gate may first approve an exact specification for implementation using development-only synthetic fixtures. Update and reapprove the versioned gate with the built artifact, test evidence, and **offline execution** level before processing the scored holdout. Do not require a built artifact before granting implementation-only authority.
 
+## Conditional reusable-skill gate
+
+If a stage would install or execute a reusable skill, attach the completed `SKILL_PLANNING_TEMPLATE.md` pre-use review to that stage's gate. Identify the exact skill version, host, reviewed files and dependencies, approved tools and data, reviewer, evidence, and remaining issues. An unresolved material safety or legal issue keeps installation and execution pending. A possible skill that is only noted during a lean paper trial does not block that trial or create a new owner approval question.
+
 ## Evaluation criteria
 
 Every executable evaluation must replace qualitative goals with approved, testable criteria.

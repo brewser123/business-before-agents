@@ -22,6 +22,7 @@ Before writing or changing code:
 11. Refuse an agentic implementation unless the approved unmet-gap record identifies the baseline result, required threshold, measured gap, business consequence, simpler options considered, and exact challenger authorization.
 12. Keep evaluation authority separate from proposed operational authority and approved production authority.
 13. Wait for the matching explicit approval before planning, implementation, or execution.
+14. If the handoff proposes a reusable skill, read its skill-planning record. Check that it is a focused, repeatable procedure and verify the selected host's `SKILL.md` packaging and installation requirements. Report any missing safety or legal review as a blocker to installation or execution.
 
 If the design-review gate is pending, perform only the explicitly requested read-only review, report blockers, and stop. After design-only approval, prepare the specification. After implementation-only approval, build only with development fixtures. Process the scored holdout only after offline-execution approval tied to the artifact and passed tests.
 
@@ -37,6 +38,7 @@ During implementation:
 - Do not deploy or connect production systems without a separate explicit approval.
 - Do not choose missing business thresholds, formulas, cost limits, error tolerances, retention rules, or authority settings.
 - Do not treat baseline completion, evaluation success, or proposed operating rules as authority for the next stage.
+- Do not install or run a skill while its exact version, supporting scripts, permissions, data handling, source rights, or applicable legal obligations have unresolved material review items. Do not treat a skill as an agent or a grant of authority.
 
 Return:
 1. completeness and contradiction report
@@ -46,4 +48,5 @@ Return:
 5. security and privacy plan
 6. acceptance-test plan
 7. open decisions requiring human approval
+8. reusable-skill fit and pre-use review status, when relevant
 ```
