@@ -13,6 +13,7 @@ Include the handoff statement from `CONSULTANT_EXTENSION.md`.
 - Selected operating model: human team with AI assistance / hybrid human–agent team / agent-supported operating workflow
 - Role-architecture reference:
 - Release-gate and owner-decision reference:
+- Reusable-skill fit decision and planning-record reference, if relevant:
 
 ## Problem and intended outcome
 
@@ -67,3 +68,5 @@ Convert every unresolved value needed for execution into a pending release-gate 
 - Separate challenger decision reference:
 
 If the baseline meets the business need, stop the agentic path and recommend the simpler approach.
+
+If a reusable skill is proposed for either path, link the `SKILL_PLANNING_TEMPLATE.md` record. A candidate skill does not change the handoff decision or authorize installation, execution, or wider tool access.
